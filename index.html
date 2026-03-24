@@ -204,6 +204,145 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
 .word-inner{display:inline-block;animation:wordReveal 0.9s cubic-bezier(0.16,1,0.3,1) both;}
 @keyframes wordReveal{from{transform:translateY(100%);opacity:0;}to{transform:translateY(0);opacity:1;}}
 
+/* Progress bar */
+.progress-bar{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:10000;transition:width 0.1s linear;}
+
+/* Theme toggle */
+.theme-toggle{position:fixed;bottom:2.5rem;left:2.5rem;width:44px;height:44px;background:var(--bg2);border:1px solid var(--border);color:var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;z-index:999;transition:all 0.3s;border-radius:0;}
+.theme-toggle:hover{background:var(--gold);color:var(--bg);}
+
+/* Light mode overrides */
+body.light-mode{
+  --bg:#f5f2eb;--bg2:#ede9e0;--bg3:#e4dfd4;--bg4:#ddd8cc;--bg5:#eae6db;
+  --white:#1c1a14;--muted:#5a5648;--border:rgba(150,120,50,0.22);
+  --gold:#a67c2e;--gold-light:#c49a3c;--gold-dim:rgba(166,124,46,0.12);
+}
+
+/* Nav */
+body.light-mode nav{background:rgba(245,242,235,0.95);border-bottom:1px solid rgba(150,120,50,0.2);}
+body.light-mode .nav-logo{color:var(--gold);}
+body.light-mode .nav-links a{color:#5a5648;}
+body.light-mode .nav-links a:hover{color:var(--gold);}
+body.light-mode .nav-links a.active{color:var(--gold);}
+
+/* Hero */
+body.light-mode .hero{background:linear-gradient(125deg,#ede8de 0%,#e4ddd0 30%,#ddd4c2 55%,#e4ddd0 80%,#ede8de 100%);}
+body.light-mode .hero::before{background:radial-gradient(ellipse at 70% 50%,rgba(166,124,46,0.08) 0%,transparent 60%);}
+body.light-mode .hero::after{background:radial-gradient(circle,rgba(166,124,46,0.1) 0%,transparent 65%);}
+body.light-mode .hero-eyebrow{color:var(--gold);}
+body.light-mode .hero-eyebrow::before{background:var(--gold);}
+body.light-mode .hero h1{color:#1c1a14;}
+body.light-mode .hero h1 em{color:var(--gold);}
+body.light-mode .hero-tagline{color:rgba(28,26,20,0.62);}
+body.light-mode .btn-primary{background:var(--gold);color:#fff;}
+body.light-mode .btn-primary:hover{background:var(--gold-light);}
+body.light-mode .btn-outline{border-color:rgba(150,120,50,0.35);color:#1c1a14;}
+body.light-mode .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+
+/* Stats bar */
+body.light-mode .stats-bar{background:var(--bg3);border-color:rgba(150,120,50,0.2);}
+body.light-mode .stat-item{border-right-color:rgba(150,120,50,0.15);}
+body.light-mode .stat-num{color:var(--gold);}
+body.light-mode .stat-label{color:#6a6458;}
+
+/* Section labels & titles */
+body.light-mode .section-label{color:var(--gold);}
+body.light-mode .section-label::after{background:rgba(150,120,50,0.2);}
+body.light-mode .section-title{color:#1c1a14;}
+
+/* About */
+body.light-mode #about{background:var(--bg2);}
+body.light-mode .about-text p{color:#3a3830;line-height:2;}
+body.light-mode .about-text p strong{color:#1c1a14;}
+body.light-mode .strength-item{border-color:rgba(150,120,50,0.2);background:var(--bg);}
+body.light-mode .strength-item:hover{border-color:var(--gold);background:var(--gold-dim);}
+body.light-mode .strength-icon{color:var(--gold);}
+body.light-mode .strength-text strong{color:#1c1a14;}
+body.light-mode .strength-text span{color:#5a5648;}
+
+/* Experience */
+body.light-mode #experience{background:var(--bg5);}
+body.light-mode .exp-grid{border-color:rgba(150,120,50,0.2);}
+body.light-mode .exp-item{border-bottom-color:rgba(150,120,50,0.15);border-left-color:transparent;}
+body.light-mode .exp-item:hover{background:var(--bg2);border-left-color:var(--gold);}
+body.light-mode .exp-meta{border-right-color:rgba(150,120,50,0.15);}
+body.light-mode .exp-company{color:var(--gold);}
+body.light-mode .exp-period{color:#6a6458;}
+body.light-mode .exp-location{color:#6a6458;}
+body.light-mode .exp-role{color:#1c1a14;}
+body.light-mode .exp-sub-role{color:var(--gold);}
+body.light-mode .exp-bullets li{color:#3a3830;}
+body.light-mode .exp-bullets li::before{color:var(--gold);}
+body.light-mode .exp-bullets li strong{color:#1c1a14;}
+body.light-mode .exp-tag{border-color:rgba(150,120,50,0.2);color:#5a5648;}
+
+/* Skills */
+body.light-mode #skills{background:var(--bg3);}
+body.light-mode .skill-card{border-color:rgba(150,120,50,0.2);background:var(--bg2);}
+body.light-mode .skill-card:hover{border-color:var(--gold);background:var(--bg);}
+body.light-mode .skill-card-title{color:var(--gold);}
+body.light-mode .skill-tag{background:var(--bg);border-color:rgba(150,120,50,0.18);color:#3a3830;}
+body.light-mode .skill-tag:hover{background:var(--gold-dim);border-color:var(--gold);color:var(--gold);}
+
+/* Certifications */
+body.light-mode #certifications{background:var(--bg5);}
+body.light-mode .cert-grid{border-color:rgba(150,120,50,0.2);background:rgba(150,120,50,0.1);}
+body.light-mode .cert-item{background:var(--bg);}
+body.light-mode .cert-item:hover{background:var(--bg2);}
+body.light-mode .cert-dot{background:var(--gold);}
+body.light-mode .cert-name{color:#1c1a14;}
+body.light-mode .cert-meta{color:#6a6458;}
+body.light-mode .cert-skill{background:rgba(166,124,46,0.07);border-color:rgba(150,120,50,0.18);color:#5a5648;}
+
+/* Education */
+body.light-mode #education{background:var(--bg2);}
+body.light-mode .edu-item{border-color:rgba(150,120,50,0.2);background:var(--bg);}
+body.light-mode .edu-deg{color:#1c1a14;}
+body.light-mode .edu-school{color:var(--gold);}
+body.light-mode .edu-period{color:#6a6458;}
+body.light-mode .edu-spec{color:#5a5648;}
+
+/* Contact */
+body.light-mode #contact{background:var(--bg3);}
+body.light-mode .contact-title{color:#1c1a14;}
+body.light-mode .contact-title em{color:var(--gold);}
+body.light-mode .contact-sub{color:#5a5648;}
+
+/* Footer */
+body.light-mode footer{background:var(--bg2);border-top-color:rgba(150,120,50,0.2);}
+body.light-mode .footer-name{color:var(--gold);}
+body.light-mode .footer-copy{color:#6a6458;}
+
+/* Back to top + theme toggle */
+body.light-mode .back-to-top{background:var(--gold);color:#fff;}
+body.light-mode .back-to-top:hover{background:var(--gold-light);}
+body.light-mode .theme-toggle{background:var(--bg2);border-color:rgba(150,120,50,0.25);color:var(--gold);}
+body.light-mode .theme-toggle:hover{background:var(--gold);color:#fff;}
+
+/* Progress bar */
+body.light-mode .progress-bar{background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+
+/* Scrollbar */
+body.light-mode ::-webkit-scrollbar-track{background:var(--bg2);}
+body.light-mode ::-webkit-scrollbar-thumb{background:var(--gold);}
+
+/* Grain texture overlay */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:0.022;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px 256px;}
+
+/* Active nav */
+.nav-links a.active{color:var(--gold);}
+.nav-links a.active::after{width:100%;}
+
+/* Smooth section blends */
+section{position:relative;}
+section+section::before{content:"";position:absolute;top:-60px;left:0;right:0;height:120px;background:inherit;filter:blur(0);pointer-events:none;z-index:1;}
+#about::before{background:linear-gradient(to bottom,var(--bg),var(--bg2));}
+#experience::before{background:linear-gradient(to bottom,var(--bg2),var(--bg5));}
+#skills::before{background:linear-gradient(to bottom,var(--bg5),var(--bg3));}
+#certifications::before{background:linear-gradient(to bottom,var(--bg3),var(--bg));}
+#education::before{background:linear-gradient(to bottom,var(--bg),var(--bg2));}
+#contact::before{background:linear-gradient(to bottom,var(--bg2),var(--bg5));}
+
 @media(min-width:902px){.nav-links{display:flex!important;visibility:visible!important;opacity:1!important;}}
 </style>
 
@@ -253,6 +392,7 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
 </script>
 </head>
 <body>
+<div class="progress-bar" id="progressBar"></div>
 <a href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
 <header role="banner">
 <nav aria-label="Main navigation">
@@ -599,6 +739,9 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
 </footer>
 
 
+<!-- Theme toggle -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark mode">&#9788;</button>
+
 <!-- Cursor glow -->
 <div class="cursor-glow" id="cursorGlow"></div>
 
@@ -613,12 +756,55 @@ document.addEventListener('mousemove', e => {
   glow.style.top = e.clientY + 'px';
 });
 
-// Back to top visibility
 const btt = document.getElementById('backToTop');
+// Progress bar
+const progressBar = document.getElementById('progressBar');
+function updateProgress() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progressBar.style.width = pct + '%';
+}
+
+// Active nav highlight
+const sections = document.querySelectorAll('section[id], div[id="hero"]');
+const navLinks = document.querySelectorAll('.nav-links a');
+function updateActiveNav() {
+  const scrollY = window.scrollY + 120;
+  sections.forEach(sec => {
+    if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + sec.id) a.classList.add('active');
+      });
+    }
+  });
+}
+
 window.addEventListener('scroll', () => {
+  updateProgress();
+  updateActiveNav();
   if (window.scrollY > 400) btt.classList.add('show');
   else btt.classList.remove('show');
+}, { passive: true });
+
+updateProgress();
+updateActiveNav();
+
+// Theme toggle
+const themeToggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  document.body.classList.add('light-mode');
+  themeToggle.innerHTML = '&#9790;';
+}
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  const isLight = document.body.classList.contains('light-mode');
+  themeToggle.innerHTML = isLight ? '&#9790;' : '&#9788;';
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
+
 </script>
 </body>
 </html>
