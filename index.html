@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -33,19 +33,19 @@
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--white);font-family:"DM Mono",monospace;font-size:15px;line-height:1.75;overflow-x:hidden;}
 ::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--gold);}
-nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 5rem;background:rgba(8,9,12,0.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
+nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:9999;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 5rem;background:rgba(8,9,12,0.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
 .nav-logo{font-family:"Syne",sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:0.08em;color:var(--gold);text-decoration:none;}
-.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;visibility:visible;opacity:1;}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;transition:color 0.3s;}
 .nav-links a:hover{color:var(--gold);}
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:8rem 5rem 5rem;position:relative;overflow:hidden;background:linear-gradient(125deg,#08090c 0%,#0c1220 30%,#101828 55%,#0e1018 80%,#08090c 100%);}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:10rem 7rem 5rem;position:relative;overflow:hidden;background:linear-gradient(125deg,#08090c 0%,#0c1220 30%,#101828 55%,#0e1018 80%,#08090c 100%);}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(201,168,76,0.06) 0%,transparent 60%);pointer-events:none;}
 .hero::after{content:"";position:absolute;right:-5%;top:15%;width:550px;height:550px;background:radial-gradient(circle,rgba(201,168,76,0.09) 0%,transparent 65%);pointer-events:none;}
-.hero-eyebrow{font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
+.hero-eyebrow{font-size:clamp(0.65rem,0.9vw,0.82rem);letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
 .hero-eyebrow::before{content:"";display:block;width:40px;height:1px;background:var(--gold);}
-.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(3.5rem,6vw,5.5rem);font-weight:300;line-height:1.05;margin-bottom:0.2rem;}
+.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(4rem,11vw,11rem);font-weight:300;line-height:0.95;margin-bottom:0.5rem;letter-spacing:-0.02em;}
 .hero h1 em{font-style:italic;color:var(--gold-light);}
-.hero-tagline{font-family:"Cormorant Garamond",serif;font-size:1.3rem;font-style:italic;color:var(--muted);margin:1.5rem 0 2.5rem;font-weight:300;max-width:420px;}
+.hero-tagline{font-family:"Cormorant Garamond",serif;font-size:clamp(1.2rem,2vw,1.8rem);font-style:italic;color:rgba(240,237,230,0.60);margin:2rem 0 3rem;font-weight:300;max-width:600px;line-height:1.5;}
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;}
 .btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 2rem;font-family:"DM Mono",monospace;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;cursor:pointer;}
 .btn-primary{background:var(--gold);color:var(--bg);font-weight:500;}
@@ -68,7 +68,7 @@ nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:spa
 section{padding:5.5rem 5rem;}
 .section-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:1rem;}
 .section-label::after{content:"";flex:1;height:1px;background:var(--border);max-width:80px;}
-.section-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2.2rem,3.5vw,3rem);font-weight:300;line-height:1.15;margin-bottom:2.5rem;}
+.section-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2.2rem,3.8vw,3.8rem);font-weight:300;line-height:1.15;margin-bottom:2.5rem;}
 .section-title em{font-style:italic;}
 #about{background:var(--bg2);border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start;}
 .about-text p{color:#b8b5ae;font-size:0.92rem;line-height:2;margin-bottom:1.4rem;}
@@ -139,7 +139,7 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
 @media(max-width:900px){
   nav{padding:1.2rem 1.5rem;}
   .nav-links{display:none;}
-  .hero{grid-template-columns:1fr;padding:6rem 1.5rem 3rem;gap:3rem;}
+  .hero{flex-direction:column;padding:7rem 1.5rem 3rem;}
   .hero-right{align-items:flex-start;}
   section{padding:4rem 1.5rem;}
   #about{grid-template-columns:1fr;gap:3rem;}
@@ -151,10 +151,111 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
   #education{grid-template-columns:1fr;gap:2rem;}
   footer{flex-direction:column;gap:0.5rem;text-align:center;padding:1.5rem;}
 }
-.li-btn{display:inline-flex;align-items:center;justify-content:center;padding:0.3rem;transition:opacity 0.25s;}.li-btn:hover{opacity:0.75;}</style>
+
+/* Back to top */
+.back-to-top{position:fixed;bottom:2.5rem;right:2.5rem;width:44px;height:44px;background:var(--gold);color:var(--bg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;z-index:999;opacity:0;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s,background 0.2s;pointer-events:none;}
+.back-to-top.show{opacity:1;transform:translateY(0);pointer-events:all;}
+.back-to-top:hover{background:var(--gold-light);}
+.li-btn{display:inline-flex;align-items:center;justify-content:center;padding:0.3rem;transition:opacity 0.25s;}.li-btn:hover{opacity:0.75;}
+/* ── INTERACTIVITY ─────────────────────────────────────── */
+/* Cursor glow */
+.cursor-glow{pointer-events:none;position:fixed;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.06) 0%,transparent 70%);transform:translate(-50%,-50%);transition:left 0.08s ease,top 0.08s ease;z-index:0;mix-blend-mode:screen;}
+
+/* Scroll reveal */
+.reveal{opacity:1;transform:translateY(0);transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1),transform 0.75s cubic-bezier(0.16,1,0.3,1);}.js-ready .reveal{opacity:0;transform:translateY(28px);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:0.1s;}
+.reveal-delay-2{transition-delay:0.2s;}
+.reveal-delay-3{transition-delay:0.3s;}
+.reveal-delay-4{transition-delay:0.4s;}
+
+/* Exp item hover - gold left border sweep */
+.exp-item{border-left:3px solid transparent;transition:background 0.3s,border-left-color 0.3s;}
+.exp-item:hover{background:var(--bg2);border-left-color:var(--gold);}
+
+/* Skill tag pop on hover */
+.skill-tag{transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);}
+.skill-tag:hover{transform:translateY(-2px);background:var(--gold-dim);border-color:var(--gold);color:var(--gold-light);}
+
+/* Cert item subtle scale */
+.cert-item{transition:background 0.3s,transform 0.25s;}
+.cert-item:hover{background:var(--bg2);transform:translateX(4px);}
+
+/* Stat item pulse on hover */
+.stat-item{transition:background 0.25s;}
+.stat-item:hover{background:rgba(201,168,76,0.05);}
+.stat-item:hover .stat-num{color:var(--gold-light);}
+
+/* Nav link underline slide */
+.nav-links a{position:relative;}
+.nav-links a::after{content:"";position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+.nav-links a:hover::after{width:100%;}
+
+/* Button shine effect */
+.btn-primary{position:relative;overflow:hidden;}
+.btn-primary::after{content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);transition:left 0.45s ease;}
+.btn-primary:hover::after{left:160%;}
+
+/* Section title underline grow */
+.section-title{position:relative;display:inline-block;}
+
+/* Hero h1 word stagger via spans added by JS */
+.word{display:inline-block;overflow:hidden;}
+.word-inner{display:inline-block;animation:wordReveal 0.9s cubic-bezier(0.16,1,0.3,1) both;}
+@keyframes wordReveal{from{transform:translateY(100%);opacity:0;}to{transform:translateY(0);opacity:1;}}
+
+@media(min-width:902px){.nav-links{display:flex!important;visibility:visible!important;opacity:1!important;}}
+</style>
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hardik Mehta",
+  "url": "https://hardikmehta.au",
+  "jobTitle": "Senior Performance Manager",
+  "description": "Melbourne-based digital strategy and performance leader with 8+ years experience driving business growth through cross-channel marketing, paid media, and commercial strategy.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Melbourne",
+    "addressRegion": "VIC",
+    "addressCountry": "AU"
+  },
+  "email": "hardik.mehta@impressive.com.au",
+  "sameAs": ["https://www.linkedin.com/in/hardik--mehta/"],
+  "knowsAbout": [
+    "Digital Strategy",
+    "Performance Marketing",
+    "Paid Media",
+    "Google Ads",
+    "Meta Ads",
+    "TikTok Ads",
+    "LinkedIn Ads",
+    "Programmatic Advertising",
+    "Brand Strategy",
+    "Commercial Strategy",
+    "Market Research",
+    "AI Automation",
+    "Agency Management"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Impressive Digital Agency",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressRegion": "VIC",
+      "addressCountry": "AU"
+    }
+  }
+}
+</script>
 </head>
 <body>
-<nav>
+<a href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+<header role="banner">
+<nav aria-label="Main navigation">
   <a class="nav-logo" href="#hero">HM</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -164,7 +265,9 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
+</header>
 
+<main id="main-content">
 <section class="hero" id="hero">
   <div class="hero-left">
     <div class="hero-eyebrow">Digital Strategy &amp; Performance Leadership</div>
@@ -179,7 +282,7 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
   </div>
 </section>
 
-<div class="stats-bar">
+<div class="stats-bar" role="region" aria-label="Key performance metrics">
   <div class="stats-track">
     <div class="stat-item"><span class="stat-num">12&times;</span><span class="stat-label">Average ROAS</span></div>
     <div class="stat-item"><span class="stat-num">$430K</span><span class="stat-label">New ARR Secured</span></div>
@@ -198,28 +301,28 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
   </div>
 </div>
 
-<section id="about">
+<section id="about" aria-label="About Hardik Mehta">
   <div class="about-left">
     <div class="section-label">About</div>
     <h2 class="section-title">Business-first thinking.<br/><em>Built on data.</em></h2>
   </div>
-  <div class="about-text">
+  <div class="about-text reveal">
     <p>I'm a <strong>digital strategy and performance leader</strong> based in Melbourne. My work sits at the intersection of commercial strategy, brand thinking, and performance marketing: translating business objectives into channel strategies that actually move the needle.</p>
     <p>I don't start with platforms. I start with <strong>where a business needs to go</strong>: its revenue targets, competitive position, and customer journey. From there, I build the cross-channel investment strategy to get it there. At Impressive Digital Agency, that approach has driven <strong>$430K in new ARR</strong>, a <strong>93% pitch win rate</strong>, and consistently outsized results across a portfolio of 19 clients.</p>
-    <p>Alongside client work, I operate as a <strong>strategic partner to agency leadership</strong>: leading Quarterly Business Reviews with clients, contributing to commercial conversations with agency partners, shaping internal R&amp;D direction, and building the systems and frameworks that make the broader team more effective. I'm as comfortable in a boardroom as I am in a dashboard.</p>
-    <div class="strength-list">
-      <div class="strength-item"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Strategic &amp; Commercial Leadership</strong><span>Translating business goals into go-to-market strategy, with a clear eye on revenue impact, market positioning, and long-term growth.</span></div></div>
-      <div class="strength-item"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Agency &amp; Partnership Management</strong><span>Building trusted relationships with agency partners, clients, and senior stakeholders: leading commercial conversations and QBRs that unlock growth.</span></div></div>
-      <div class="strength-item"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Team Leadership &amp; Capability Building</strong><span>Managing cross-functional teams of 10+, mentoring talent, and shaping agency-wide practices around AI, automation, and data-first thinking.</span></div></div>
-      <div class="strength-item"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Technical Depth, Strategically Applied</strong><span>From GA4 scripts to AI agents and custom MCPs. I build tools that give teams a competitive edge, not just technical novelty.</span></div></div>
+    <p>Alongside client work, I operate as a <strong>strategic partner to agency leadership</strong>: leading Quarterly Business Reviews, contributing to commercial conversations with agency partners, shaping internal R&amp;D direction, and building the systems and frameworks that make the broader team more effective. I'm as comfortable in a boardroom as I am in a dashboard.</p>
+    <div class="strength-list reveal">
+      <div class="strength-item reveal reveal-delay-1"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Strategic &amp; Commercial Leadership</strong><span>Translating business goals into go-to-market strategy, with a clear eye on revenue impact, market positioning, and long-term growth.</span></div></div>
+      <div class="strength-item reveal reveal-delay-2"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Agency &amp; Partnership Management</strong><span>Building trusted relationships with agency partners, clients, and senior stakeholders: leading commercial conversations and QBRs that unlock growth.</span></div></div>
+      <div class="strength-item reveal reveal-delay-3"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Team Leadership &amp; Capability Building</strong><span>Managing cross-functional teams of 10+, mentoring talent, and shaping agency-wide practices around AI, automation, and data-first thinking.</span></div></div>
+      <div class="strength-item reveal reveal-delay-4"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Technical Depth, Strategically Applied</strong><span>From GA4 scripts to AI agents and custom MCPs. I build tools that give teams a competitive edge, not just technical novelty.</span></div></div>
     </div>
   </div>
 </section>
 
-<section id="experience">
+<section id="experience" aria-label="Work Experience">
   <div class="section-label">Experience</div>
   <h2 class="section-title">Career <em>Timeline</em></h2>
-  <div class="exp-grid">
+  <div class="exp-grid reveal">
 
     <div class="exp-item">
       <div class="exp-meta">
@@ -346,10 +449,10 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
   </div>
 </section>
 
-<section id="skills">
+<section id="skills" aria-label="Skills and Tools">
   <div class="section-label">Skills</div>
   <h2 class="section-title">Tools &amp; <em>Capabilities</em></h2>
-  <div class="skills-grid">
+  <div class="skills-grid reveal">
 
     <div class="skill-card" style="grid-column:1/-1;">
       <div class="skill-card-title">Strategic Competencies</div>
@@ -403,10 +506,10 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
   </div>
 </section>
 
-<section id="certifications">
+<section id="certifications" aria-label="Certifications">
   <div class="section-label">Certifications</div>
   <h2 class="section-title">Credentials &amp; <em>Qualifications</em></h2>
-  <div class="cert-grid" style="grid-template-columns:repeat(2,1fr);">
+  <div class="cert-grid reveal" style="grid-template-columns:repeat(2,1fr);">
 
     <div class="cert-item"><div class="cert-dot"></div><div>
       <div class="cert-name">Digital Marketing Strategy</div>
@@ -459,12 +562,12 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
   </div>
 </section>
 
-<section id="education">
+<section id="education" aria-label="Education">
   <div>
     <div class="section-label">Education</div>
     <h2 class="section-title">Academic <em>Background</em></h2>
   </div>
-  <div class="edu-items">
+  <div class="edu-items reveal">
     <div class="edu-item">
       <div class="edu-school">RMIT University, Melbourne</div>
       <div class="edu-deg">Master of Information Technology</div>
@@ -480,19 +583,42 @@ footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" aria-label="Contact">
   <h2 class="contact-title">Let's build something<br/><em>exceptional together.</em></h2>
   <p class="contact-sub">Open to strategic partnerships, consulting opportunities, and leadership conversations.</p>
   <div class="contact-links">
-    <a href="/cdn-cgi/l/email-protection#c2aaa3b0a6aba9ecafa7aab6a382abafb2b0a7b1b1abb4a7eca1adafeca3b7" class="btn btn-primary">Email</a>
+    <a href="/cdn-cgi/l/email-protection#5931382b3d303277343c312d38193034292b3c2a2a302f3c773a363477382c" class="btn btn-primary">Email</a>
     <a href="https://www.linkedin.com/in/hardik--mehta/" target="_blank" rel="noopener" class="btn btn-outline">Let's Connect</a>
   </div>
 </section>
 
-<footer>
+</main>
+<footer role="contentinfo">
   <div class="footer-name">Hardik Mehta</div>
   <div class="footer-copy">Senior Performance Manager &middot; Melbourne, VIC &middot; 2026</div>
 </footer>
 
+
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+<script>
+// Cursor glow
+const glow = document.getElementById('cursorGlow');
+document.addEventListener('mousemove', e => {
+  glow.style.left = e.clientX + 'px';
+  glow.style.top = e.clientY + 'px';
+});
+
+// Back to top visibility
+const btt = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) btt.classList.add('show');
+  else btt.classList.remove('show');
+});
+</script>
 </body>
 </html>
