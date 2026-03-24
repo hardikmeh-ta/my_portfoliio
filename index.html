@@ -333,6 +333,814 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .nav-links a.active{color:var(--gold);}
 .nav-links a.active::after{width:100%;}
 
+/* Smooth section blends - using top gradient overlay per section */
+section{position:relative;}
+#about{background:linear-gradient(to bottom,var(--bg) 0%,var(--bg2) 6%,var(--bg2) 100%);}
+#experience{background:linear-gradient(to bottom,var(--bg2) 0%,var(--bg5) 5%,var(--bg5) 100%);}
+#skills{background:linear-gradient(to bottom,var(--bg5) 0%,var(--bg3) 5%,var(--bg3) 100%);}
+#certifications{background:linear-gradient(to bottom,var(--bg3) 0%,var(--bg) 5%,var(--bg) 100%);}
+#education{background:linear-gradient(to bottom,var(--bg) 0%,var(--bg2) 5%,var(--bg2) 100%);}
+#contact{background:linear-gradient(to bottom,var(--bg2) 0%,var(--bg5) 5%,var(--bg5) 100%);}
+
+@media(min-width:902px){.nav-links{display:flex!important;visibility:visible!important;opacity:1!important;}}
+</style>
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hardik Mehta",
+  "url": "https://hardikmehta.au",
+  "jobTitle": "Senior Performance Manager",
+  "description": "Melbourne-based digital strategy and performance leader with 8+ years experience driving business growth through cross-channel marketing, paid media, and commercial strategy.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Melbourne",
+    "addressRegion": "VIC",
+    "addressCountry": "AU"
+  },
+  "email": "hardik.mehta@impressive.com.au",
+  "sameAs": ["https://www.linkedin.com/in/hardik--mehta/"],
+  "knowsAbout": [
+    "Digital Strategy",
+    "Performance Marketing",
+    "Paid Media",
+    "Google Ads",
+    "Meta Ads",
+    "TikTok Ads",
+    "LinkedIn Ads",
+    "Programmatic Advertising",
+    "Brand Strategy",
+    "Commercial Strategy",
+    "Market Research",
+    "AI Automation",
+    "Agency Management"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Impressive Digital Agency",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressRegion": "VIC",
+      "addressCountry": "AU"
+    }
+  }
+}
+</script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<a href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+<header role="banner">
+<nav aria-label="Main navigation">
+  <a class="nav-logo" href="#hero">HM</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+</header>
+
+<main id="main-content">
+<section class="hero" id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Digital Strategy &amp; Performance Leadership</div>
+    <h1>Hardik<br/><em>Mehta</em></h1>
+    <p class="hero-tagline">Building strategies that connect channel investment to business growth, at scale.</p>
+    <div class="hero-cta">
+      <a href="#experience" class="btn btn-primary">View Work &darr;</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-right">
+  </div>
+</section>
+
+<div class="stats-bar" role="region" aria-label="Key performance metrics">
+  <div class="stats-track">
+    <div class="stat-item"><span class="stat-num">12&times;</span><span class="stat-label">Average ROAS</span></div>
+    <div class="stat-item"><span class="stat-num">$430K</span><span class="stat-label">New ARR Secured</span></div>
+    <div class="stat-item"><span class="stat-num">93%</span><span class="stat-label">Pitch Success Rate</span></div>
+    <div class="stat-item"><span class="stat-num">19</span><span class="stat-label">Client Portfolio</span></div>
+    <div class="stat-item"><span class="stat-num">41%</span><span class="stat-label">YoY Lead Growth</span></div>
+    <div class="stat-item"><span class="stat-num">34%</span><span class="stat-label">Online Sales Growth</span></div>
+    <div class="stat-item"><span class="stat-num">38%</span><span class="stat-label">YoY Revenue Growth</span></div>
+    <div class="stat-item"><span class="stat-num">12&times;</span><span class="stat-label">Average ROAS</span></div>
+    <div class="stat-item"><span class="stat-num">$430K</span><span class="stat-label">New ARR Secured</span></div>
+    <div class="stat-item"><span class="stat-num">93%</span><span class="stat-label">Pitch Success Rate</span></div>
+    <div class="stat-item"><span class="stat-num">19</span><span class="stat-label">Client Portfolio</span></div>
+    <div class="stat-item"><span class="stat-num">41%</span><span class="stat-label">YoY Lead Growth</span></div>
+    <div class="stat-item"><span class="stat-num">34%</span><span class="stat-label">Online Sales Growth</span></div>
+    <div class="stat-item"><span class="stat-num">38%</span><span class="stat-label">YoY Revenue Growth</span></div>
+  </div>
+</div>
+
+<section id="about" aria-label="About Hardik Mehta">
+  <div class="about-left">
+    <div class="section-label">About</div>
+    <h2 class="section-title">Business-first thinking.<br/><em>Built on data.</em></h2>
+  </div>
+  <div class="about-text reveal">
+    <p>I'm a <strong>digital strategy and performance leader</strong> based in Melbourne. My work sits at the intersection of commercial strategy, brand thinking, and performance marketing: translating business objectives into channel strategies that actually move the needle.</p>
+    <p>I don't start with platforms. I start with <strong>where a business needs to go</strong>: its revenue targets, competitive position, and customer journey. From there, I build the cross-channel investment strategy to get it there. At Impressive Digital Agency, that approach has driven <strong>$430K in new ARR</strong>, a <strong>93% pitch win rate</strong>, and consistently outsized results across a portfolio of 19 clients.</p>
+    <p>Alongside client work, I operate as a <strong>strategic partner to agency leadership</strong>: leading Quarterly Business Reviews, contributing to commercial conversations with agency partners, shaping internal R&amp;D direction, and building the systems and frameworks that make the broader team more effective. I'm as comfortable in a boardroom as I am in a dashboard.</p>
+    <div class="strength-list reveal">
+      <div class="strength-item reveal reveal-delay-1"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Strategic &amp; Commercial Leadership</strong><span>Translating business goals into go-to-market strategy, with a clear eye on revenue impact, market positioning, and long-term growth.</span></div></div>
+      <div class="strength-item reveal reveal-delay-2"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Agency &amp; Partnership Management</strong><span>Building trusted relationships with agency partners, clients, and senior stakeholders: leading commercial conversations and QBRs that unlock growth.</span></div></div>
+      <div class="strength-item reveal reveal-delay-3"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Team Leadership &amp; Capability Building</strong><span>Managing cross-functional teams of 10+, mentoring talent, and shaping agency-wide practices around AI, automation, and data-first thinking.</span></div></div>
+      <div class="strength-item reveal reveal-delay-4"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Technical Depth, Strategically Applied</strong><span>From GA4 scripts to AI agents and custom MCPs. I build tools that give teams a competitive edge, not just technical novelty.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" aria-label="Work Experience">
+  <div class="section-label">Experience</div>
+  <h2 class="section-title">Career <em>Timeline</em></h2>
+  <div class="exp-grid reveal">
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-company">Impressive Digital Agency</div>
+        <div class="exp-period">Aug 2024 &ndash; Present</div>
+        <div class="exp-location">Melbourne, VIC</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Senior Performance Manager</div>
+        <div class="exp-sub-role">Paid Media R&amp;D &middot; AI, Programmatic &amp; MiQ Ambassador</div>
+        <ul class="exp-bullets">
+          <li>Act as a <strong>strategic partner to senior clients and agency leadership</strong>: leading Quarterly Business Reviews, shaping commercial investment decisions, and connecting channel strategy to broader business growth goals</li>
+          <li>Own go-to-market strategy across a <strong>portfolio of 19 clients</strong>, securing <strong>$430K in new ARR</strong> and consistently delivering against, and beyond, client growth targets at avg <strong>12&times; ROAS</strong></li>
+          <li>Drove <strong>38% YoY revenue growth</strong> for a luxury furniture brand (target: 25%) by diagnosing the full funnel, restructuring paid investment, and aligning channel strategy with brand and commercial goals</li>
+          <li>Delivered <strong>5 consecutive record months</strong> for a B2B industrial client through a market insight-led strategy overhaul; scaled a B2B tech client into the <strong>US market</strong> using 1PD and 3PD audience data</li>
+          <li>Named <strong>agency ambassador for AI, Programmatic &amp; MiQ</strong>: representing Impressive in partner conversations, shaping the agency's positioning, and building internal capability through training and tooling</li>
+          <li>Co-leads agency <strong>R&amp;D and innovation</strong>: developing pacing automations, a negative keyword AI agent, and automated audit tools that raise performance standards across the entire agency</li>
+          <li>Achieved a <strong>93% pitch success rate</strong> by leading hypothesis-driven pre-sales audits that frame strategy in business terms, not just marketing metrics</li>
+          <li>Leads and mentors a <strong>cross-functional team of 10</strong>: building analytical capability, accountability, and a strategic mindset across the group</li>
+        </ul>
+        <div class="exp-tag-row">
+          <span class="exp-tag">Commercial Strategy</span><span class="exp-tag">Agency Partnerships</span><span class="exp-tag">QBRs</span><span class="exp-tag">Team Leadership</span><span class="exp-tag">Paid Media R&amp;D</span><span class="exp-tag">AI &amp; Automation</span><span class="exp-tag">Programmatic</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-company">Impressive Digital Agency</div>
+        <div class="exp-period">Nov 2023 &ndash; Aug 2024</div>
+        <div class="exp-location">Melbourne, VIC</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Client Strategy Manager</div>
+        <ul class="exp-bullets">
+          <li>Drove digital strategy for <strong>15 clients</strong>, achieving avg <strong>10&times; ROAS</strong> and securing <strong>$350K in new revenue</strong> from budgets up to $60K/channel</li>
+          <li>Secured a <strong>16% increase in market share</strong> for a key client through competitor analysis and consumer insights</li>
+          <li>Led adoption of <strong>AI-driven tools</strong> for market research, elevating quality of client-facing strategic recommendations</li>
+          <li>Orchestrated hands-on campaign implementation and <strong>strategic website overhauls</strong> (UI/UX) using agile principles</li>
+          <li>Executed <strong>executive-level events</strong> and fostered strategic networking opportunities leading to new client leads</li>
+        </ul>
+        <div class="exp-tag-row">
+          <span class="exp-tag">Google Ads</span><span class="exp-tag">Meta Ads</span><span class="exp-tag">UX/UI</span><span class="exp-tag">Agile</span><span class="exp-tag">Market Research</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-company">Miller Leith</div>
+        <div class="exp-period">May 2022 &ndash; Nov 2023</div>
+        <div class="exp-location">Melbourne, VIC</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Digital Marketing Coordinator</div>
+        <ul class="exp-bullets">
+          <li>Co-led a <strong>full company rebrand</strong>: driving strategic research, brand definition, and all digital and visual elements, resulting in <strong>11% lift in brand recognition</strong> and <strong>37% improvement in website engagement</strong></li>
+          <li>Developed and executed a <strong>data-driven social media strategy</strong>, overseeing long-form video content and paid ads to grow brand presence and engagement</li>
+          <li>Spearheaded <strong>executive-level events</strong>, managing high-stakes client relationships and creating networking opportunities that converted into new leads and strategic partnerships</li>
+          <li>Initiated and managed the company's <strong>CSR program</strong>, aligning organisational values with community impact and strengthening brand reputation</li>
+        </ul>
+        <div class="exp-tag-row">
+          <span class="exp-tag">Rebranding</span><span class="exp-tag">Social Media</span><span class="exp-tag">Event Strategy</span><span class="exp-tag">CSR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-company">Pizza Monster</div>
+        <div class="exp-period">Jun 2021 &ndash; Nov 2021</div>
+        <div class="exp-location">Melbourne, VIC</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Digital Marketing Specialist</div>
+        <ul class="exp-bullets">
+          <li>Optimised <strong>Google Search &amp; Shopping Ads</strong> for soft opening day, yielding over <strong>40 online orders and 35 walk-ins</strong></li>
+          <li>Cultivated cohesive brand presence across all digital channels through creative storytelling and visual identity</li>
+        </ul>
+        <div class="exp-tag-row">
+          <span class="exp-tag">Google Ads</span><span class="exp-tag">Brand Identity</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-company">RMIT University</div>
+        <div class="exp-period">Dec 2019 &ndash; Apr 2021</div>
+        <div class="exp-location">Melbourne, VIC</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Creative Manager</div>
+        <ul class="exp-bullets">
+          <li>Led a team of 6 to plan and execute <strong>university-wide events attracting 15,000+ students</strong>: managing end-to-end logistics, communications, and on-the-day delivery at scale</li>
+          <li>Developed and executed <strong>comprehensive digital strategy</strong> and high-impact promotional campaigns across key channels</li>
+          <li>Built a clear feedback loop between digital activity and outcomes, using <strong>data to directly inform campaign decisions</strong> and demonstrate performance impact</li>
+        </ul>
+        <div class="exp-tag-row">
+          <span class="exp-tag">Event Marketing</span><span class="exp-tag">Digital Strategy</span><span class="exp-tag">Campaign Management</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-company">Ekvity Ventures</div>
+        <div class="exp-period">Apr 2017 &ndash; Dec 2018</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-role">Digital Marketing Executive</div>
+        <ul class="exp-bullets">
+          <li>Led a team of 5 in a <strong>full brand rebranding</strong>, broadening the target audience from 35+ to 18+ and driving <strong>16% growth</strong> in existing clientele</li>
+          <li>Owned end-to-end <strong>website redesign</strong>: from design and content creation through to external agency collaboration and launch</li>
+          <li>Launched a <strong>nationwide quarterly newsletter</strong>, managing design, copy, and distribution to build brand presence at scale</li>
+          <li>Grew organic reach through <strong>SEO, content strategy, and Google Ads</strong></li>
+        </ul>
+        <div class="exp-tag-row">
+          <span class="exp-tag">Rebranding</span><span class="exp-tag">SEO</span><span class="exp-tag">Web Design</span><span class="exp-tag">Google Ads</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills" aria-label="Skills and Tools">
+  <div class="section-label">Skills</div>
+  <h2 class="section-title">Tools &amp; <em>Capabilities</em></h2>
+  <div class="skills-grid reveal">
+
+    <div class="skill-card" style="grid-column:1/-1;">
+      <div class="skill-card-title">Strategic Competencies</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Digital Strategy</span><span class="skill-tag">Market Research</span><span class="skill-tag">Forecasting &amp; Auditing</span><span class="skill-tag">Consumer Behaviour</span><span class="skill-tag">Brand Management</span><span class="skill-tag">Stakeholder Communications</span><span class="skill-tag">Training &amp; Development</span><span class="skill-tag">Commercial Mindset</span><span class="skill-tag">Email Marketing</span><span class="skill-tag">CRM Management</span><span class="skill-tag">Go-To-Market Strategy</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card-title">Analytics &amp; Ads</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Google Analytics</span><span class="skill-tag">Google Ads</span><span class="skill-tag">Meta Ads</span><span class="skill-tag">TikTok Ads</span><span class="skill-tag">LinkedIn Ads</span><span class="skill-tag">Programmatic Ads</span><span class="skill-tag">BigQuery</span><span class="skill-tag">SEMRush</span><span class="skill-tag">AHRefs</span><span class="skill-tag">Agency Analytics</span><span class="skill-tag">Google Search Console</span><span class="skill-tag">Power BI</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card-title">CRM &amp; MarTech</div>
+      <div class="skill-tags">
+        <span class="skill-tag">HubSpot</span><span class="skill-tag">Marketo</span><span class="skill-tag">ProfitPeak</span><span class="skill-tag">Zoho</span><span class="skill-tag">Hotjar</span><span class="skill-tag">Microsoft Clarity</span><span class="skill-tag">Wordpress</span><span class="skill-tag">Octoparse</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card-title">AI &amp; Automation</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Prompt Engineering</span><span class="skill-tag">MCP Development</span><span class="skill-tag">AI Agents</span><span class="skill-tag">Zapier</span><span class="skill-tag">N8N</span><span class="skill-tag">Asana Automation</span><span class="skill-tag">GA4 Scripts</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card-title">Design &amp; Creative</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Adobe Suite</span><span class="skill-tag">Figma</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card-title">Technical</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">MySQL</span><span class="skill-tag">HTML/CSS</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card-title">Project Management</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Monday</span><span class="skill-tag">Asana</span><span class="skill-tag">Jira</span><span class="skill-tag">Trello</span><span class="skill-tag">Notion</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="certifications" aria-label="Certifications">
+  <div class="section-label">Certifications</div>
+  <h2 class="section-title">Credentials &amp; <em>Qualifications</em></h2>
+  <div class="cert-grid reveal" style="grid-template-columns:repeat(2,1fr);">
+
+    <div class="cert-item"><div class="cert-dot"></div><div>
+      <div class="cert-name">Digital Marketing Strategy</div>
+      <div class="cert-meta">ADMA &middot; August 2023</div>
+      <div class="cert-skills">
+        <span class="cert-skill">Digital Marketing Strategy</span><span class="cert-skill">Customer Journey Mapping</span><span class="cert-skill">Empathy Mapping</span><span class="cert-skill">Remarketing</span><span class="cert-skill">Market Research</span><span class="cert-skill">Keyword Research</span><span class="cert-skill">Paid Advertising</span><span class="cert-skill">Strategic Content Development</span><span class="cert-skill">On-Page Optimisation</span>
+      </div>
+    </div></div>
+
+    <div class="cert-item"><div class="cert-dot"></div><div>
+      <div class="cert-name">Behavioural Economics</div>
+      <div class="cert-meta">ADMA &middot; December 2024</div>
+      <div class="cert-skills">
+        <span class="cert-skill">Consumer Behaviour</span><span class="cert-skill">Decision-Making Psychology</span><span class="cert-skill">Strategic Planning</span><span class="cert-skill">Marketing Strategy</span>
+      </div>
+    </div></div>
+
+    <div class="cert-item"><div class="cert-dot"></div><div>
+      <div class="cert-name">Social Media Strategy</div>
+      <div class="cert-meta">Australian Institute of Management &middot; October 2022</div>
+      <div class="cert-skills">
+        <span class="cert-skill">Social Media Strategy</span><span class="cert-skill">Content Marketing</span><span class="cert-skill">Audience Engagement</span><span class="cert-skill">Brand Presence</span>
+      </div>
+    </div></div>
+
+    <div class="cert-item"><div class="cert-dot"></div><div>
+      <div class="cert-name">Google Analytics Certification</div>
+      <div class="cert-meta">Google &middot; May 2025 &ndash; May 2026</div>
+      <div class="cert-skills">
+        <span class="cert-skill">Google Analytics</span><span class="cert-skill">Data Analytics</span><span class="cert-skill">Marketing Attribution</span><span class="cert-skill">Performance Measurement</span><span class="cert-skill">Trend Forecasting</span><span class="cert-skill">Demand Forecasting</span><span class="cert-skill">Performance Marketing</span><span class="cert-skill">Online Marketing</span>
+      </div>
+    </div></div>
+
+    <div class="cert-item"><div class="cert-dot"></div><div>
+      <div class="cert-name">Google Ads Shopping Certification</div>
+      <div class="cert-meta">Google &middot; May 2025 &ndash; May 2026</div>
+      <div class="cert-skills">
+        <span class="cert-skill">Shopping Ads</span><span class="cert-skill">Google Ads</span><span class="cert-skill">Paid Search Campaigns</span><span class="cert-skill">Paid Media Strategy</span><span class="cert-skill">Search Engine Marketing</span><span class="cert-skill">Paid Media Advertising</span>
+      </div>
+    </div></div>
+
+    <div class="cert-item"><div class="cert-dot"></div><div>
+      <div class="cert-name">Google Ads Measurement Certification</div>
+      <div class="cert-meta">Google &middot; May 2025 &ndash; May 2026</div>
+      <div class="cert-skills">
+        <span class="cert-skill">Performance Measurement</span><span class="cert-skill">Performance Attribution</span><span class="cert-skill">Marketing Attribution</span><span class="cert-skill">Strategic Planning</span><span class="cert-skill">Performance Marketing</span>
+      </div>
+    </div></div>
+
+  </div>
+</section>
+
+<section id="education" aria-label="Education">
+  <div>
+    <div class="section-label">Education</div>
+    <h2 class="section-title">Academic <em>Background</em></h2>
+  </div>
+  <div class="edu-items reveal">
+    <div class="edu-item">
+      <div class="edu-school">RMIT University, Melbourne</div>
+      <div class="edu-deg">Master of Information Technology</div>
+      <div class="edu-period">Feb 2019 &ndash; Nov 2020</div>
+      <div class="edu-spec">Specialisations: Software Engineering, Project Management, Usability Engineering</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-school">University of Mumbai</div>
+      <div class="edu-deg">Bachelor of Financial Accounting</div>
+      <div class="edu-period">2015 &ndash; 2018</div>
+      <div class="edu-spec">Specialisations: Economics, Management Accounting &amp; Trade Finance</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-label="Contact">
+  <h2 class="contact-title">Let's build something<br/><em>exceptional together.</em></h2>
+  <p class="contact-sub">Open to strategic partnerships, consulting opportunities, and leadership conversations.</p>
+  <div class="contact-links">
+    <a href="/cdn-cgi/l/email-protection#5931382b3d303277343c312d38193034292b3c2a2a302f3c773a363477382c" class="btn btn-primary">Email</a>
+    <a href="https://www.linkedin.com/in/hardik--mehta/" target="_blank" rel="noopener" class="btn btn-outline">Let's Connect</a>
+  </div>
+</section>
+
+</main>
+<footer role="contentinfo">
+  <div class="footer-name">Hardik Mehta</div>
+  <div class="footer-copy">Senior Performance Manager &middot; Melbourne, VIC &middot; 2026</div>
+</footer>
+
+
+<!-- Theme toggle -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark mode">&#9788;</button>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+<script>
+// Cursor glow
+const glow = document.getElementById('cursorGlow');
+document.addEventListener('mousemove', e => {
+  glow.style.left = e.clientX + 'px';
+  glow.style.top = e.clientY + 'px';
+});
+
+const btt = document.getElementById('backToTop');
+// Progress bar
+const progressBar = document.getElementById('progressBar');
+function updateProgress() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progressBar.style.width = pct + '%';
+}
+
+// Active nav highlight
+const sections = document.querySelectorAll('section[id], div[id="hero"]');
+const navLinks = document.querySelectorAll('.nav-links a');
+function updateActiveNav() {
+  const scrollY = window.scrollY + 120;
+  sections.forEach(sec => {
+    if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + sec.id) a.classList.add('active');
+      });
+    }
+  });
+}
+
+window.addEventListener('scroll', () => {
+  updateProgress();
+  updateActiveNav();
+  if (window.scrollY > 400) btt.classList.add('show');
+  else btt.classList.remove('show');
+}, { passive: true });
+
+updateProgress();
+updateActiveNav();
+
+// Theme toggle
+const themeToggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  document.body.classList.add('light-mode');
+  themeToggle.innerHTML = '&#9790;';
+}
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  const isLight = document.body.classList.contains('light-mode');
+  themeToggle.innerHTML = isLight ? '&#9790;' : '&#9788;';
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+<!-- SEO -->
+<title>Hardik Mehta - Digital Strategy &amp; Performance Leadership | Melbourne</title>
+<meta name="description" content="Hardik Mehta is a Melbourne-based digital strategy and performance leader with 8+ years experience driving business growth through cross-channel marketing, paid media, and commercial strategy."/>
+<meta name="author" content="Hardik Mehta"/>
+<meta name="keywords" content="Hardik Mehta, Digital Strategy, Performance Marketing, Performance Manager, Paid Media, Google Ads, Meta Ads, Marketing Strategy, Melbourne, Agency Strategy, Brand Strategy"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://hardikmehta.au"/>
+
+<!-- Open Graph (LinkedIn, Facebook, WhatsApp previews) -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://hardikmehta.au"/>
+<meta property="og:title" content="Hardik Mehta - Digital Strategy &amp; Performance Leadership"/>
+<meta property="og:description" content="Melbourne-based digital strategy and performance leader. Building cross-channel strategies that connect brand goals to business growth, at scale."/>
+<meta property="og:locale" content="en_AU"/>
+<meta property="og:site_name" content="Hardik Mehta"/>
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hardik Mehta - Digital Strategy &amp; Performance Leadership"/>
+<meta name="twitter:description" content="Melbourne-based digital strategy and performance leader. Building cross-channel strategies that connect brand goals to business growth, at scale."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#08090c;--bg2:#0f1117;--bg3:#161a22;--bg4:#1a1f2e;--bg5:#0c1018;--gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:rgba(201,168,76,0.15);--white:#f0ede6;--muted:#7a7a8a;--border:rgba(201,168,76,0.18);--accent-blue:rgba(80,120,200,0.06);--accent-warm:rgba(201,140,76,0.05);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--white);font-family:"DM Mono",monospace;font-size:15px;line-height:1.75;overflow-x:hidden;}
+::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--gold);}
+nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:9999;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 5rem;background:rgba(8,9,12,0.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:"Syne",sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:0.08em;color:var(--gold);text-decoration:none;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;visibility:visible;opacity:1;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;transition:color 0.3s;}
+.nav-links a:hover{color:var(--gold);}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:10rem 7rem 5rem;position:relative;overflow:hidden;background:linear-gradient(125deg,#08090c 0%,#0c1220 30%,#101828 55%,#0e1018 80%,#08090c 100%);}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(201,168,76,0.06) 0%,transparent 60%);pointer-events:none;}
+.hero::after{content:"";position:absolute;right:-5%;top:15%;width:550px;height:550px;background:radial-gradient(circle,rgba(201,168,76,0.09) 0%,transparent 65%);pointer-events:none;}
+.hero-eyebrow{font-size:clamp(0.65rem,0.9vw,0.82rem);letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
+.hero-eyebrow::before{content:"";display:block;width:40px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(4rem,11vw,11rem);font-weight:300;line-height:0.95;margin-bottom:0.5rem;letter-spacing:-0.02em;}
+.hero h1 em{font-style:italic;color:var(--gold-light);}
+.hero-tagline{font-family:"Cormorant Garamond",serif;font-size:clamp(1.2rem,2vw,1.8rem);font-style:italic;color:rgba(240,237,230,0.60);margin:2rem 0 3rem;font-weight:300;max-width:600px;line-height:1.5;}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 2rem;font-family:"DM Mono",monospace;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;cursor:pointer;}
+.btn-primary{background:var(--gold);color:var(--bg);font-weight:500;}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);}
+.btn-outline{border:1px solid var(--border);color:var(--white);}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+.hero-right{display:flex;flex-direction:column;align-items:flex-end;gap:1.5rem;}
+.rating-badge{border:1px solid var(--border);padding:1.5rem 2rem;text-align:center;background:var(--bg2);position:relative;}
+.rating-badge::before{content:"2026 PERFORMANCE REVIEW";position:absolute;top:-0.6rem;left:50%;transform:translateX(-50%);font-size:0.6rem;letter-spacing:0.2em;background:var(--bg2);padding:0 0.8rem;color:var(--gold);}
+.rating-number{font-family:"Cormorant Garamond",serif;font-size:3.5rem;font-weight:300;color:var(--gold);line-height:1;}
+.rating-label{font-size:0.62rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;margin-top:0.4rem;}
+.hero-location{font-size:0.72rem;color:var(--muted);letter-spacing:0.1em;text-align:right;}
+.stats-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg3);overflow:hidden;}
+.stats-track{display:flex;animation:ticker 30s linear infinite;width:max-content;}
+.stats-track:hover{animation-play-state:paused;}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.stat-item{display:flex;align-items:center;gap:1.5rem;padding:1.2rem 3rem;white-space:nowrap;border-right:1px solid var(--border);}
+.stat-num{font-family:"Syne",sans-serif;font-size:1.3rem;font-weight:700;color:var(--gold);}
+.stat-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);}
+section{padding:5.5rem 5rem;}
+.section-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:1rem;}
+.section-label::after{content:"";flex:1;height:1px;background:var(--border);max-width:80px;}
+.section-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2.2rem,3.8vw,3.8rem);font-weight:300;line-height:1.15;margin-bottom:2.5rem;}
+.section-title em{font-style:italic;}
+#about{background:var(--bg2);border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start;}
+.about-text p{color:#b8b5ae;font-size:0.92rem;line-height:2;margin-bottom:1.4rem;}
+.about-text p strong{color:var(--white);font-weight:500;}
+.strength-list{margin-top:2rem;display:flex;flex-direction:column;gap:0.9rem;}
+.strength-item{display:flex;align-items:flex-start;gap:1.1rem;padding:1.1rem 1.4rem;border:1px solid var(--border);transition:border-color 0.3s,background 0.3s;}
+.strength-item:hover{border-color:var(--gold);background:var(--gold-dim);}
+.strength-icon{color:var(--gold);font-size:0.8rem;margin-top:0.15rem;flex-shrink:0;}
+.strength-text strong{display:block;font-family:"Syne",sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.05em;margin-bottom:0.3rem;}
+.strength-text span{color:var(--muted);font-size:0.8rem;line-height:1.7;}
+#experience{background:var(--bg5);background:linear-gradient(180deg,var(--bg5) 0%,var(--bg) 100%);}
+.exp-grid{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);}
+.exp-item{display:grid;grid-template-columns:240px 1fr;border-bottom:1px solid var(--border);transition:background 0.3s;}
+.exp-item:last-child{border-bottom:none;}
+.exp-item:hover{background:var(--bg2);}
+.exp-meta{padding:2.2rem 2rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:0.5rem;}
+.exp-company{font-family:"Syne",sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;color:var(--gold);}
+.exp-period{font-size:0.65rem;letter-spacing:0.1em;color:var(--muted);}
+.exp-location{font-size:0.65rem;color:var(--muted);margin-top:auto;padding-top:1rem;}
+.exp-content{padding:2.2rem 2.5rem;}
+.exp-role{font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:400;margin-bottom:0.3rem;color:var(--white);}
+.exp-sub-role{font-size:0.68rem;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.4rem;}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.9rem;}
+.exp-bullets li{font-size:0.85rem;color:#b0afa9;line-height:1.75;padding-left:1.4rem;position:relative;}
+.exp-bullets li::before{content:"\2192";position:absolute;left:0;color:var(--gold);font-size:0.75rem;top:0.05rem;}
+.exp-bullets li strong{color:var(--white);font-weight:500;}
+.exp-tag-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;}
+.exp-tag{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid var(--border);color:var(--muted);}
+#skills{background:var(--bg3);}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.skill-card{border:1px solid var(--border);padding:2rem 2.2rem;transition:border-color 0.3s,background 0.3s;position:relative;overflow:hidden;}
+.skill-card::before{content:"";position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.4s;}
+.skill-card:hover{border-color:var(--gold);background:var(--bg3);}
+.skill-card:hover::before{height:100%;}
+.skill-card-title{font-family:"Syne",sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;}
+.skill-tags{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.skill-tag{font-size:0.72rem;padding:0.35rem 0.85rem;background:rgba(8,9,12,0.7);border:1px solid rgba(201,168,76,0.14);color:#c0bdb6;transition:all 0.25s;line-height:1.4;}
+.skill-tag:hover{background:var(--gold-dim);border-color:var(--gold);color:var(--gold-light);}
+#certifications{background:linear-gradient(135deg,var(--bg) 0%,var(--bg4) 100%);}
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;border:1px solid var(--border);background:var(--border);}
+.cert-item{background:var(--bg);padding:2rem 2.5rem;display:flex;align-items:flex-start;gap:1.5rem;transition:background 0.3s;}
+.cert-item:hover{background:var(--bg2);}
+.cert-dot{width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:0.45rem;}
+.cert-name{font-family:"Cormorant Garamond",serif;font-size:1.1rem;font-weight:400;margin-bottom:0.3rem;}
+.cert-meta{font-size:0.66rem;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;margin-bottom:0.8rem;}
+.cert-skills{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.2rem;}
+.cert-skill{font-size:0.62rem;padding:0.2rem 0.65rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);color:var(--muted);letter-spacing:0.06em;}
+#education{background:var(--bg2);background:linear-gradient(180deg,var(--bg2) 0%,var(--bg3) 100%);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.edu-items{display:flex;flex-direction:column;gap:1.5rem;}
+.edu-item{border:1px solid var(--border);padding:2.2rem 2.5rem;}
+.edu-deg{font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-weight:400;margin-bottom:0.4rem;}
+.edu-school{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;}
+.edu-period{font-size:0.65rem;color:var(--muted);}
+.edu-spec{margin-top:1rem;font-size:0.8rem;color:var(--muted);font-style:italic;line-height:1.6;}
+#contact{background:linear-gradient(135deg,var(--bg5) 0%,var(--bg) 60%,var(--bg4) 100%);text-align:center;padding:5.5rem 5rem;position:relative;overflow:hidden;}
+#contact::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(201,168,76,0.05) 0%,transparent 70%);pointer-events:none;}
+.contact-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:300;line-height:1.1;margin-bottom:1.2rem;}
+.contact-title em{font-style:italic;color:var(--gold-light);}
+.contact-sub{font-size:0.85rem;color:var(--muted);margin-bottom:3rem;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.8;}
+.contact-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;}
+footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);}
+.footer-name{font-family:"Syne",sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.1em;color:var(--gold);}
+.footer-copy{font-size:0.65rem;letter-spacing:0.1em;color:var(--muted);}
+
+
+
+
+@media(max-width:900px){
+  nav{padding:1.2rem 1.5rem;}
+  .nav-links{display:none;}
+  .hero{flex-direction:column;padding:7rem 1.5rem 3rem;}
+  .hero-right{align-items:flex-start;}
+  section{padding:4rem 1.5rem;}
+  #about{grid-template-columns:1fr;gap:3rem;}
+  .skills-grid{grid-template-columns:1fr;}
+  .exp-item{grid-template-columns:1fr;}
+  .exp-meta{border-right:none;border-bottom:1px solid var(--border);}
+  .exp-content{padding:1.8rem 1.5rem;}
+  .cert-grid{grid-template-columns:1fr;}
+  #education{grid-template-columns:1fr;gap:2rem;}
+  footer{flex-direction:column;gap:0.5rem;text-align:center;padding:1.5rem;}
+}
+
+/* Back to top */
+.back-to-top{position:fixed;bottom:2.5rem;right:2.5rem;width:44px;height:44px;background:var(--gold);color:var(--bg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;z-index:999;opacity:0;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s,background 0.2s;pointer-events:none;}
+.back-to-top.show{opacity:1;transform:translateY(0);pointer-events:all;}
+.back-to-top:hover{background:var(--gold-light);}
+.li-btn{display:inline-flex;align-items:center;justify-content:center;padding:0.3rem;transition:opacity 0.25s;}.li-btn:hover{opacity:0.75;}
+/* ── INTERACTIVITY ─────────────────────────────────────── */
+/* Cursor glow */
+.cursor-glow{pointer-events:none;position:fixed;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.06) 0%,transparent 70%);transform:translate(-50%,-50%);transition:left 0.08s ease,top 0.08s ease;z-index:0;mix-blend-mode:screen;}
+
+/* Scroll reveal */
+.reveal{opacity:1;transform:translateY(0);transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1),transform 0.75s cubic-bezier(0.16,1,0.3,1);}.js-ready .reveal{opacity:0;transform:translateY(28px);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:0.1s;}
+.reveal-delay-2{transition-delay:0.2s;}
+.reveal-delay-3{transition-delay:0.3s;}
+.reveal-delay-4{transition-delay:0.4s;}
+
+/* Exp item hover - gold left border sweep */
+.exp-item{border-left:3px solid transparent;transition:background 0.3s,border-left-color 0.3s;}
+.exp-item:hover{background:var(--bg2);border-left-color:var(--gold);}
+
+/* Skill tag pop on hover */
+.skill-tag{transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);}
+.skill-tag:hover{transform:translateY(-2px);background:var(--gold-dim);border-color:var(--gold);color:var(--gold-light);}
+
+/* Cert item subtle scale */
+.cert-item{transition:background 0.3s,transform 0.25s;}
+.cert-item:hover{background:var(--bg2);transform:translateX(4px);}
+
+/* Stat item pulse on hover */
+.stat-item{transition:background 0.25s;}
+.stat-item:hover{background:rgba(201,168,76,0.05);}
+.stat-item:hover .stat-num{color:var(--gold-light);}
+
+/* Nav link underline slide */
+.nav-links a{position:relative;}
+.nav-links a::after{content:"";position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+.nav-links a:hover::after{width:100%;}
+
+/* Button shine effect */
+.btn-primary{position:relative;overflow:hidden;}
+.btn-primary::after{content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);transition:left 0.45s ease;}
+.btn-primary:hover::after{left:160%;}
+
+/* Section title underline grow */
+.section-title{position:relative;display:inline-block;}
+
+/* Hero h1 word stagger via spans added by JS */
+.word{display:inline-block;overflow:hidden;}
+.word-inner{display:inline-block;animation:wordReveal 0.9s cubic-bezier(0.16,1,0.3,1) both;}
+@keyframes wordReveal{from{transform:translateY(100%);opacity:0;}to{transform:translateY(0);opacity:1;}}
+
+/* Progress bar */
+.progress-bar{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:10000;transition:width 0.1s linear;}
+
+/* Theme toggle */
+.theme-toggle{position:fixed;bottom:2.5rem;left:2.5rem;width:44px;height:44px;background:var(--bg2);border:1px solid var(--border);color:var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;z-index:999;transition:all 0.3s;border-radius:0;}
+.theme-toggle:hover{background:var(--gold);color:var(--bg);}
+
+/* Light mode overrides */
+body.light-mode{
+  --bg:#f5f2eb;--bg2:#ede9e0;--bg3:#e4dfd4;--bg4:#ddd8cc;--bg5:#eae6db;
+  --white:#1c1a14;--muted:#5a5648;--border:rgba(150,120,50,0.22);
+  --gold:#a67c2e;--gold-light:#c49a3c;--gold-dim:rgba(166,124,46,0.12);
+}
+
+/* Nav */
+body.light-mode nav{background:rgba(245,242,235,0.95);border-bottom:1px solid rgba(150,120,50,0.2);}
+body.light-mode .nav-logo{color:var(--gold);}
+body.light-mode .nav-links a{color:#5a5648;}
+body.light-mode .nav-links a:hover{color:var(--gold);}
+body.light-mode .nav-links a.active{color:var(--gold);}
+
+/* Hero */
+body.light-mode .hero{background:linear-gradient(125deg,#ede8de 0%,#e4ddd0 30%,#ddd4c2 55%,#e4ddd0 80%,#ede8de 100%);}
+body.light-mode .hero::before{background:radial-gradient(ellipse at 70% 50%,rgba(166,124,46,0.08) 0%,transparent 60%);}
+body.light-mode .hero::after{background:radial-gradient(circle,rgba(166,124,46,0.1) 0%,transparent 65%);}
+body.light-mode .hero-eyebrow{color:var(--gold);}
+body.light-mode .hero-eyebrow::before{background:var(--gold);}
+body.light-mode .hero h1{color:#1c1a14;}
+body.light-mode .hero h1 em{color:var(--gold);}
+body.light-mode .hero-tagline{color:rgba(28,26,20,0.62);}
+body.light-mode .btn-primary{background:var(--gold);color:#fff;}
+body.light-mode .btn-primary:hover{background:var(--gold-light);}
+body.light-mode .btn-outline{border-color:rgba(150,120,50,0.35);color:#1c1a14;}
+body.light-mode .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+
+/* Stats bar */
+body.light-mode .stats-bar{background:var(--bg3);border-color:rgba(150,120,50,0.2);}
+body.light-mode .stat-item{border-right-color:rgba(150,120,50,0.15);}
+body.light-mode .stat-num{color:var(--gold);}
+body.light-mode .stat-label{color:#6a6458;}
+
+/* Section labels & titles */
+body.light-mode .section-label{color:var(--gold);}
+body.light-mode .section-label::after{background:rgba(150,120,50,0.2);}
+body.light-mode .section-title{color:#1c1a14;}
+
+/* About */
+body.light-mode #about{background:var(--bg2);}
+body.light-mode .about-text p{color:#3a3830;line-height:2;}
+body.light-mode .about-text p strong{color:#1c1a14;}
+body.light-mode .strength-item{border-color:rgba(150,120,50,0.2);background:var(--bg);}
+body.light-mode .strength-item:hover{border-color:var(--gold);background:var(--gold-dim);}
+body.light-mode .strength-icon{color:var(--gold);}
+body.light-mode .strength-text strong{color:#1c1a14;}
+body.light-mode .strength-text span{color:#5a5648;}
+
+/* Experience */
+body.light-mode #experience{background:var(--bg5);}
+body.light-mode .exp-grid{border-color:rgba(150,120,50,0.2);}
+body.light-mode .exp-item{border-bottom-color:rgba(150,120,50,0.15);border-left-color:transparent;}
+body.light-mode .exp-item:hover{background:var(--bg2);border-left-color:var(--gold);}
+body.light-mode .exp-meta{border-right-color:rgba(150,120,50,0.15);}
+body.light-mode .exp-company{color:var(--gold);}
+body.light-mode .exp-period{color:#6a6458;}
+body.light-mode .exp-location{color:#6a6458;}
+body.light-mode .exp-role{color:#1c1a14;}
+body.light-mode .exp-sub-role{color:var(--gold);}
+body.light-mode .exp-bullets li{color:#3a3830;}
+body.light-mode .exp-bullets li::before{color:var(--gold);}
+body.light-mode .exp-bullets li strong{color:#1c1a14;}
+body.light-mode .exp-tag{border-color:rgba(150,120,50,0.2);color:#5a5648;}
+
+/* Skills */
+body.light-mode #skills{background:var(--bg3);}
+body.light-mode .skill-card{border-color:rgba(150,120,50,0.2);background:var(--bg2);}
+body.light-mode .skill-card:hover{border-color:var(--gold);background:var(--bg);}
+body.light-mode .skill-card-title{color:var(--gold);}
+body.light-mode .skill-tag{background:var(--bg);border-color:rgba(150,120,50,0.18);color:#3a3830;}
+body.light-mode .skill-tag:hover{background:var(--gold-dim);border-color:var(--gold);color:var(--gold);}
+
+/* Certifications */
+body.light-mode #certifications{background:var(--bg5);}
+body.light-mode .cert-grid{border-color:rgba(150,120,50,0.2);background:rgba(150,120,50,0.1);}
+body.light-mode .cert-item{background:var(--bg);}
+body.light-mode .cert-item:hover{background:var(--bg2);}
+body.light-mode .cert-dot{background:var(--gold);}
+body.light-mode .cert-name{color:#1c1a14;}
+body.light-mode .cert-meta{color:#6a6458;}
+body.light-mode .cert-skill{background:rgba(166,124,46,0.07);border-color:rgba(150,120,50,0.18);color:#5a5648;}
+
+/* Education */
+body.light-mode #education{background:var(--bg2);}
+body.light-mode .edu-item{border-color:rgba(150,120,50,0.2);background:var(--bg);}
+body.light-mode .edu-deg{color:#1c1a14;}
+body.light-mode .edu-school{color:var(--gold);}
+body.light-mode .edu-period{color:#6a6458;}
+body.light-mode .edu-spec{color:#5a5648;}
+
+/* Contact */
+body.light-mode #contact{background:var(--bg3);}
+body.light-mode .contact-title{color:#1c1a14;}
+body.light-mode .contact-title em{color:var(--gold);}
+body.light-mode .contact-sub{color:#5a5648;}
+
+/* Footer */
+body.light-mode footer{background:var(--bg2);border-top-color:rgba(150,120,50,0.2);}
+body.light-mode .footer-name{color:var(--gold);}
+body.light-mode .footer-copy{color:#6a6458;}
+
+/* Back to top + theme toggle */
+body.light-mode .back-to-top{background:var(--gold);color:#fff;}
+body.light-mode .back-to-top:hover{background:var(--gold-light);}
+body.light-mode .theme-toggle{background:var(--bg2);border-color:rgba(150,120,50,0.25);color:var(--gold);}
+body.light-mode .theme-toggle:hover{background:var(--gold);color:#fff;}
+
+/* Progress bar */
+body.light-mode .progress-bar{background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+
+/* Scrollbar */
+body.light-mode ::-webkit-scrollbar-track{background:var(--bg2);}
+body.light-mode ::-webkit-scrollbar-thumb{background:var(--gold);}
+
+/* Grain texture overlay */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:0.022;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px 256px;}
+
+/* Active nav */
+.nav-links a.active{color:var(--gold);}
+.nav-links a.active::after{width:100%;}
+
 /* Smooth section blends */
 section{position:relative;}
 section+section::before{content:"";position:absolute;top:-60px;left:0;right:0;height:120px;background:inherit;filter:blur(0);pointer-events:none;z-index:1;}
