@@ -1,991 +1,1393 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="en-AU" data-theme="light">
 <head>
-<!-- Google tag (gtag.js) -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
+<meta name="theme-color" content="#f4f7f5"/>
+
+<title>Hardik Mehta - Director of AI Innovation &amp; Performance, Melbourne</title>
+<meta name="description" content="Hardik Mehta is Director of AI Innovation &amp; Performance at Impressive Digital in Melbourne. Performance strategy for the agency's largest accounts, and the tools the rest of the team works in."/>
+<meta name="author" content="Hardik Mehta"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://hardikmehta.au"/>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cg fill='%23116b52'%3E%3Crect x='3.2' y='7' width='3.4' height='18' rx='1.7'/%3E%3Crect x='21.4' y='3' width='3.4' height='22' rx='1.7'/%3E%3Crect x='6' y='12.3' width='16' height='3.4' rx='1.7'/%3E%3C/g%3E%3C/svg%3E"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://hardikmehta.au"/>
+<meta property="og:title" content="Hardik Mehta - Director of AI Innovation &amp; Performance"/>
+<meta property="og:description" content="Performance strategy for an agency's largest accounts, and the tools the rest of the team works in."/>
+<meta property="og:locale" content="en_AU"/>
+<meta property="og:site_name" content="Hardik Mehta"/>
+<meta property="og:image" content="https://hardikmehta.au/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Hardik Mehta - Director of AI Innovation &amp; Performance"/>
+<meta name="twitter:description" content="Performance strategy for an agency's largest accounts, and the tools the rest of the team works in."/>
+<meta name="twitter:image" content="https://hardikmehta.au/og-image.png"/>
+
+<script>(function(){try{var t=localStorage.getItem('hm-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Manrope:wght@300..800&display=swap" rel="stylesheet"/>
+
+<style>
+/* ==========================================================
+   TOKENS
+   Every text colour is a tinted ink drawn off the brand hue.
+   Nothing in this palette is neutral grey.
+   ========================================================== */
+:root{
+  --paper:#f4f7f5;
+  --surface:#ffffff;
+  --tint:#e7f1ec;
+  --tint-2:#d7e9e1;
+  --line:#dbe8e2;
+  --line-2:#bcd6cb;
+
+  --ink:#0b201a;
+  --ink-2:#1f463a;
+  --ink-3:#3d6e5d;
+
+  --brand:#116b52;
+  --brand-2:#0c5340;
+  --on-brand:#ffffff;
+  --live:#1d9d57;
+
+  --slab:#0b201a;
+  --slab-2:#123029;
+  --slab-ink:#eaf4ef;
+  --slab-ink-2:#a9ccbd;
+  --slab-line:rgba(234,244,239,.15);
+
+  /* type scale */
+  --fs-display:clamp(3.1rem,10vw,8.2rem);
+  --fs-h2:clamp(1.95rem,3.6vw,3rem);
+  --fs-h3:1.16rem;
+  --fs-fig:clamp(2rem,3.4vw,2.6rem);
+  --fs-lede:clamp(1.02rem,1.35vw,1.16rem);
+  --fs-body:.945rem;
+  --fs-small:.845rem;
+  --fs-micro:.78rem;
+
+  /* spacing scale */
+  --sp-sec:clamp(4.5rem,8.5vw,7.5rem);
+  --sp-card:clamp(1.5rem,2.4vw,1.9rem);
+  --sp-gap:1.1rem;
+  --sp-head:clamp(2.6rem,5vw,4rem);
+
+  --r-xs:9px; --r-sm:14px; --r-md:20px; --r-lg:28px; --r-pill:999px;
+  --lock:.62;                      /* share of a viewport a panel takes to lock in */
+
+  --sh-1:0 1px 2px rgba(11,32,26,.05);
+  --sh-2:0 1px 2px rgba(11,32,26,.04),0 14px 30px -18px rgba(11,32,26,.22);
+  --sh-3:0 2px 6px rgba(11,32,26,.05),0 34px 74px -30px rgba(11,32,26,.34);
+  --sh-slab:0 -18px 44px -30px rgba(11,32,26,.32);
+
+  --e:cubic-bezier(.22,.61,.36,1);
+  --e-out:cubic-bezier(.16,1,.3,1);
+  --e-soft:cubic-bezier(.33,.9,.35,1);
+  --maxw:1160px;
+  --pad:clamp(1.25rem,5vw,3.5rem);
+
+  /* ambient, written each frame by the scroll and pointer loop */
+  --vel:0;--px:0;--py:0;
+}
+
+html[data-theme="dark"]{
+  --paper:#08120f;
+  --surface:#0e1b17;
+  --tint:rgba(79,199,158,.10);
+  --tint-2:rgba(79,199,158,.17);
+  --line:#1b302a;
+  --line-2:#2c4d42;
+
+  --ink:#e9f5f0;
+  --ink-2:#bcd8cc;
+  --ink-3:#8fbcaa;
+
+  --brand:#4fc79e;
+  --brand-2:#6fd7b3;
+  --on-brand:#06120e;
+  --live:#4ade80;
+
+  --slab:#102019;
+  --slab-2:#163027;
+  --slab-ink:#e9f5f0;
+  --slab-ink-2:#a9ccbd;
+  --slab-line:rgba(233,245,240,.12);
+
+  --sh-1:0 1px 0 rgba(255,255,255,.03);
+  --sh-2:0 1px 0 rgba(255,255,255,.035),0 18px 36px -22px rgba(0,0,0,.85);
+  --sh-3:0 1px 0 rgba(255,255,255,.04),0 40px 76px -34px rgba(0,0,0,.92);
+  --sh-slab:0 -18px 44px -30px rgba(0,0,0,.7);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:110px;-webkit-text-size-adjust:100%;}
+body{
+  background:var(--paper);color:var(--ink-2);
+  font-family:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:var(--fs-body);font-weight:450;line-height:1.72;letter-spacing:-.004em;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  transition:background-color .55s var(--e),color .55s var(--e);
+}
+::selection{background:var(--brand);color:var(--on-brand);}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:var(--r-xs);}
+::-webkit-scrollbar{width:11px;}
+::-webkit-scrollbar-track{background:var(--paper);}
+::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:var(--r-pill);border:3px solid var(--paper);}
+::-webkit-scrollbar-thumb:hover{background:var(--brand);}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.5s;}
+
+/* ==========================================================
+   TYPE
+   ========================================================== */
+h1,h2,h3{color:var(--ink);font-family:"Bricolage Grotesque","Manrope",sans-serif;font-optical-sizing:auto;}
+.display{font-size:var(--fs-display);font-weight:250;line-height:.92;letter-spacing:-.045em;}
+.h2{font-size:var(--fs-h2);font-weight:300;line-height:1.08;letter-spacing:-.038em;max-width:19ch;}
+.h3{font-size:var(--fs-h3);font-weight:550;line-height:1.28;letter-spacing:-.022em;}
+.fig{font-family:"Bricolage Grotesque","Manrope",sans-serif;font-size:var(--fs-fig);font-weight:260;line-height:1;letter-spacing:-.045em;color:var(--ink);font-variant-numeric:tabular-nums;}
+.lede{font-size:var(--fs-lede);font-weight:450;line-height:1.66;color:var(--ink-2);max-width:52ch;}
+.small{font-size:var(--fs-small);color:var(--ink-3);line-height:1.6;}
+.micro{font-size:var(--fs-micro);color:var(--ink-3);line-height:1.55;}
+strong,b{font-weight:650;color:var(--ink);}
+p+p{margin-top:1.05rem;}
+
+/* ==========================================================
+   LAYOUT + SLABS
+   ========================================================== */
+.wrap{max-width:var(--maxw);margin-inline:auto;width:100%;}
+section{padding:var(--sp-sec) var(--pad);position:relative;overflow:hidden;overflow:clip;}
+/* PANEL LOCK-IN.
+   A section arrives as an inset, heavily rounded panel sitting on the page,
+   and widens to full bleed with square corners as it takes the screen. The
+   background lives on a pseudo element so nothing in the content reflows. */
+.slab{position:relative;}
+.slab::before{
+  content:"";position:absolute;inset:0;left:var(--sx,0px);right:var(--sx,0px);z-index:0;
+  background:var(--slab-bg);
+  border-radius:var(--sr,0px) var(--sr,0px) 0 0;
+  box-shadow:
+    0 calc(var(--sx,0px) * -.22) calc(22px + var(--sx,0px) * .9) calc(-16px - var(--sx,0px) * .12) rgba(11,32,26,.34),
+    inset 0 1.5px 0 0 var(--slab-edge,transparent);
+  transition:background-color .55s var(--e);
+}
+.slab > .deco{left:var(--sx,0px);right:var(--sx,0px);border-radius:var(--sr,0px) var(--sr,0px) 0 0;z-index:1;}
+html[data-theme="dark"] .slab::before{box-shadow:inset 0 1.5px 0 0 rgba(255,255,255,.05);}
+.s-surface{--slab-bg:var(--surface);--slab-edge:rgba(255,255,255,.7);}
+.s-paper{--slab-bg:var(--paper);--slab-edge:rgba(255,255,255,.55);}
+.s-dark{--slab-bg:var(--slab);--slab-edge:rgba(255,255,255,.08);color:var(--slab-ink-2);}
+html[data-theme="dark"] .s-surface,html[data-theme="dark"] .s-paper{--slab-edge:rgba(255,255,255,.05);}
+.s-dark h2,.s-dark h3,.s-dark .fig,.s-dark strong{color:var(--slab-ink);}
+.s-dark .lede,.s-dark .small,.s-dark .micro{color:var(--slab-ink-2);}
+.head{margin-bottom:var(--sp-head);}
+.head-2{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(1.4rem,4vw,3.5rem);align-items:end;}
+
+/* ==========================================================
+   BUTTONS + CHIPS
+   ========================================================== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  padding:.86rem 1.65rem;border-radius:var(--r-pill);border:1.5px solid transparent;
+  font-family:inherit;font-size:.9rem;font-weight:650;letter-spacing:-.012em;
+  text-decoration:none;cursor:pointer;white-space:nowrap;position:relative;overflow:hidden;
+  transition:background-color .4s var(--e),border-color .4s var(--e),color .4s var(--e),transform .5s var(--e-out),box-shadow .4s var(--e);
+}
+.btn:hover{transform:translateY(-2px);}
+.btn:active{transform:translateY(0) scale(.98);}
+.btn-fill{background:var(--brand);color:var(--on-brand);box-shadow:var(--sh-1);}
+.btn-fill:hover{background:var(--brand-2);box-shadow:var(--sh-2);}
+.btn-ghost{border-color:var(--line-2);color:var(--ink);}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand);background:var(--tint);}
+.s-dark .btn-ghost{border-color:var(--slab-line);color:var(--slab-ink);}
+.s-dark .btn-ghost:hover{border-color:var(--brand);color:var(--brand);background:rgba(255,255,255,.04);}
+
+.chip{
+  display:inline-flex;align-items:center;padding:.32rem .74rem;border-radius:var(--r-pill);
+  background:var(--tint);color:var(--ink-3);font-size:var(--fs-micro);font-weight:550;letter-spacing:-.006em;
+  transition:background-color .35s var(--e),color .35s var(--e),transform .45s var(--e-out);
+}
+.chip:hover{background:var(--tint-2);color:var(--brand);transform:translateY(-3px);}
+.s-dark .chip{background:rgba(255,255,255,.06);color:var(--slab-ink-2);}
+.s-dark .chip:hover{background:rgba(79,199,158,.16);color:var(--brand);}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;}
+
+.flag{
+  display:inline-flex;align-items:center;gap:.5rem;padding:.32rem .82rem .32rem .6rem;
+  border-radius:var(--r-pill);background:var(--tint);color:var(--brand);
+  font-size:var(--fs-micro);font-weight:650;letter-spacing:-.005em;
+}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--live);position:relative;flex:none;}
+.dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1.5px solid var(--live);animation:ping 2.9s var(--e) infinite;}
+@keyframes ping{0%{transform:scale(.5);opacity:.75;}72%,100%{transform:scale(1.7);opacity:0;}}
+
+/* ==========================================================
+   NAV
+   ========================================================== */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:1500;padding:.95rem var(--pad);transition:padding .55s var(--e);}
+.topbar.stuck{padding-block:.6rem;}
+.shell{
+  max-width:var(--maxw);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.46rem .5rem .46rem .9rem;border:1.5px solid transparent;border-radius:var(--r-pill);
+  transition:background-color .55s var(--e),border-color .55s var(--e),box-shadow .55s var(--e),max-width .65s var(--e);
+}
+.topbar.stuck .shell{
+  max-width:900px;background:var(--surface);background:color-mix(in srgb,var(--surface) 84%,transparent);
+  border-color:var(--line);box-shadow:var(--sh-2);
+  backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);
+}
+.brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);}
+.brand .mark{width:26px;height:26px;color:var(--brand);flex:none;overflow:visible;}
+.brand .mark .up,.brand .mark .bar,.brand .mark .pip{fill:currentColor;}
+.brand .mark .l{transform-box:view-box;transform-origin:4.9px 25px;transform:scaleY(.8);transition:transform .7s var(--e-out);}
+.brand:hover .mark .l{transform:scaleY(1);}
+.brand .mark .bar{opacity:.34;}
+.brand .mark .pip{transform-box:view-box;animation:pip 3.6s cubic-bezier(.45,.02,.55,.98) infinite alternate;}
+@keyframes pip{from{transform:translateX(0);}to{transform:translateX(10.4px);}}
+.brand .wm{font-family:"Bricolage Grotesque","Manrope",sans-serif;font-weight:600;font-size:1rem;letter-spacing:-.035em;}
+.nav-right{display:flex;align-items:center;gap:.35rem;}
+.menu{position:relative;display:flex;align-items:center;list-style:none;}
+.menu a{
+  position:relative;z-index:1;display:block;padding:.44rem .8rem;border-radius:var(--r-pill);
+  font-size:.865rem;font-weight:550;color:var(--ink-3);text-decoration:none;transition:color .35s var(--e);
+}
+.menu a:hover,.menu a.on{color:var(--ink);}
+.glider{position:absolute;top:0;left:0;height:100%;border-radius:var(--r-pill);background:var(--tint);opacity:0;z-index:0;pointer-events:none;transition:transform .55s var(--e),width .55s var(--e),opacity .35s var(--e);}
+.ibtn{
+  width:36px;height:36px;border-radius:var(--r-pill);border:1.5px solid transparent;background:transparent;
+  color:var(--ink-3);cursor:pointer;display:grid;place-items:center;
+  transition:background-color .35s var(--e),color .35s var(--e),transform .5s var(--e-out);
+}
+.ibtn:hover{background:var(--tint);color:var(--brand);transform:rotate(-12deg);}
+.ibtn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+html[data-theme="light"] .moon,html[data-theme="dark"] .sun{display:none;}
+.burger{display:none;}
+.burger:hover{transform:none;}
+.burger span{display:block;width:16px;height:1.7px;background:currentColor;border-radius:2px;transition:transform .45s var(--e),opacity .25s;}
+.burger span+span{margin-top:4.6px;}
+.burger.open span:nth-child(1){transform:translateY(6.3px) rotate(45deg);}
+.burger.open span:nth-child(2){opacity:0;}
+.burger.open span:nth-child(3){transform:translateY(-6.3px) rotate(-45deg);}
+.drawer{display:none;max-width:var(--maxw);margin:.5rem auto 0;overflow:hidden;border:1.5px solid var(--line);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--sh-3);max-height:0;transition:max-height .55s var(--e);}
+.drawer.open{max-height:430px;}
+.drawer ul{list-style:none;padding:.5rem;}
+.drawer a{display:block;padding:.72rem .9rem;border-radius:var(--r-sm);text-decoration:none;color:var(--ink);font-weight:550;font-size:.95rem;transition:background-color .3s;}
+.drawer a:hover{background:var(--tint);}
+
+/* ==========================================================
+   DECOR SHAPES (scroll driven)
+   ========================================================== */
+.deco{
+  position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;
+  transform:translate3d(calc(var(--px) * 13px),calc(var(--vel) * 26px + var(--py) * 10px),0);
+  will-change:transform;
+}
+section>.wrap{position:relative;z-index:2;}
+
+/* slow colour fields */
+/* a colour field: the wrapper is moved by scroll, the field drifts inside it */
+.drifter{position:absolute;will-change:transform;}
+.blobby{
+  position:absolute;inset:0;border-radius:50%;filter:blur(78px);
+  animation:drift var(--drift,64s) ease-in-out infinite alternate;
+}
+.blobby.green{background:radial-gradient(circle,var(--brand) 0%,transparent 66%);opacity:.13;}
+.blobby.teal{background:radial-gradient(circle,#4f9ea0 0%,transparent 66%);opacity:.15;}
+.blobby.deep{background:radial-gradient(circle,#2f8f6f 0%,transparent 66%);opacity:.26;}
+html[data-theme="dark"] .blobby.green{opacity:.2;}
+html[data-theme="dark"] .blobby.teal{opacity:.19;}
+
+/* a faint rule grid, hollowed out where the text sits, that parallaxes past */
+.mesh{
+  position:absolute;inset:0;pointer-events:none;opacity:.45;will-change:transform;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:68px 68px;
+  -webkit-mask-image:radial-gradient(82% 76% at 50% 50%,transparent 32%,#000 66%,transparent 95%);
+  mask-image:radial-gradient(82% 76% at 50% 50%,transparent 32%,#000 66%,transparent 95%);
+}
+
+/* a soft shaft of light that sweeps across as the section passes */
+.beam{
+  position:absolute;top:-34%;bottom:-34%;width:min(34vw,380px);left:6%;
+  background:linear-gradient(90deg,transparent,var(--brand),transparent);
+  opacity:.14;filter:blur(48px);will-change:transform;
+}
+@keyframes drift{
+  from{transform:translate3d(0,0,0) scale(1);}
+  to{transform:translate3d(var(--dx,4%),var(--dy,-5%),0) scale(var(--ds,1.12));}
+}
+
+/* a dot field lit by a pool of light that wanders */
+.field{
+  position:absolute;inset:-12%;pointer-events:none;color:var(--slab-ink);opacity:.085;
+  background-image:radial-gradient(currentColor 1.1px,transparent 1.1px);
+  background-size:30px 30px;
+  -webkit-mask-image:radial-gradient(closest-side,#000,transparent);
+  mask-image:radial-gradient(closest-side,#000,transparent);
+  -webkit-mask-size:66% 66%;mask-size:66% 66%;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  animation:sweep 72s ease-in-out infinite alternate,pan 140s linear infinite;
+}
+@keyframes sweep{
+  0%{-webkit-mask-position:4% 6%;mask-position:4% 6%;}
+  50%{-webkit-mask-position:84% 48%;mask-position:84% 48%;}
+  100%{-webkit-mask-position:20% 92%;mask-position:20% 92%;}
+}
+@keyframes pan{to{background-position:30px 30px;}}
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+.hero{padding-top:clamp(7.5rem,15vw,10.5rem);padding-bottom:clamp(2rem,4vw,3.5rem);overflow:hidden;}
+html[data-theme="dark"] .hero .blobby.b1{opacity:.22;}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr);gap:clamp(2rem,5vw,4.5rem);align-items:center;}
+.hero-role{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:1.5rem;color:var(--ink-3);font-size:.93rem;font-weight:550;}
+.hero-role .rule{width:26px;height:1.5px;background:var(--brand);flex:none;margin-top:.8em;border-radius:2px;}
+.hero-say{margin:1.6rem 0 2.1rem;font-size:var(--fs-lede);line-height:1.64;color:var(--ink-2);max-width:38ch;}
+.hero-cta{display:flex;gap:.7rem;flex-wrap:wrap;}
+
+.panel{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--sh-3);padding:1.45rem 1.55rem 1.3rem;transition:background-color .55s var(--e),border-color .55s var(--e);}
+.panel-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-bottom:1.05rem;border-bottom:1.5px solid var(--line);}
+.fn{display:grid;grid-template-columns:98px 1fr;gap:.3rem 1rem;align-items:baseline;padding:.78rem 0;border-bottom:1.5px solid var(--line);}
+.fn:last-of-type{border-bottom:0;padding-bottom:.15rem;}
+.fn dt{font-size:var(--fs-small);font-weight:650;color:var(--ink);letter-spacing:-.014em;white-space:nowrap;}
+.fn dd{font-size:var(--fs-small);line-height:1.56;color:var(--ink-3);}
+
+/* ==========================================================
+   PROOF
+   ========================================================== */
+.proof{padding-top:0;padding-bottom:calc(var(--sp-sec) * .7);}
+.proof-card{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--sh-2);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden;transition:background-color .55s var(--e),border-color .55s var(--e);}
+.stat{padding:1.8rem var(--sp-card);border-right:1.5px solid var(--line);transition:background-color .4s var(--e);}
+.stat:last-child{border-right:0;}
+.stat:hover{background:var(--tint);}
+.stat .fig{display:block;margin-bottom:.55rem;}
+.stat span{display:block;font-size:var(--fs-small);color:var(--ink-3);line-height:1.5;}
+
+/* ==========================================================
+   APPROACH
+   ========================================================== */
+.approach{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.06fr);gap:clamp(2rem,5vw,4.5rem);align-items:start;}
+.rows{border-top:1.5px solid var(--line);}
+.row{position:relative;display:grid;grid-template-columns:128px 1fr;gap:1.1rem;align-items:start;padding:1.25rem .85rem;border-radius:var(--r-md);transition:background-color .45s var(--e),transform .55s var(--e-out);}
+.row::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--line);}
+.row:hover{background:var(--tint);transform:translateX(6px);}
+.row dt{font-size:var(--fs-small);font-weight:650;color:var(--ink);letter-spacing:-.016em;}
+.row dd{font-size:var(--fs-small);line-height:1.7;color:var(--ink-3);}
+
+/* ==========================================================
+   BUILD
+   ========================================================== */
+.feature{
+  background:var(--slab-2);
+  background:color-mix(in srgb,#ffffff 5%,var(--slab));
+  border:1.5px solid var(--slab-line);border-radius:var(--r-lg);
+  padding:clamp(1.7rem,3.2vw,2.6rem);margin-bottom:var(--sp-gap);
+  display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(1.6rem,4vw,3.2rem);align-items:center;
+}
+.feature p{font-size:var(--fs-body);line-height:1.76;color:var(--slab-ink-2);max-width:56ch;}
+.feature .h3{font-size:clamp(1.3rem,2.3vw,1.7rem);font-weight:400;letter-spacing:-.032em;margin:.7rem 0 .85rem;}
+.mini{display:grid;gap:.9rem;}
+.mini div{border-left:2px solid var(--brand);padding-left:.95rem;}
+.mini b{display:block;font-family:"Bricolage Grotesque","Manrope",sans-serif;font-size:1.55rem;font-weight:260;letter-spacing:-.04em;color:var(--slab-ink);line-height:1.1;font-variant-numeric:tabular-nums;}
+.mini span{display:block;font-size:var(--fs-micro);color:var(--slab-ink-2);line-height:1.5;margin-top:.15rem;}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-gap);}
+.card{
+  position:relative;background:var(--slab-2);
+  background:color-mix(in srgb,#ffffff 4%,var(--slab));
+  border:1.5px solid var(--slab-line);
+  border-radius:var(--r-md);padding:var(--sp-card);display:flex;flex-direction:column;
+  transition:border-color .5s var(--e),background-color .5s var(--e),transform .6s var(--e-out);
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(79,199,158,.45);background:color-mix(in srgb,#ffffff 8%,var(--slab));}
+.card .fig{transition:color .45s var(--e);}
+.card:hover .fig{color:var(--brand);}
+.card-cap{font-size:var(--fs-micro);color:var(--slab-ink-2);line-height:1.5;margin:.45rem 0 1.25rem;}
+.card .h3{margin-bottom:.55rem;}
+.card p{font-size:var(--fs-small);line-height:1.68;color:var(--slab-ink-2);margin-bottom:1.3rem;flex:1;}
+.card .chips{margin-top:auto;}
+.note{margin-top:var(--sp-gap);background:var(--slab-2);background:color-mix(in srgb,#ffffff 3%,var(--slab));border:1.5px dashed var(--slab-line);border-radius:var(--r-md);padding:1.15rem 1.5rem;font-size:var(--fs-small);line-height:1.72;color:var(--slab-ink-2);}
+
+/* ==========================================================
+   TIMELINE
+   ========================================================== */
+.tl{position:relative;padding-left:0;}
+.spine{position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--line);border-radius:2px;overflow:hidden;}
+.spine i{position:absolute;inset:0;background:var(--brand);transform-origin:top;transform:scaleY(var(--sp,0));border-radius:2px;}
+.tl-item{border-bottom:1.5px solid var(--line);}
+.tl-item:first-child{border-top:1.5px solid var(--line);}
+.tl-head{
+  width:100%;display:grid;grid-template-columns:1fr auto;gap:1.2rem;align-items:center;
+  background:none;border:0;cursor:pointer;text-align:left;color:inherit;font:inherit;
+  padding:1.45rem 1rem 1.45rem 1.4rem;border-radius:var(--r-md);
+  transition:background-color .45s var(--e),padding-left .55s var(--e-out);
+}
+.tl-head:hover{background:var(--tint);padding-left:1.9rem;}
+.tl-role{display:block;font-family:"Bricolage Grotesque","Manrope",sans-serif;font-size:clamp(1.1rem,1.9vw,1.42rem);font-weight:400;letter-spacing:-.03em;color:var(--ink);transition:color .4s var(--e);}
+.tl-item.open .tl-role{color:var(--brand);}
+.tl-meta{display:flex;flex-wrap:wrap;gap:.3rem .8rem;margin-top:.3rem;font-size:var(--fs-small);color:var(--ink-3);}
+.tl-meta .org{color:var(--ink-2);font-weight:650;}
+.tl-meta i{font-style:normal;color:var(--line-2);}
+.caret{width:31px;height:31px;border-radius:var(--r-pill);border:1.5px solid var(--line);display:grid;place-items:center;flex:none;color:var(--ink-3);transition:transform .55s var(--e),border-color .4s,color .4s,background-color .4s;}
+.caret svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
+.tl-item.open .caret{transform:rotate(180deg);background:var(--brand);border-color:var(--brand);color:var(--on-brand);}
+.tl-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--e);}
+.tl-item.open .tl-panel{grid-template-rows:1fr;}
+.tl-panel>div{overflow:hidden;}
+.tl-body{padding:.1rem 1rem 1.9rem 1.4rem;max-width:78ch;opacity:0;transform:translateY(8px);transition:opacity .5s var(--e) .12s,transform .5s var(--e) .12s;}
+.tl-item.open .tl-body{opacity:1;transform:none;}
+.tl-body ul{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.25rem;}
+.tl-body li{position:relative;padding-left:1.35rem;font-size:var(--fs-small);line-height:1.74;color:var(--ink-2);}
+.tl-body li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--brand);}
+
+/* ==========================================================
+   CAPABILITY / CREDENTIALS
+   ========================================================== */
+/* industries */
+.sectors{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-gap);}
+.sector{
+  background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-md);
+  padding:var(--sp-card);transition:border-color .45s var(--e),transform .55s var(--e-out);
+}
+.sector:hover{border-color:var(--line-2);transform:translateY(-4px);}
+.sector h3{
+  font-size:.95rem;font-weight:600;letter-spacing:-.02em;color:var(--ink);
+  padding-bottom:.85rem;margin-bottom:.95rem;border-bottom:1.5px solid var(--line);
+}
+.sector ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.sector li{position:relative;padding-left:1.05rem;font-size:var(--fs-small);line-height:1.5;color:var(--ink-3);}
+.sector li::before{content:"";position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--brand);opacity:.6;}
+
+.caps{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-gap);}
+.cap{background:var(--paper);border:1.5px solid var(--line);border-radius:var(--r-md);padding:var(--sp-card);transition:border-color .45s var(--e),transform .55s var(--e-out),background-color .5s var(--e);}
+.cap:hover{border-color:var(--line-2);transform:translateY(-4px);}
+.cap h3{font-size:.96rem;font-weight:600;letter-spacing:-.02em;margin-bottom:.95rem;}
+.creds{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(2rem,4vw,3.5rem);align-items:start;}
+.cred-list{border-top:1.5px solid var(--line);}
+.cred{position:relative;padding:1.05rem .85rem;border-radius:var(--r-md);transition:background-color .45s var(--e),transform .55s var(--e-out);}
+.cred::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--line);}
+.cred:hover{background:var(--tint);transform:translateX(6px);}
+.cred h3{font-size:.97rem;font-weight:600;letter-spacing:-.02em;}
+.cred .small{margin-top:.12rem;}
+.cred .chips{margin-top:.55rem;}
+.edu{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-md);padding:var(--sp-card);margin-bottom:var(--sp-gap);transition:border-color .45s,transform .55s var(--e-out),background-color .5s var(--e);}
+.edu:hover{border-color:var(--line-2);transform:translateY(-4px);}
+.edu .org{color:var(--brand);font-size:var(--fs-small);font-weight:650;letter-spacing:-.008em;}
+.edu h3{font-size:1.1rem;font-weight:450;letter-spacing:-.028em;margin:.28rem 0 .18rem;}
+.edu .yr{font-size:var(--fs-small);color:var(--ink-3);font-weight:550;}
+.edu p{font-size:var(--fs-small);color:var(--ink-3);line-height:1.68;margin-top:.65rem;}
+
+/* ==========================================================
+   CONTACT + FOOTER
+   ========================================================== */
+.cta-card{
+  position:relative;overflow:hidden;background:var(--brand);color:var(--on-brand);
+  border-radius:var(--r-lg);padding:clamp(2.6rem,6vw,4.4rem) clamp(1.5rem,5vw,4rem);
+  text-align:center;box-shadow:var(--sh-3);
+}
+.cta-card::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(58% 90% at 86% -12%,rgba(255,255,255,.18),transparent 62%),radial-gradient(48% 78% at 8% 112%,rgba(255,255,255,.12),transparent 60%);}
+.cta-card h2,.cta-card p,.cta-card .btn{position:relative;z-index:2;}
+.cta-card h2{color:var(--on-brand);font-size:clamp(1.95rem,4vw,3rem);font-weight:300;letter-spacing:-.042em;line-height:1.08;max-width:17ch;margin-inline:auto;}
+.cta-card p{color:var(--on-brand);opacity:.76;margin:1.05rem auto 2.1rem;max-width:42ch;font-size:1rem;}
+.cta-card .btn{background:var(--on-brand);color:var(--brand);}
+footer{border-top:1.5px solid var(--line);padding:1.7rem calc(var(--pad) + 58px) 1.7rem var(--pad);display:flex;align-items:center;justify-content:space-between;gap:.6rem 1.5rem;flex-wrap:wrap;font-size:var(--fs-small);color:var(--ink-3);}
+footer b{font-weight:650;color:var(--ink);}
+
+/* ==========================================================
+   COMMAND PALETTE + TO TOP
+   ========================================================== */
+.kbtn{display:inline-flex;align-items:center;gap:.5rem;height:36px;padding:0 .72rem;border:1.5px solid var(--line);border-radius:var(--r-pill);background:transparent;color:var(--ink-3);font-family:inherit;font-size:.8rem;font-weight:550;cursor:pointer;transition:border-color .35s var(--e),color .35s var(--e),background-color .35s var(--e);}
+.kbtn:hover{border-color:var(--brand);color:var(--brand);background:var(--tint);}
+.kbtn kbd{font-family:inherit;font-size:.75rem;opacity:.85;}
+.cmd{position:fixed;inset:0;z-index:3000;display:none;align-items:flex-start;justify-content:center;padding:14vh 1.25rem 2rem;background:rgba(11,32,26,.45);backdrop-filter:blur(7px);}
+.cmd.open{display:flex;}
+.cmd-box{width:100%;max-width:470px;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--sh-3);overflow:hidden;animation:cmdIn .42s var(--e-out) both;}
+@keyframes cmdIn{from{opacity:0;transform:translateY(-12px) scale(.97);}to{opacity:1;transform:none;}}
+.cmd-box input{width:100%;background:none;border:0;border-bottom:1.5px solid var(--line);padding:1rem 1.2rem;font-family:inherit;font-size:.95rem;color:var(--ink);}
+.cmd-box input:focus{outline:none;}
+.cmd-box input::placeholder{color:var(--ink-3);}
+.cmd-list{list-style:none;max-height:46vh;overflow-y:auto;padding:.4rem;}
+.cmd-list li{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.65rem .8rem;border-radius:var(--r-sm);font-size:.9rem;color:var(--ink-2);cursor:pointer;transition:background-color .22s,color .22s;}
+.cmd-list li em{font-style:normal;font-size:var(--fs-micro);color:var(--ink-3);}
+.cmd-list li[aria-selected="true"]{background:var(--tint);color:var(--brand);}
+.cmd-foot{padding:.65rem 1.2rem;border-top:1.5px solid var(--line);font-size:var(--fs-micro);color:var(--ink-3);}
+.to-top{position:fixed;right:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);z-index:1400;width:44px;height:44px;border-radius:var(--r-pill);border:1.5px solid var(--line);background:var(--surface);color:var(--ink-3);cursor:pointer;display:grid;place-items:center;box-shadow:var(--sh-2);opacity:0;transform:translateY(14px) scale(.85);pointer-events:none;transition:opacity .45s var(--e),transform .6s var(--e-out),background-color .35s,color .35s,border-color .35s;}
+.to-top.show{opacity:1;transform:none;pointer-events:auto;}
+.to-top:hover{background:var(--brand);color:var(--on-brand);border-color:var(--brand);transform:translateY(-3px);}
+.to-top svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
+
+/* ==========================================================
+   MOTION
+   ========================================================== */
+.js [data-rv]{opacity:0;transform:translateY(16px) scale(.988);}
+[data-rv]{transition:opacity .72s var(--e-soft) calc(var(--i,0) * 80ms),transform .82s var(--e-out) calc(var(--i,0) * 80ms);}
+[data-rv].in{opacity:1;transform:none;}
+.w{display:inline-block;overflow:hidden;vertical-align:bottom;margin-right:.26em;}
+.w>span{display:inline-block;will-change:transform;}
+.js .w>span{transform:translateY(105%);}
+.in .w>span,.ready .hero-name .w>span{transform:none;transition:transform .9s var(--e-out) calc(var(--wi,0) * 52ms);}
+.js .hero-role,.js .hero-say,.js .hero-cta,.js .panel{opacity:0;}
+.js .panel{transform:translateY(22px);}
+.ready .hero-role{opacity:1;transition:opacity .75s var(--e) .12s;}
+.ready .hero-say{opacity:1;transition:opacity .85s var(--e) .55s;}
+.ready .hero-cta{opacity:1;transition:opacity .85s var(--e) .68s;}
+.ready .panel{opacity:1;transform:none;transition:opacity .95s var(--e) .38s,transform .95s var(--e-out) .38s,background-color .55s var(--e),border-color .55s var(--e);}
+.fig.rolling{filter:blur(5px);opacity:.65;}
+.fig{transition:filter .5s var(--e),opacity .5s var(--e),color .45s var(--e);}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media(max-width:1080px){
+  .sectors{grid-template-columns:repeat(2,1fr);}
+  .cards{grid-template-columns:repeat(2,1fr);}
+  .kbtn{display:none;}
+  .feature{grid-template-columns:1fr;gap:1.8rem;}
+  .mini{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:940px){
+  .menu{display:none;}
+  .burger{display:grid;}
+  .drawer{display:block;}
+  .hero-grid{grid-template-columns:1fr;gap:2.3rem;}
+  .panel{max-width:560px;}
+  .approach{grid-template-columns:1fr;gap:2.1rem;}
+  .head-2{grid-template-columns:1fr;gap:1rem;align-items:start;}
+  .h2{max-width:24ch;}
+  .creds{grid-template-columns:1fr;}
+  .proof-card{grid-template-columns:repeat(2,1fr);}
+  .stat:nth-child(2){border-right:0;}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1.5px solid var(--line);}
+  .topbar.stuck .shell{max-width:var(--maxw);}
+  .spine{display:none;}
+  .tl-head{padding-left:.9rem;}
+  .tl-body{padding-left:.9rem;}
+  .tl-head:hover{padding-left:1.3rem;}
+}
+@media(max-width:680px){
+  .sectors{grid-template-columns:1fr;}
+  .cards{grid-template-columns:1fr;}
+  .caps{grid-template-columns:1fr;}
+  .hero-cta{flex-direction:column;align-items:stretch;}
+  .row{grid-template-columns:1fr;gap:.3rem;}
+  .mini{grid-template-columns:1fr;}
+  footer{justify-content:flex-start;}
+}
+@media(max-width:420px){
+  .proof-card{grid-template-columns:1fr;}
+  .stat{border-right:0;border-bottom:1.5px solid var(--line);}
+  .stat:last-child{border-bottom:0;}
+  .fn{grid-template-columns:1fr;gap:.18rem;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}
+  .js [data-rv]{opacity:1!important;transform:none!important;}
+  .js .w>span{transform:none!important;}
+  .js .hero-role,.js .hero-say,.js .hero-cta,.js .panel{opacity:1!important;transform:none!important;}
+  .dot::after{display:none;}
+  .slab::before{left:0!important;right:0!important;border-radius:0!important;}
+  .blobby,.field,.mesh,.beam{display:none;}
+  .brand .mark .pip{animation:none!important;transform:translateX(5.2px)!important;}
+  .deco{transform:none!important;}
+  .fig.rolling{filter:none;opacity:1;}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="btn btn-fill" style="position:fixed;left:-9999px;top:1rem;z-index:4000;" onfocus="this.style.left='1rem'" onblur="this.style.left='-9999px'">Skip to content</a>
+
+<div class="topbar" id="topbar">
+  <div class="shell">
+    <a class="brand" href="#top" aria-label="Hardik Mehta, back to top">
+      <svg class="mark" id="mark" viewBox="0 0 28 28" aria-hidden="true">
+        <rect class="up l" x="3.2" y="3" width="3.4" height="22" rx="1.7"/>
+        <rect class="up r" x="21.4" y="3" width="3.4" height="22" rx="1.7"/>
+        <rect class="bar" x="6" y="13.3" width="16" height="2.4" rx="1.2"/>
+        <circle class="pip" cx="8.8" cy="14.5" r="2.6"/>
+      </svg>
+      <span class="wm">Hardik Mehta</span>
+    </a>
+    <div class="nav-right">
+      <ul class="menu" id="menu">
+        <span class="glider" id="glider" aria-hidden="true"></span>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#build">Build</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#capability">Capability</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+      </ul>
+      <button class="kbtn" id="cmdOpen" aria-label="Open quick navigation">Search <kbd>&#8984;K</kbd></button>
+      <button class="ibtn" id="themeBtn" aria-label="Switch theme">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2M12 19.4v2M21.4 12h-2M4.6 12h-2M18.4 5.6 17 7M7 17l-1.4 1.4M18.4 18.4 17 17M7 7 5.6 5.6"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.2 8.2 0 1 0 10.2 10.2Z"/></svg>
+      </button>
+      <button class="ibtn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="Mobile">
+    <ul>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#build">Build</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#capability">Capability</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#contact">Get in touch</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="deco" aria-hidden="true">
+    <span class="drifter" data-shape data-speed="150" data-x="-40" style="width:min(60vw,740px);height:min(60vw,740px);right:-14vw;top:-18vw;"><i class="blobby green" style="--dx:-3.5%;--dy:4%;--ds:1.1;--drift:66s;"></i></span>
+    <span class="drifter" data-shape data-speed="-120" data-x="50" style="width:min(46vw,520px);height:min(46vw,520px);left:-16vw;top:36vh;"><i class="blobby teal" style="--dx:5%;--dy:-6%;--ds:1.16;--drift:88s;"></i></span>
+  </div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hero-role"><span class="rule"></span>Director of AI Innovation &amp; Performance, Melbourne</p>
+      <h1 class="display hero-name">
+        <span class="w" style="--wi:0"><span>Hardik</span></span><br/>
+        <span class="w" style="--wi:1"><span>Mehta</span></span>
+      </h1>
+      <p class="hero-say">I own performance strategy for an agency's largest accounts, and the data function the rest of the business runs on.</p>
+      <div class="hero-cta">
+        <a href="#build" class="btn btn-fill" onclick="track('CTA','Hero build')">See what I build</a>
+        <a href="#contact" class="btn btn-ghost" onclick="track('CTA','Hero contact')">Get in touch</a>
+      </div>
+    </div>
+
+    <aside class="panel" aria-label="What I am building now">
+      <div class="panel-top">
+        <span class="flag"><span class="dot" aria-hidden="true"></span>Currently building</span>
+        <span class="micro">2026</span>
+      </div>
+      <dl>
+        <div class="fn"><dt>Leadership</dt><dd>A single performance score per client, sortable across the whole book</dd></div>
+        <div class="fn"><dt>Paid media</dt><dd>Account reviews in minutes, so specialists spend their time deciding</dd></div>
+        <div class="fn"><dt>SEO</dt><dd>Keyword work, technical audits and content plans, largely automated</dd></div>
+        <div class="fn"><dt>Finance</dt><dd>Budget drift caught in the month, not in the reconciliation</dd></div>
+        <div class="fn"><dt>Client service</dt><dd>Onboarding, meeting notes and handovers, handled where the work happens</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= PROOF ================= -->
+<section class="proof">
+  <div class="wrap">
+    <div class="proof-card" data-rv>
+      <div class="stat"><b class="fig" data-count="671" data-pre="$" data-suf="K">0</b><span>New recurring revenue secured</span></div>
+      <div class="stat"><b class="fig" data-count="350" data-pre="$" data-suf="K">0</b><span>Project revenue delivered</span></div>
+      <div class="stat"><b class="fig" data-count="12" data-suf="&#215;">0</b><span>Average return on ad spend</span></div>
+      <div class="stat"><b class="fig" data-count="93" data-suf="%">0</b><span>Pitch success rate</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPROACH ================= -->
+<section id="approach" class="slab s-surface">
+  <div class="deco" aria-hidden="true">
+    <span class="mesh" data-shape data-speed="86"></span>
+    <span class="drifter" data-shape data-speed="-140" data-x="46" style="width:min(42vw,480px);height:min(42vw,480px);left:-14vw;bottom:-16vw;"><i class="blobby green" style="--dx:4%;--dy:-4%;--ds:1.14;--drift:76s;"></i></span>
+  </div>
+  <div class="wrap">
+    <div class="head" data-rv>
+      <h2 class="h2" data-split>Half the week with clients. Half the week on the data function.</h2>
+    </div>
+    <div class="approach">
+      <div data-rv>
+        <p class="lede">One half is the agency's largest accounts. Strategy, quarterly reviews, pitch work and the media investment decisions behind them, held against revenue rather than platform metrics.</p>
+        <p>The other half is the data function. Most agencies bolt AI onto the edge of what they already do and call it transformation. I am building the layer underneath: consistent measurement, one definition of performance across paid and organic, and reporting senior people will actually make decisions on. Automation only compounds on top of that.</p>
+        <p>Every build carries a business case. Build cost, run cost, maintenance, and the billable hours it returns. A good share of what gets proposed does not clear that bar, and killing those is worth as much as shipping the rest. What does get built is built with the team who will own it, because a tool nobody adopts is a write-off.</p>
+      </div>
+      <dl class="rows">
+        <div class="row" data-rv style="--i:0"><dt>Strategy</dt><dd>Business objectives translated into media strategy, with revenue, market position and the customer journey making the call rather than the platform.</dd></div>
+        <div class="row" data-rv style="--i:1"><dt>Data</dt><dd>One definition of performance across paid and organic, and the measurement discipline to make it hold up in front of a client or a board.</dd></div>
+        <div class="row" data-rv style="--i:2"><dt>Tooling</dt><dd>Tools, agents and pipelines, each with a business case. The decision to build is a commercial one that happens to have a technical answer.</dd></div>
+        <div class="row" data-rv style="--i:3"><dt>People</dt><dd>A team of four, and an agency that has to adopt what gets built. Adoption is the number I am judged on, not delivery.</dd></div>
+        <div class="row" data-rv style="--i:4"><dt>Partnerships</dt><dd>The agency's programmatic partnership and annual spend commitment, plus the platform and vendor relationships that sit around it.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUILD ================= -->
+<section id="build" class="slab s-dark">
+  <div class="deco" aria-hidden="true">
+    <span class="field"></span>
+    <span class="beam" data-shape data-x="620" data-rot="14"></span>
+    <span class="drifter" data-shape data-speed="200" data-x="-70" style="width:min(62vw,740px);height:min(62vw,740px);right:-18vw;top:-16vw;"><i class="blobby deep" style="--dx:-4%;--dy:5%;--ds:1.12;--drift:82s;"></i></span>
+    <span class="drifter" data-shape data-speed="-170" data-x="60" style="width:min(44vw,500px);height:min(44vw,500px);left:-14vw;bottom:-12vw;"><i class="blobby teal" style="--dx:5%;--dy:-5%;--ds:1.18;--drift:104s;"></i></span>
+  </div>
+  <div class="wrap">
+    <div class="head head-2" data-rv>
+      <h2 class="h2" data-split>What I build</h2>
+      <p class="lede">Each of these carried a business case before a line of it existed, and each is measured on the hours it returns to fee-earning work.</p>
+    </div>
+
+    <div class="feature" data-rv>
+      <div>
+        <span class="flag">The main one</span>
+        <h3 class="h3">An ad account reviewer that does the reading</h3>
+        <p>A proper account review costs a specialist the better part of a day: hundreds of settings, thousands of keywords, and very little of it judgement. This does the reading in minutes, checks the 243 things a strong specialist would check across Google, Meta and Microsoft, and writes both the findings and the client deck. What it does not do is decide. That stays with the strategist, which is the only part of the job worth paying for.</p>
+      </div>
+      <div class="mini">
+        <div><b class="num" data-count="243">0</b><span>Things checked on every account</span></div>
+        <div><b class="num" data-count="3">0</b><span>Ad platforms, one consistent review</span></div>
+        <div><b>Minutes</b><span>Instead of most of a working day</span></div>
+      </div>
+    </div>
+
+    <div class="cards">
+
+      <article class="card" data-rv style="--i:0">
+        <span class="fig" data-count="6">0</span>
+        <span class="card-cap">Data sources answered in one question</span>
+        <h3 class="h3">Ask AI</h3>
+        <p>Ad platforms, analytics, Search Console and Merchant Center sit in separate systems, so nobody sees the whole picture. This answers one question across all of them in plain English. Read-only by design, so it can never touch a live account.</p>
+        <div class="chips"><span class="chip">Google Ads</span><span class="chip">Meta</span><span class="chip">GA4</span></div>
+      </article>
+
+      <article class="card" data-rv style="--i:1">
+        <span class="fig" data-count="90" data-suf="+">0</span>
+        <span class="card-cap">Client accounts scored every week</span>
+        <h3 class="h3">Client health scorecard</h3>
+        <p>Leadership had four reports and no answer. Every client now carries one score built from advertising, SEO, budget position and satisfaction, so underperformance surfaces before the client raises it.</p>
+        <div class="chips"><span class="chip">Google Ads</span><span class="chip">Meta</span><span class="chip">HubSpot</span></div>
+      </article>
+
+      <article class="card" data-rv style="--i:2">
+        <span class="fig" data-count="42" data-suf="%">0</span>
+        <span class="card-cap">Fewer accounts going over budget</span>
+        <h3 class="h3">Budget pacing</h3>
+        <p>Overspend used to surface on the invoice, and the credit note followed. Every account is now checked against budget each morning, and drift is flagged while there is still margin to correct it.</p>
+        <div class="chips"><span class="chip">Apps Script</span><span class="chip">Google Ads</span><span class="chip">Microsoft Ads</span></div>
+      </article>
+
+      <article class="card" data-rv style="--i:3">
+        <span class="fig" data-count="15" data-pre="$" data-suf="K+">0</span>
+        <span class="card-cap">Wasted advertising spend recovered</span>
+        <h3 class="h3">Negative keyword agent</h3>
+        <p>Every account quietly funds searches nobody intended to buy. This reads the search terms daily, isolates the waste, and returns a list the team approves in one click, with the saving tracked rather than estimated.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Agents</span><span class="chip">Google Ads</span></div>
+      </article>
+
+      <article class="card" data-rv style="--i:4">
+        <span class="fig" data-count="31">0</span>
+        <span class="card-cap">Project sections built automatically</span>
+        <h3 class="h3">Inbox to project</h3>
+        <p>Onboarding a client used to cost an hour of an account manager's day. One click in Gmail now builds the project board, drafts the replies, and turns meeting notes into assigned work.</p>
+        <div class="chips"><span class="chip">Gmail</span><span class="chip">Asana</span><span class="chip">Meeting notes</span></div>
+      </article>
+
+      <article class="card" data-rv style="--i:5">
+        <span class="fig" data-count="1" data-suf="&#215;/mo">0</span>
+        <span class="card-cap">Client reports, built without a designer</span>
+        <h3 class="h3">Monthly reporting</h3>
+        <p>Client reporting was assembled slide by slide, every month, for every account. The numbers, charts and commentary now land in a finished deck, so the time goes into the recommendation instead.</p>
+        <div class="chips"><span class="chip">Google Slides</span><span class="chip">GA4</span><span class="chip">Meta</span></div>
+      </article>
+
+    </div>
+
+    <p class="note" data-rv>Smaller pieces, all in service. A content planner that reads a client's site and the live search results, then drafts the brief, the questions and the page copy for around twelve cents a page. Measurement for the traffic now arriving from AI assistants rather than search engines. A handover tool that reads a client's full email history and reports where the account actually stands. And a Mac app that folds my calendar, tasks and meeting notes into one view.</p>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="slab s-paper">
+  <div class="deco" aria-hidden="true">
+    <span class="mesh" data-shape data-speed="-74"></span>
+  </div>
+  <div class="wrap">
+    <div class="head head-2" data-rv>
+      <h2 class="h2" data-split>Experience</h2>
+      <p class="lede">Nine years, from running campaigns to running the systems a whole agency depends on.</p>
+    </div>
+
+    <div class="tl" id="tl" data-rv>
+      <div class="spine" id="spine" aria-hidden="true"><i></i></div>
+
+      <div class="tl-item open">
+        <button class="tl-head" aria-expanded="true">
+          <span>
+            <span class="tl-role">Director of AI Innovation &amp; Performance</span>
+            <span class="tl-meta"><span class="org">Impressive Digital</span><i>/</i><span>Jul 2026 to present</span><i>/</i><span>Melbourne</span></span>
+          </span>
+          <span class="caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="tl-panel"><div><div class="tl-body">
+          <ul>
+            <li>A split remit by design. Half of it is performance director work on the agency's largest accounts and its commercial strategy. The other half is the agency-wide <strong>data, AI and automation function</strong>, built from scratch</li>
+            <li>Own the agency's <strong>AI and automation roadmap</strong>: around fifty initiatives spanning paid media, SEO, operations and finance, each scoped and sequenced around how the teams actually work rather than what is technically interesting</li>
+            <li>Lead the build of an <strong>AI-first paid media platform</strong>, rolled out one channel at a time so adoption is real rather than announced</li>
+            <li>Built the <strong>agency-wide client health scorecard</strong>, resolving advertising, SEO, budget status and client sentiment into one score that sorts by client, by team and across the agency</li>
+            <li>Lead a <strong>team of four</strong></li>
+            <li>Own the agency's <strong>programmatic partnership</strong> and annual spend agreement, rebuilt from the ground up across the client book after a cycle of over-committed budgets</li>
+            <li>New business contribution to date sits at <strong>$671K recurring</strong> and <strong>$350K in project revenue</strong></li>
+          </ul>
+          <div class="chips"><span class="chip">AI strategy</span><span class="chip">Automation roadmap</span><span class="chip">Product leadership</span><span class="chip">Commercial strategy</span><span class="chip">Team leadership</span><span class="chip">Programmatic</span></div>
+        </div></div></div>
+      </div>
+
+      <div class="tl-item">
+        <button class="tl-head" aria-expanded="false">
+          <span>
+            <span class="tl-role">Senior Performance Manager</span>
+            <span class="tl-meta"><span class="org">Impressive Digital</span><i>/</i><span>Aug 2024 to Jul 2026</span><i>/</i><span>Melbourne</span></span>
+          </span>
+          <span class="caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="tl-panel"><div><div class="tl-body">
+          <ul>
+            <li>Strategic partner to senior clients and agency leadership, leading quarterly business reviews and shaping the investment decisions behind them</li>
+            <li>Owned go-to-market strategy across a <strong>portfolio of 19 clients</strong> at an average <strong>12&#215; return on ad spend</strong></li>
+            <li>Drove <strong>38% year on year revenue growth</strong> for a luxury furniture brand against a 25% target, by diagnosing the full funnel and restructuring paid investment around brand and commercial goals</li>
+            <li>Delivered <strong>five consecutive record months</strong> for a B2B industrial client, and scaled a B2B tech client into the <strong>US market</strong> using first and third party audience data</li>
+            <li>Built the agency's first <strong>AI-native tooling</strong>: an automated account reviewer across Google, Meta and Microsoft Ads, budget pacing, and a negative keyword agent</li>
+            <li>Led the response to a <strong>Google Ads manager account security incident</strong> across a 531 account structure, diagnosing the attack vector and coordinating remediation</li>
+            <li>Named <strong>agency ambassador for AI and programmatic</strong>, and hit a <strong>93% pitch success rate</strong> with hypothesis-led pre-sales audits framed in business terms rather than platform metrics</li>
+          </ul>
+          <div class="chips"><span class="chip">Client strategy</span><span class="chip">Paid media R&amp;D</span><span class="chip">Programmatic</span><span class="chip">Pre-sales audits</span><span class="chip">Mentoring</span></div>
+        </div></div></div>
+      </div>
+
+      <div class="tl-item">
+        <button class="tl-head" aria-expanded="false">
+          <span>
+            <span class="tl-role">Client Strategy Manager</span>
+            <span class="tl-meta"><span class="org">Impressive Digital</span><i>/</i><span>Nov 2023 to Aug 2024</span><i>/</i><span>Melbourne</span></span>
+          </span>
+          <span class="caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="tl-panel"><div><div class="tl-body">
+          <ul>
+            <li>Drove digital strategy for <strong>15 clients</strong> at an average <strong>10&#215; return on ad spend</strong>, securing <strong>$350K in new revenue</strong> from budgets up to $60K per channel</li>
+            <li>Secured a <strong>16% increase in market share</strong> for a key client through competitor analysis and consumer insight work</li>
+            <li>Led adoption of AI-driven research tools, lifting the quality of client-facing recommendations</li>
+            <li>Ran campaign implementation and strategic website overhauls across UI and UX, using agile delivery</li>
+          </ul>
+          <div class="chips"><span class="chip">Google Ads</span><span class="chip">Meta Ads</span><span class="chip">UX and UI</span><span class="chip">Agile</span><span class="chip">Market research</span></div>
+        </div></div></div>
+      </div>
+
+      <div class="tl-item">
+        <button class="tl-head" aria-expanded="false">
+          <span>
+            <span class="tl-role">Digital Marketing Coordinator</span>
+            <span class="tl-meta"><span class="org">Miller Leith</span><i>/</i><span>May 2022 to Nov 2023</span><i>/</i><span>Melbourne</span></span>
+          </span>
+          <span class="caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="tl-panel"><div><div class="tl-body">
+          <ul>
+            <li>Co-led a <strong>full company rebrand</strong>, driving the research, brand definition and every digital and visual element, delivering an <strong>11% lift in brand recognition</strong> and a <strong>37% improvement in website engagement</strong></li>
+            <li>Built and ran a data-driven social media strategy covering long-form video and paid amplification</li>
+            <li>Spearheaded executive-level events, managing high-stakes client relationships that converted into new leads and partnerships</li>
+            <li>Started and ran the company CSR program, aligning organisational values with community impact</li>
+          </ul>
+          <div class="chips"><span class="chip">Rebranding</span><span class="chip">Social</span><span class="chip">Event strategy</span><span class="chip">CSR</span></div>
+        </div></div></div>
+      </div>
+
+      <div class="tl-item">
+        <button class="tl-head" aria-expanded="false">
+          <span>
+            <span class="tl-role">Earlier roles</span>
+            <span class="tl-meta"><span class="org">Pizza Monster, RMIT University, Ekvity Ventures</span><i>/</i><span>2017 to 2021</span></span>
+          </span>
+          <span class="caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="tl-panel"><div><div class="tl-body">
+          <ul>
+            <li><strong>Digital Marketing Specialist, Pizza Monster</strong>, 2021. Optimised Google Search and Shopping for opening day, yielding over 40 online orders and 35 walk-ins, and built a consistent brand presence across every channel</li>
+            <li><strong>Creative Manager, RMIT University</strong>, 2019 to 2021. Led a team of six delivering university-wide events for more than 15,000 students, owning logistics, communications and on-the-day delivery, with a feedback loop tying digital activity straight to outcomes</li>
+            <li><strong>Digital Marketing Executive, Ekvity Ventures</strong>, 2017 to 2018. Led a team of five through a full rebrand, widening the target audience from 35+ to 18+ and driving 16% growth in existing clientele, alongside a website redesign, a nationwide quarterly newsletter, and organic growth through SEO and content</li>
+          </ul>
+          <div class="chips"><span class="chip">Brand identity</span><span class="chip">Event marketing</span><span class="chip">SEO</span><span class="chip">Web design</span></div>
+        </div></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= INDUSTRIES ================= -->
+<section id="industries" class="slab s-paper">
+  <div class="deco" aria-hidden="true">
+    <span class="mesh" data-shape data-speed="70"></span>
+  </div>
+  <div class="wrap">
+    <div class="head head-2" data-rv>
+      <h2 class="h2" data-split>Industries</h2>
+      <p class="lede">Sixteen sectors across ecommerce, lead generation and considered purchase. The mechanics change from one to the next. The commercial questions do not.</p>
+    </div>
+    <div class="sectors">
+
+      <div class="sector" data-rv style="--i:0">
+        <h3>Retail and ecommerce</h3>
+        <ul>
+          <li>Luxury furniture and interiors</li>
+          <li>Automotive accessories and 4WD</li>
+          <li>Food, beverage and FMCG</li>
+          <li>Pet and specialty retail</li>
+        </ul>
+      </div>
+
+      <div class="sector" data-rv style="--i:1">
+        <h3>Industrial and trade</h3>
+        <ul>
+          <li>Manufacturing</li>
+          <li>Trade and power tools</li>
+          <li>Building products and hardware</li>
+          <li>Commercial fitout and furniture</li>
+        </ul>
+      </div>
+
+      <div class="sector" data-rv style="--i:2">
+        <h3>Considered purchase</h3>
+        <ul>
+          <li>Automotive retail and dealer networks</li>
+          <li>Health and medical services</li>
+          <li>Education and training</li>
+          <li>Home improvement and services</li>
+        </ul>
+      </div>
+
+      <div class="sector" data-rv style="--i:3">
+        <h3>Technology and enterprise</h3>
+        <ul>
+          <li>B2B software and platforms</li>
+          <li>Property technology</li>
+          <li>Business process outsourcing</li>
+          <li>Talent and recruitment</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAPABILITY ================= -->
+<section id="capability" class="slab s-surface">
+  <div class="deco" aria-hidden="true">
+    <span class="mesh" data-shape data-speed="64"></span>
+    <span class="drifter" data-shape data-speed="170" data-x="-50" style="width:min(38vw,430px);height:min(38vw,430px);right:-14vw;top:-8vw;"><i class="blobby green" style="--dx:-4%;--dy:5%;--ds:1.12;--drift:94s;"></i></span>
+  </div>
+  <div class="wrap">
+    <div class="head head-2" data-rv>
+      <h2 class="h2" data-split>Capability</h2>
+      <p class="lede">What I work with, on both sides of the role.</p>
+    </div>
+    <div class="caps">
+      <div class="cap" data-rv style="--i:0">
+        <h3>Strategy and commercial</h3>
+        <div class="chips"><span class="chip">Digital strategy</span><span class="chip">Go-to-market</span><span class="chip">Commercial modelling</span><span class="chip">Forecasting</span><span class="chip">Auditing</span><span class="chip">Market research</span><span class="chip">Consumer behaviour</span><span class="chip">Brand</span><span class="chip">Quarterly business reviews</span><span class="chip">Partner negotiation</span><span class="chip">Roadmap and KPI design</span></div>
+      </div>
+      <div class="cap" data-rv style="--i:1">
+        <h3>AI and automation</h3>
+        <div class="chips"><span class="chip">Claude API</span><span class="chip">Prompt engineering</span><span class="chip">Agents</span><span class="chip">MCP development</span><span class="chip">Claude Code</span><span class="chip">Grounding and evals</span><span class="chip">Apps Script</span><span class="chip">n8n</span><span class="chip">Zapier</span></div>
+      </div>
+      <div class="cap" data-rv style="--i:2">
+        <h3>Platforms, data and engineering</h3>
+        <div class="chips"><span class="chip">Google Ads API</span><span class="chip">Meta Graph API</span><span class="chip">Microsoft Ads API</span><span class="chip">Merchant API</span><span class="chip">GA4</span><span class="chip">Search Console</span><span class="chip">HubSpot</span><span class="chip">Node.js</span><span class="chip">Python</span><span class="chip">Cloud Run</span><span class="chip">Firestore</span><span class="chip">BigQuery</span></div>
+      </div>
+      <div class="cap" data-rv style="--i:3">
+        <h3>Media and analytics</h3>
+        <div class="chips"><span class="chip">Google Ads</span><span class="chip">Meta Ads</span><span class="chip">Microsoft Ads</span><span class="chip">TikTok</span><span class="chip">LinkedIn</span><span class="chip">Amazon Ads</span><span class="chip">Programmatic and DSP</span><span class="chip">Retail media</span><span class="chip">Looker Studio</span><span class="chip">Power BI</span><span class="chip">SEMrush</span><span class="chip">Ahrefs</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CREDENTIALS ================= -->
+<section id="credentials" class="slab s-paper">
+  <div class="deco" aria-hidden="true">
+    <span class="mesh" data-shape data-speed="-80"></span>
+  </div>
+  <div class="wrap">
+    <div class="head" data-rv><h2 class="h2" data-split>Credentials</h2></div>
+    <div class="creds">
+      <div data-rv>
+        <div class="cred-list">
+          <div class="cred"><h3>Digital Marketing Strategy</h3><p class="small">ADMA, August 2023</p>
+            <div class="chips"><span class="chip">Strategy</span><span class="chip">Customer journey</span><span class="chip">Market research</span><span class="chip">Paid advertising</span></div></div>
+          <div class="cred"><h3>Behavioural Economics</h3><p class="small">ADMA, December 2024</p>
+            <div class="chips"><span class="chip">Consumer behaviour</span><span class="chip">Decision psychology</span><span class="chip">Strategic planning</span></div></div>
+          <div class="cred"><h3>Social Media Strategy</h3><p class="small">Australian Institute of Management, October 2022</p>
+            <div class="chips"><span class="chip">Social strategy</span><span class="chip">Content marketing</span><span class="chip">Audience engagement</span></div></div>
+          <div class="cred"><h3>Google Analytics Certification</h3><p class="small">Google</p>
+            <div class="chips"><span class="chip">GA4</span><span class="chip">Attribution</span><span class="chip">Measurement</span><span class="chip">Forecasting</span></div></div>
+          <div class="cred"><h3>Google Ads Shopping Certification</h3><p class="small">Google</p>
+            <div class="chips"><span class="chip">Shopping</span><span class="chip">Paid search</span><span class="chip">Feed strategy</span></div></div>
+          <div class="cred"><h3>Google Ads Measurement Certification</h3><p class="small">Google</p>
+            <div class="chips"><span class="chip">Measurement</span><span class="chip">Attribution</span><span class="chip">Planning</span></div></div>
+        </div>
+      </div>
+      <div data-rv style="--i:1">
+        <div class="edu">
+          <p class="org">RMIT University, Melbourne</p>
+          <h3>Master of Information Technology</h3>
+          <p class="yr">Feb 2019 to Nov 2020</p>
+          <p>Software engineering, project management and usability engineering. The reason the building half of the job came naturally.</p>
+        </div>
+        <div class="edu">
+          <p class="org">University of Mumbai</p>
+          <h3>Bachelor of Financial Accounting</h3>
+          <p class="yr">2015 to 2018</p>
+          <p>Economics, management accounting and trade finance. Where the commercial lens came from.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-card" data-rv>
+      <h2 data-split>Open to the right conversation</h2>
+      <p>Strategic partnerships, advisory work, and how AI actually lands inside an agency rather than how it demos.</p>
+      <a href="https://www.linkedin.com/in/hardik--mehta/" target="_blank" rel="noopener" class="btn" onclick="track('CTA','Contact LinkedIn')">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span><b>Hardik Mehta</b></span>
+  <span>Designed and built by me, in Melbourne</span>
+  <span>2026</span>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="cmd" id="cmd" role="dialog" aria-modal="true" aria-label="Quick navigation">
+  <div class="cmd-box">
+    <input id="cmdInput" type="text" placeholder="Jump to a section..." autocomplete="off" spellcheck="false"/>
+    <ul class="cmd-list" id="cmdList" role="listbox"></ul>
+    <p class="cmd-foot">Arrows to move, Enter to go, Esc to close</p>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Hardik Mehta",
+  "url":"https://hardikmehta.au",
+  "jobTitle":"Director of AI Innovation & Performance",
+  "description":"Melbourne-based performance and AI leader. Performance strategy for an agency's largest accounts, and the tools and automation the rest of the team works in.",
+  "alumniOf":[{"@type":"CollegeOrUniversity","name":"RMIT University"},{"@type":"CollegeOrUniversity","name":"University of Mumbai"}],
+  "address":{"@type":"PostalAddress","addressLocality":"Melbourne","addressRegion":"VIC","addressCountry":"AU"},
+  "sameAs":["https://www.linkedin.com/in/hardik--mehta/"],
+  "knowsAbout":["AI Automation","AI Agents","Model Context Protocol","Prompt Engineering","Performance Marketing","Paid Media","Google Ads","Meta Ads","Microsoft Advertising","Programmatic Advertising","Retail Media","Digital Strategy","Commercial Strategy","Marketing Analytics","Agency Operations"],
+  "worksFor":{"@type":"Organization","name":"Impressive Digital","address":{"@type":"PostalAddress","addressLocality":"Melbourne","addressRegion":"VIC","addressCountry":"AU"}}
+}
+</script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXR9F8S8LB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-YXR9F8S8LB');
+  function track(c,l){ try{ gtag('event','click',{event_category:c,event_label:l}); }catch(e){} }
 </script>
-
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-
-<!-- SEO -->
-<title>Hardik Mehta - Digital Strategy &amp; Performance Leadership | Melbourne</title>
-<meta name="description" content="Hardik Mehta is a Melbourne-based digital strategy and performance leader with 8+ years experience driving business growth through cross-channel marketing, paid media, and commercial strategy."/>
-<meta name="author" content="Hardik Mehta"/>
-<meta name="keywords" content="Hardik Mehta, Digital Strategy, Performance Marketing, Performance Manager, Paid Media, Google Ads, Meta Ads, Marketing Strategy, Melbourne, Agency Strategy, Brand Strategy"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://hardikmehta.au"/>
-
-<!-- Favicon -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2308090c'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='62' fill='%23c9a84c' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E"/>
-
-<!-- Open Graph (LinkedIn, Facebook, WhatsApp previews) -->
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://hardikmehta.au"/>
-<meta property="og:title" content="Hardik Mehta - Digital Strategy &amp; Performance Leadership"/>
-<meta property="og:description" content="Melbourne-based digital strategy and performance leader. Building cross-channel strategies that connect brand goals to business growth, at scale."/>
-<meta property="og:locale" content="en_AU"/>
-<meta property="og:site_name" content="Hardik Mehta"/>
-
-<!-- Twitter / X Card -->
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hardik Mehta - Digital Strategy &amp; Performance Leadership"/>
-<meta name="twitter:description" content="Melbourne-based digital strategy and performance leader. Building cross-channel strategies that connect brand goals to business growth, at scale."/>
-
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<style>
-:root{--bg:#08090c;--bg2:#0f1117;--bg3:#161a22;--bg4:#1a1f2e;--bg5:#0c1018;--gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:rgba(201,168,76,0.15);--white:#f0ede6;--muted:#9494a3;--border:rgba(201,168,76,0.18);--accent-blue:rgba(80,120,200,0.06);--accent-warm:rgba(201,140,76,0.05);}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--white);font-family:"DM Mono",monospace;font-size:15px;line-height:1.75;overflow-x:hidden;}
-::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--gold);}
-nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:9999;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 5rem;background:rgba(8,9,12,0.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:"Syne",sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:0.08em;color:var(--gold);text-decoration:none;z-index:2;}
-.nav-links{display:flex;gap:1.8rem;list-style:none;visibility:visible;opacity:1;align-items:center;}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;transition:color 0.3s;}
-.nav-links a:hover{color:var(--gold);}
-/* Hamburger toggle (mobile only) */
-.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:11px;z-index:2;}
-.nav-toggle span{display:block;width:22px;height:2px;background:var(--gold);transition:transform 0.3s,opacity 0.3s;border-radius:2px;}
-.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.nav-toggle.open span:nth-child(2){opacity:0;}
-.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:10rem 5rem 5rem;position:relative;overflow:hidden;background:linear-gradient(125deg,#08090c 0%,#0c1220 30%,#101828 55%,#0e1018 80%,#08090c 100%);}
-.hero-left{max-width:680px;}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(201,168,76,0.06) 0%,transparent 60%);pointer-events:none;}
-.hero::after{content:"";position:absolute;right:-5%;top:15%;width:550px;height:550px;background:radial-gradient(circle,rgba(201,168,76,0.09) 0%,transparent 65%);pointer-events:none;}
-.hero-eyebrow{font-size:clamp(0.65rem,0.9vw,0.82rem);letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
-.hero-eyebrow::before{content:"";display:block;width:40px;height:1px;background:var(--gold);flex-shrink:0;}
-.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(3.6rem,11vw,11rem);font-weight:300;line-height:0.95;margin-bottom:0.5rem;letter-spacing:-0.02em;}
-.hero h1 em{font-style:italic;color:var(--gold-light);}
-.hero-tagline{font-family:"Cormorant Garamond",serif;font-size:clamp(1.2rem,2vw,1.8rem);font-style:italic;color:rgba(240,237,230,0.60);margin:2rem 0 3rem;max-width:600px;line-height:1.5;font-weight:300;}
-.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;}
-.btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 2rem;font-family:"DM Mono",monospace;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;cursor:pointer;}
-.btn-primary{background:var(--gold);color:var(--bg);font-weight:500;}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);}
-.btn-outline{border:1px solid var(--border);color:var(--white);}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
-.stats-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg3);overflow:hidden;}
-.stats-track{display:flex;animation:ticker 30s linear infinite;width:max-content;}
-.stats-track:hover{animation-play-state:paused;}
-@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-.stat-item{display:flex;align-items:center;gap:1.5rem;padding:1.2rem 3rem;white-space:nowrap;border-right:1px solid var(--border);}
-.stat-num{font-family:"Syne",sans-serif;font-size:1.3rem;font-weight:700;color:var(--gold);}
-.stat-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);}
-section{padding:5.5rem 5rem;}
-.section-label{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:1rem;}
-.section-label::after{content:"";flex:1;height:1px;background:var(--border);max-width:80px;}
-.section-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2.2rem,3.8vw,3.8rem);font-weight:300;line-height:1.15;margin-bottom:2.5rem;}
-.section-title em{font-style:italic;}
-#about{background:var(--bg2);border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start;}
-.about-text p{color:#b8b5ae;font-size:0.92rem;line-height:2;margin-bottom:1.4rem;}
-.about-text p strong{color:var(--white);font-weight:500;}
-.strength-list{margin-top:2rem;display:flex;flex-direction:column;gap:0.9rem;}
-.strength-item{display:flex;align-items:flex-start;gap:1.1rem;padding:1.1rem 1.4rem;border:1px solid var(--border);transition:border-color 0.3s,background 0.3s;}
-.strength-item:hover{border-color:var(--gold);background:var(--gold-dim);}
-.strength-icon{color:var(--gold);font-size:0.8rem;margin-top:0.15rem;flex-shrink:0;}
-.strength-text strong{display:block;font-family:"Syne",sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.05em;margin-bottom:0.3rem;}
-.strength-text span{color:var(--muted);font-size:0.8rem;line-height:1.7;}
-#experience{background:var(--bg5);background:linear-gradient(180deg,var(--bg5) 0%,var(--bg) 100%);}
-.exp-grid{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);}
-.exp-item{display:grid;grid-template-columns:240px 1fr;border-bottom:1px solid var(--border);transition:background 0.3s;}
-.exp-item:last-child{border-bottom:none;}
-.exp-item:hover{background:var(--bg2);}
-.exp-meta{padding:2.2rem 2rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:0.5rem;}
-.exp-company{font-family:"Syne",sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;color:var(--gold);}
-.exp-period{font-size:0.65rem;letter-spacing:0.1em;color:var(--muted);}
-.exp-location{font-size:0.65rem;color:var(--muted);margin-top:auto;padding-top:1rem;}
-.exp-content{padding:2.2rem 2.5rem;}
-.exp-role{font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:400;margin-bottom:0.3rem;color:var(--white);}
-.exp-sub-role{font-size:0.68rem;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin-bottom:1.4rem;}
-.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.9rem;}
-.exp-bullets li{font-size:0.85rem;color:#b0afa9;line-height:1.75;padding-left:1.4rem;position:relative;}
-.exp-bullets li::before{content:"\2192";position:absolute;left:0;color:var(--gold);font-size:0.75rem;top:0.05rem;}
-.exp-bullets li strong{color:var(--white);font-weight:500;}
-.exp-tag-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;}
-.exp-tag{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid var(--border);color:var(--muted);}
-/* What I've Built */
-.built-intro{color:#b8b5ae;font-size:0.95rem;max-width:660px;margin-bottom:2.8rem;line-height:1.9;}
-.built-intro strong{color:var(--white);font-weight:500;}
-.built-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
-.built-card{border:1px solid var(--border);padding:2.2rem 2.3rem;background:var(--bg2);position:relative;overflow:hidden;display:flex;flex-direction:column;transition:border-color 0.3s,transform 0.3s,background 0.3s;}
-.built-card::before{content:"";position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.4s;}
-.built-card:hover{border-color:var(--gold);transform:translateY(-4px);}
-.built-card:hover::before{height:100%;}
-.built-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1.2rem;margin-bottom:1.4rem;}
-.built-index{font-family:"DM Mono",monospace;font-size:0.72rem;color:var(--gold);letter-spacing:0.12em;border:1px solid var(--border);padding:0.3rem 0.6rem;flex-shrink:0;}
-.built-metric{text-align:right;}
-.built-metric-num{display:block;font-family:"Cormorant Garamond",serif;font-size:2.7rem;line-height:0.95;color:var(--gold-light);font-weight:300;}
-.built-metric-label{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);max-width:180px;display:inline-block;margin-top:0.4rem;line-height:1.5;}
-.built-card-title{font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:400;margin-bottom:0.7rem;color:var(--white);line-height:1.2;}
-.built-card-desc{font-size:0.85rem;color:#b0afa9;line-height:1.8;margin-bottom:1.6rem;flex:1;}
-.built-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:auto;}
-.built-tags span{font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.7rem;border:1px solid rgba(201,168,76,0.16);color:var(--muted);transition:all 0.2s;}
-.built-card:hover .built-tags span{border-color:rgba(201,168,76,0.3);}
-#skills{background:var(--bg3);}
-.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.skill-card{border:1px solid var(--border);padding:2rem 2.2rem;transition:border-color 0.3s,background 0.3s;position:relative;overflow:hidden;}
-.skill-card::before{content:"";position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.4s;}
-.skill-card:hover{border-color:var(--gold);background:var(--bg3);}
-.skill-card:hover::before{height:100%;}
-.skill-card-title{font-family:"Syne",sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.3rem;}
-.skill-tags{display:flex;flex-wrap:wrap;gap:0.5rem;}
-.skill-tag{font-size:0.72rem;padding:0.35rem 0.85rem;background:rgba(8,9,12,0.7);border:1px solid rgba(201,168,76,0.14);color:#c0bdb6;transition:all 0.25s;line-height:1.4;}
-.skill-tag:hover{background:var(--gold-dim);border-color:var(--gold);color:var(--gold-light);}
-#certifications{background:linear-gradient(135deg,var(--bg) 0%,var(--bg4) 100%);}
-.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;border:1px solid var(--border);background:var(--border);}
-.cert-item{background:var(--bg);padding:2rem 2.5rem;display:flex;align-items:flex-start;gap:1.5rem;transition:background 0.3s;}
-.cert-item:hover{background:var(--bg2);}
-.cert-dot{width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:0.45rem;}
-.cert-name{font-family:"Cormorant Garamond",serif;font-size:1.1rem;font-weight:400;margin-bottom:0.3rem;}
-.cert-meta{font-size:0.66rem;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;margin-bottom:0.8rem;}
-.cert-skills{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.2rem;}
-.cert-skill{font-size:0.62rem;padding:0.2rem 0.65rem;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);color:var(--muted);letter-spacing:0.06em;}
-#education{background:var(--bg2);background:linear-gradient(180deg,var(--bg2) 0%,var(--bg3) 100%);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
-.edu-items{display:flex;flex-direction:column;gap:1.5rem;}
-.edu-item{border:1px solid var(--border);padding:2.2rem 2.5rem;}
-.edu-deg{font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-weight:400;margin-bottom:0.4rem;}
-.edu-school{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;}
-.edu-period{font-size:0.65rem;color:var(--muted);}
-.edu-spec{margin-top:1rem;font-size:0.8rem;color:var(--muted);font-style:italic;line-height:1.6;}
-#contact{background:linear-gradient(135deg,var(--bg5) 0%,var(--bg) 60%,var(--bg4) 100%);text-align:center;padding:5.5rem 5rem;position:relative;overflow:hidden;}
-#contact::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(201,168,76,0.05) 0%,transparent 70%);pointer-events:none;}
-.contact-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:300;line-height:1.1;margin-bottom:1.2rem;}
-.contact-title em{font-style:italic;color:var(--gold-light);}
-.contact-sub{font-size:0.85rem;color:var(--muted);margin-bottom:3rem;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.8;}
-.contact-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;}
-footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);}
-.footer-name{font-family:"Syne",sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.1em;color:var(--gold);}
-.footer-copy{font-size:0.65rem;letter-spacing:0.1em;color:var(--muted);}
-
-/* Back to top */
-.back-to-top{position:fixed;bottom:2.5rem;right:2.5rem;width:44px;height:44px;background:var(--gold);color:var(--bg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;z-index:999;opacity:0;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s,background 0.2s;pointer-events:none;}
-.back-to-top.show{opacity:1;transform:translateY(0);pointer-events:all;}
-.back-to-top:hover{background:var(--gold-light);}
-.li-btn{display:inline-flex;align-items:center;justify-content:center;padding:0.3rem;transition:opacity 0.25s;}.li-btn:hover{opacity:0.75;}
-/* ── INTERACTIVITY ─────────────────────────────────────── */
-/* Cursor glow */
-.cursor-glow{pointer-events:none;position:fixed;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.06) 0%,transparent 70%);transform:translate(-50%,-50%);transition:left 0.08s ease,top 0.08s ease;z-index:0;mix-blend-mode:screen;}
-
-/* Scroll reveal */
-.reveal{opacity:1;transform:translateY(0);transition:opacity 0.75s cubic-bezier(0.16,1,0.3,1),transform 0.75s cubic-bezier(0.16,1,0.3,1);}.js-ready .reveal{opacity:0;transform:translateY(28px);}
-.reveal.visible{opacity:1;transform:translateY(0);}
-.reveal-delay-1{transition-delay:0.1s;}
-.reveal-delay-2{transition-delay:0.2s;}
-.reveal-delay-3{transition-delay:0.3s;}
-.reveal-delay-4{transition-delay:0.4s;}
-
-/* Exp item hover - gold left border sweep */
-.exp-item{border-left:3px solid transparent;transition:background 0.3s,border-left-color 0.3s;}
-.exp-item:hover{background:var(--bg2);border-left-color:var(--gold);}
-
-/* Skill tag pop on hover */
-.skill-tag{transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);}
-.skill-tag:hover{transform:translateY(-2px);background:var(--gold-dim);border-color:var(--gold);color:var(--gold-light);}
-
-/* Cert item subtle scale */
-.cert-item{transition:background 0.3s,transform 0.25s;}
-.cert-item:hover{background:var(--bg2);transform:translateX(4px);}
-
-/* Stat item pulse on hover */
-.stat-item{transition:background 0.25s;}
-.stat-item:hover{background:rgba(201,168,76,0.05);}
-.stat-item:hover .stat-num{color:var(--gold-light);}
-
-/* Nav link underline slide */
-.nav-links a{position:relative;}
-.nav-links a::after{content:"";position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
-.nav-links a:hover::after{width:100%;}
-
-/* Button shine effect */
-.btn-primary{position:relative;overflow:hidden;}
-.btn-primary::after{content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);transition:left 0.45s ease;}
-.btn-primary:hover::after{left:160%;}
-
-/* Section title underline grow */
-.section-title{position:relative;display:inline-block;}
-
-/* Hero h1 word stagger */
-.word{display:inline-block;overflow:hidden;}
-.word-inner{display:inline-block;animation:wordReveal 0.9s cubic-bezier(0.16,1,0.3,1) both;}
-.hero h1 .word:nth-of-type(2) .word-inner{animation-delay:0.13s;}
-@keyframes wordReveal{from{transform:translateY(100%);opacity:0;}to{transform:translateY(0);opacity:1;}}
-
-/* Progress bar */
-.progress-bar{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:10000;transition:width 0.1s linear;}
-
-/* Theme toggle */
-.theme-toggle{position:fixed;bottom:2.5rem;left:2.5rem;width:44px;height:44px;background:var(--bg2);border:1px solid var(--border);color:var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;z-index:999;transition:all 0.3s;border-radius:0;}
-.theme-toggle:hover{background:var(--gold);color:var(--bg);}
-
-/* Light mode overrides */
-body.light-mode{
-  --bg:#f5f2eb;--bg2:#ede9e0;--bg3:#e4dfd4;--bg4:#ddd8cc;--bg5:#eae6db;
-  --white:#1c1a14;--muted:#5a5648;--border:rgba(150,120,50,0.22);
-  --gold:#a67c2e;--gold-light:#c49a3c;--gold-dim:rgba(166,124,46,0.12);
-}
-
-/* Nav */
-body.light-mode nav{background:rgba(245,242,235,0.95);border-bottom:1px solid rgba(150,120,50,0.2);}
-body.light-mode .nav-logo{color:var(--gold);}
-body.light-mode .nav-links a{color:#5a5648;}
-body.light-mode .nav-links a:hover{color:var(--gold);}
-body.light-mode .nav-links a.active{color:var(--gold);}
-
-/* Hero */
-body.light-mode .hero{background:linear-gradient(125deg,#ede8de 0%,#e4ddd0 30%,#ddd4c2 55%,#e4ddd0 80%,#ede8de 100%);}
-body.light-mode .hero::before{background:radial-gradient(ellipse at 70% 50%,rgba(166,124,46,0.08) 0%,transparent 60%);}
-body.light-mode .hero::after{background:radial-gradient(circle,rgba(166,124,46,0.1) 0%,transparent 65%);}
-body.light-mode .hero-eyebrow{color:var(--gold);}
-body.light-mode .hero-eyebrow::before{background:var(--gold);}
-body.light-mode .hero h1{color:#1c1a14;}
-body.light-mode .hero h1 em{color:var(--gold);}
-body.light-mode .hero-tagline{color:rgba(28,26,20,0.62);}
-body.light-mode .btn-primary{background:var(--gold);color:#fff;}
-body.light-mode .btn-primary:hover{background:var(--gold-light);}
-body.light-mode .btn-outline{border-color:rgba(150,120,50,0.35);color:#1c1a14;}
-body.light-mode .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
-
-/* Stats bar */
-body.light-mode .stats-bar{background:var(--bg3);border-color:rgba(150,120,50,0.2);}
-body.light-mode .stat-item{border-right-color:rgba(150,120,50,0.15);}
-body.light-mode .stat-num{color:var(--gold);}
-body.light-mode .stat-label{color:#6a6458;}
-
-/* Section labels & titles */
-body.light-mode .section-label{color:var(--gold);}
-body.light-mode .section-label::after{background:rgba(150,120,50,0.2);}
-body.light-mode .section-title{color:#1c1a14;}
-
-/* About */
-body.light-mode #about{background:var(--bg2);}
-body.light-mode .about-text p{color:#3a3830;line-height:2;}
-body.light-mode .about-text p strong{color:#1c1a14;}
-body.light-mode .strength-item{border-color:rgba(150,120,50,0.2);background:var(--bg);}
-body.light-mode .strength-item:hover{border-color:var(--gold);background:var(--gold-dim);}
-body.light-mode .strength-icon{color:var(--gold);}
-body.light-mode .strength-text strong{color:#1c1a14;}
-body.light-mode .strength-text span{color:#5a5648;}
-
-/* Experience */
-body.light-mode #experience{background:var(--bg5);}
-body.light-mode .exp-grid{border-color:rgba(150,120,50,0.2);}
-body.light-mode .exp-item{border-bottom-color:rgba(150,120,50,0.15);border-left-color:transparent;}
-body.light-mode .exp-item:hover{background:var(--bg2);border-left-color:var(--gold);}
-body.light-mode .exp-meta{border-right-color:rgba(150,120,50,0.15);}
-body.light-mode .exp-company{color:var(--gold);}
-body.light-mode .exp-period{color:#6a6458;}
-body.light-mode .exp-location{color:#6a6458;}
-body.light-mode .exp-role{color:#1c1a14;}
-body.light-mode .exp-sub-role{color:var(--gold);}
-body.light-mode .exp-bullets li{color:#3a3830;}
-body.light-mode .exp-bullets li::before{color:var(--gold);}
-body.light-mode .exp-bullets li strong{color:#1c1a14;}
-body.light-mode .exp-tag{border-color:rgba(150,120,50,0.2);color:#5a5648;}
-
-/* Built */
-body.light-mode #built{background:var(--bg5);}
-body.light-mode .built-intro{color:#3a3830;}
-body.light-mode .built-intro strong{color:#1c1a14;}
-body.light-mode .built-card{border-color:rgba(150,120,50,0.2);background:var(--bg2);}
-body.light-mode .built-card:hover{border-color:var(--gold);}
-body.light-mode .built-card-title{color:#1c1a14;}
-body.light-mode .built-card-desc{color:#3a3830;}
-body.light-mode .built-tags span{border-color:rgba(150,120,50,0.18);color:#5a5648;}
-
-/* Skills */
-body.light-mode #skills{background:var(--bg3);}
-body.light-mode .skill-card{border-color:rgba(150,120,50,0.2);background:var(--bg2);}
-body.light-mode .skill-card:hover{border-color:var(--gold);background:var(--bg);}
-body.light-mode .skill-card-title{color:var(--gold);}
-body.light-mode .skill-tag{background:var(--bg);border-color:rgba(150,120,50,0.18);color:#3a3830;}
-body.light-mode .skill-tag:hover{background:var(--gold-dim);border-color:var(--gold);color:var(--gold);}
-
-/* Certifications */
-body.light-mode #certifications{background:var(--bg5);}
-body.light-mode .cert-grid{border-color:rgba(150,120,50,0.2);background:rgba(150,120,50,0.1);}
-body.light-mode .cert-item{background:var(--bg);}
-body.light-mode .cert-item:hover{background:var(--bg2);}
-body.light-mode .cert-dot{background:var(--gold);}
-body.light-mode .cert-name{color:#1c1a14;}
-body.light-mode .cert-meta{color:#6a6458;}
-body.light-mode .cert-skill{background:rgba(166,124,46,0.07);border-color:rgba(150,120,50,0.18);color:#5a5648;}
-
-/* Education */
-body.light-mode #education{background:var(--bg2);}
-body.light-mode .edu-item{border-color:rgba(150,120,50,0.2);background:var(--bg);}
-body.light-mode .edu-deg{color:#1c1a14;}
-body.light-mode .edu-school{color:var(--gold);}
-body.light-mode .edu-period{color:#6a6458;}
-body.light-mode .edu-spec{color:#5a5648;}
-
-/* Contact */
-body.light-mode #contact{background:var(--bg3);}
-body.light-mode .contact-title{color:#1c1a14;}
-body.light-mode .contact-title em{color:var(--gold);}
-body.light-mode .contact-sub{color:#5a5648;}
-
-/* Footer */
-body.light-mode footer{background:var(--bg2);border-top-color:rgba(150,120,50,0.2);}
-body.light-mode .footer-name{color:var(--gold);}
-body.light-mode .footer-copy{color:#6a6458;}
-
-/* Back to top + theme toggle */
-body.light-mode .back-to-top{background:var(--gold);color:#fff;}
-body.light-mode .back-to-top:hover{background:var(--gold-light);}
-body.light-mode .theme-toggle{background:var(--bg2);border-color:rgba(150,120,50,0.25);color:var(--gold);}
-body.light-mode .theme-toggle:hover{background:var(--gold);color:#fff;}
-body.light-mode .nav-toggle span{background:var(--gold);}
-
-/* Progress bar */
-body.light-mode .progress-bar{background:linear-gradient(90deg,var(--gold),var(--gold-light));}
-
-/* Scrollbar */
-body.light-mode ::-webkit-scrollbar-track{background:var(--bg2);}
-body.light-mode ::-webkit-scrollbar-thumb{background:var(--gold);}
-
-/* Grain texture overlay */
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:0.022;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px 256px;}
-
-/* Active nav */
-.nav-links a.active{color:var(--gold);}
-.nav-links a.active::after{width:100%;}
-
-/* Smooth section blends - using top gradient overlay per section */
-section{position:relative;}
-#about{background:linear-gradient(to bottom,var(--bg) 0%,var(--bg2) 6%,var(--bg2) 100%);}
-#experience{background:linear-gradient(to bottom,var(--bg2) 0%,var(--bg5) 5%,var(--bg5) 100%);}
-#built{background:linear-gradient(to bottom,var(--bg5) 0%,var(--bg) 5%,var(--bg) 100%);}
-#skills{background:linear-gradient(to bottom,var(--bg) 0%,var(--bg3) 5%,var(--bg3) 100%);}
-#certifications{background:linear-gradient(to bottom,var(--bg3) 0%,var(--bg) 5%,var(--bg) 100%);}
-#education{background:linear-gradient(to bottom,var(--bg) 0%,var(--bg2) 5%,var(--bg2) 100%);}
-#contact{background:linear-gradient(to bottom,var(--bg2) 0%,var(--bg5) 5%,var(--bg5) 100%);}
-
-/* ── RESPONSIVE ──────────────────────────────────────── */
-@media(min-width:902px){.nav-links{display:flex!important;visibility:visible!important;opacity:1!important;}}
-
-@media(max-width:1200px){
-  nav{padding:1.2rem 2.5rem;}
-  section{padding:5rem 3rem;}
-  #contact{padding:5rem 3rem;}
-  .hero{padding:9rem 3rem 4rem;}
-  .skills-grid{grid-template-columns:repeat(2,1fr);}
-}
-
-@media(max-width:1100px){
-  .nav-links{gap:1.3rem;}
-  nav{padding:1.2rem 2rem;}
-}
-
-@media(max-width:900px){
-  nav{padding:1rem 1.5rem;}
-  .nav-toggle{display:flex;}
-  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(8,9,12,0.98);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);max-height:0;overflow:hidden;transition:max-height 0.35s ease;}
-  body.light-mode .nav-links{background:rgba(245,242,235,0.98);}
-  .nav-links.open{max-height:460px;}
-  .nav-links li{width:100%;border-bottom:1px solid var(--border);}
-  .nav-links li:last-child{border-bottom:none;}
-  .nav-links a{display:block;padding:1.05rem 1.5rem;font-size:0.78rem;}
-  .nav-links a::after{display:none;}
-  .hero{padding:7rem 1.5rem 3rem;}
-  .hero-left{max-width:100%;}
-  section{padding:4rem 1.5rem;}
-  #contact{padding:4rem 1.5rem;}
-  #about{grid-template-columns:1fr;gap:3rem;}
-  .skills-grid{grid-template-columns:1fr;}
-  .built-grid{grid-template-columns:1fr;}
-  .exp-item{grid-template-columns:1fr;}
-  .exp-meta{border-right:none;border-bottom:1px solid var(--border);flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:0.4rem 1rem;}
-  .exp-location{margin-top:0;padding-top:0;width:100%;}
-  .exp-content{padding:1.8rem 1.5rem;}
-  .cert-grid{grid-template-columns:1fr;}
-  #education{grid-template-columns:1fr;gap:2rem;}
-  footer{flex-direction:column;gap:0.5rem;text-align:center;padding:1.5rem;}
-}
-
-@media(max-width:560px){
-  section{padding:3.5rem 1.25rem;}
-  #contact{padding:3.5rem 1.25rem;}
-  .hero{padding:6.5rem 1.25rem 2.5rem;}
-  .built-card{padding:1.8rem 1.5rem;}
-  .built-metric-num{font-size:2.2rem;}
-  .built-card-top{flex-direction:row;align-items:flex-start;}
-  .exp-content{padding:1.5rem 1.25rem;}
-  .strength-item{padding:1rem 1.1rem;}
-  .back-to-top,.theme-toggle{width:42px;height:42px;bottom:1.5rem;}
-  .back-to-top{right:1.5rem;}
-  .theme-toggle{left:1.5rem;}
-  .stat-item{padding:1rem 2rem;gap:1rem;}
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{animation-duration:0.001ms!important;animation-iteration-count:1!important;transition-duration:0.001ms!important;scroll-behavior:auto!important;}
-  .stats-track{animation:none!important;}
-  .reveal{opacity:1!important;transform:none!important;}
-  .cursor-glow{display:none!important;}
-  .status-dot{animation:none!important;}
-}
-
-/* Touch / no-hover devices: hide the cursor glow */
-@media (hover:none),(pointer:coarse){
-  .cursor-glow{display:none!important;}
-}
-</style>
-
-<!-- Structured Data (JSON-LD) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Hardik Mehta",
-  "url": "https://hardikmehta.au",
-  "jobTitle": "Senior Performance Manager",
-  "description": "Melbourne-based digital strategy and performance leader with 8+ years experience driving business growth through cross-channel marketing, paid media, and commercial strategy.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Melbourne",
-    "addressRegion": "VIC",
-    "addressCountry": "AU"
-  },
-  "sameAs": ["https://www.linkedin.com/in/hardik--mehta/"],
-  "knowsAbout": [
-    "Digital Strategy",
-    "Performance Marketing",
-    "Paid Media",
-    "Google Ads",
-    "Meta Ads",
-    "TikTok Ads",
-    "LinkedIn Ads",
-    "Programmatic Advertising",
-    "Brand Strategy",
-    "Commercial Strategy",
-    "Market Research",
-    "AI Automation",
-    "Agency Management"
-  ],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Impressive Digital Agency",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Melbourne",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    }
-  }
-}
-</script>
-</head>
-<body>
-<div class="progress-bar" id="progressBar"></div>
-<a href="#main-content" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
-<header role="banner">
-<nav aria-label="Main navigation">
-  <a class="nav-logo" href="#hero">HM</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#built">Built</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#certifications">Certs</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-</header>
-
-<main id="main-content">
-<section class="hero" id="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Digital Strategy &amp; Performance Leadership</div>
-    <h1><span class="word"><span class="word-inner">Hardik</span></span><br/><span class="word"><span class="word-inner"><em>Mehta</em></span></span></h1>
-    <p class="hero-tagline">Building strategies that connect channel investment to business growth, at scale.</p>
-    <div class="hero-cta">
-      <a href="#built" class="btn btn-primary">View Work &darr;</a>
-      <a href="#contact" class="btn btn-outline">Get in Touch</a>
-    </div>
-  </div>
-</section>
-
-<div class="stats-bar" role="region" aria-label="Key performance metrics">
-  <div class="stats-track">
-    <div class="stat-item"><span class="stat-num">12&times;</span><span class="stat-label">Average ROAS</span></div>
-    <div class="stat-item"><span class="stat-num">$430K</span><span class="stat-label">New ARR Secured</span></div>
-    <div class="stat-item"><span class="stat-num">93%</span><span class="stat-label">Pitch Success Rate</span></div>
-    <div class="stat-item"><span class="stat-num">19</span><span class="stat-label">Client Portfolio</span></div>
-    <div class="stat-item"><span class="stat-num">41%</span><span class="stat-label">YoY Lead Growth</span></div>
-    <div class="stat-item"><span class="stat-num">34%</span><span class="stat-label">Online Sales Growth</span></div>
-    <div class="stat-item"><span class="stat-num">38%</span><span class="stat-label">YoY Revenue Growth</span></div>
-    <div class="stat-item"><span class="stat-num">12&times;</span><span class="stat-label">Average ROAS</span></div>
-    <div class="stat-item"><span class="stat-num">$430K</span><span class="stat-label">New ARR Secured</span></div>
-    <div class="stat-item"><span class="stat-num">93%</span><span class="stat-label">Pitch Success Rate</span></div>
-    <div class="stat-item"><span class="stat-num">19</span><span class="stat-label">Client Portfolio</span></div>
-    <div class="stat-item"><span class="stat-num">41%</span><span class="stat-label">YoY Lead Growth</span></div>
-    <div class="stat-item"><span class="stat-num">34%</span><span class="stat-label">Online Sales Growth</span></div>
-    <div class="stat-item"><span class="stat-num">38%</span><span class="stat-label">YoY Revenue Growth</span></div>
-  </div>
-</div>
-
-<section id="about" aria-label="About Hardik Mehta">
-  <div class="about-left">
-    <div class="section-label">About</div>
-    <h2 class="section-title">Business-first thinking.<br/><em>Built on data.</em></h2>
-  </div>
-  <div class="about-text reveal">
-    <p>I'm a <strong>digital strategy and performance leader</strong> based in Melbourne. My work sits at the intersection of commercial strategy, brand thinking, and performance marketing: translating business objectives into channel strategies that actually move the needle.</p>
-    <p>I don't start with platforms. I start with <strong>where a business needs to go</strong>: its revenue targets, competitive position, and customer journey. From there, I build the cross-channel investment strategy to get it there. At Impressive Digital Agency, that approach has driven <strong>$430K in new ARR</strong>, a <strong>93% pitch win rate</strong>, and consistently outsized results across a portfolio of 19 clients.</p>
-    <p>Alongside client work, I operate as a <strong>strategic partner to clients</strong>: leading Quarterly Business Reviews, contributing to commercial conversations with agency partners, shaping internal R&amp;D direction, and building the systems and frameworks that make the broader team more effective. I'm as comfortable in a boardroom as I am in a dashboard.</p>
-    <div class="strength-list reveal">
-      <div class="strength-item reveal reveal-delay-1"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Strategic &amp; Commercial Leadership</strong><span>Translating business goals into go-to-market strategy, with a clear eye on revenue impact, market positioning, and long-term growth.</span></div></div>
-      <div class="strength-item reveal reveal-delay-2"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Agency &amp; Partnership Management</strong><span>Building trusted relationships with agency partners, clients, and senior stakeholders: leading commercial conversations and QBRs that unlock growth.</span></div></div>
-      <div class="strength-item reveal reveal-delay-3"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Team Leadership &amp; Capability Building</strong><span>Managing cross-functional teams of 10+, mentoring talent, and shaping agency-wide practices around AI, automation, and data-first thinking.</span></div></div>
-      <div class="strength-item reveal reveal-delay-4"><span class="strength-icon">&#9670;</span><div class="strength-text"><strong>Technical Depth, Strategically Applied</strong><span>From GA4 scripts to AI agents and custom MCPs. I build tools that give teams a competitive edge, not just technical novelty.</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="experience" aria-label="Work Experience">
-  <div class="section-label">Experience</div>
-  <h2 class="section-title">Career <em>Timeline</em></h2>
-  <div class="exp-grid reveal">
-
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-company">Impressive Digital Agency</div>
-        <div class="exp-period">Aug 2024 &ndash; Present</div>
-        <div class="exp-location">Melbourne, VIC</div>
-      </div>
-      <div class="exp-content">
-        <div class="exp-role">Senior Performance Manager</div>
-        <div class="exp-sub-role">Paid Media R&amp;D &middot; AI, Programmatic &amp; MiQ Ambassador</div>
-        <ul class="exp-bullets">
-          <li>Act as a <strong>strategic partner to senior clients and agency leadership</strong>: leading Quarterly Business Reviews, shaping commercial investment decisions, and connecting channel strategy to broader business growth goals for clients</li>
-          <li>Own go-to-market strategy across a <strong>portfolio of 19 clients</strong>, securing <strong>$430K in new ARR</strong> and consistently delivering against, and beyond, client growth targets at avg <strong>12&times; ROAS</strong></li>
-          <li>Drove <strong>38% YoY revenue growth</strong> for a luxury furniture brand (target: 25%) by diagnosing the full funnel, restructuring paid investment, and aligning channel strategy with brand and commercial goals</li>
-          <li>Delivered <strong>5 consecutive record months</strong> for a B2B industrial client through a market insight-led strategy overhaul; scaled a B2B tech client into the <strong>US market</strong> using 1PD and 3PD audience data</li>
-          <li>Named <strong>agency ambassador for AI, Programmatic &amp; MiQ</strong>: representing Impressive in partner conversations, shaping the agency's positioning, and building internal capability through training and tooling</li>
-          <li>Co-leads agency <strong>R&amp;D and innovation</strong>: developing pacing automations, a negative keyword AI agent, and automated audit tools that raise performance standards across the entire agency</li>
-          <li>Achieved a <strong>93% pitch success rate</strong> by leading hypothesis-driven pre-sales audits that frame strategy in business terms, not just marketing metrics</li>
-          <li>Leads and mentors a <strong>cross-functional team of 10</strong>: building analytical capability, accountability, and a strategic mindset across the group</li>
-        </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Commercial Strategy</span><span class="exp-tag">Agency Partnerships</span><span class="exp-tag">QBRs</span><span class="exp-tag">Team Leadership</span><span class="exp-tag">Paid Media R&amp;D</span><span class="exp-tag">AI &amp; Automation</span><span class="exp-tag">Programmatic</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-company">Impressive Digital Agency</div>
-        <div class="exp-period">Nov 2023 &ndash; Aug 2024</div>
-        <div class="exp-location">Melbourne, VIC</div>
-      </div>
-      <div class="exp-content">
-        <div class="exp-role">Client Strategy Manager</div>
-        <ul class="exp-bullets">
-          <li>Drove digital strategy for <strong>15 clients</strong>, achieving avg <strong>10&times; ROAS</strong> and securing <strong>$350K in new revenue</strong> from budgets up to $60K/channel</li>
-          <li>Secured a <strong>16% increase in market share</strong> for a key client through competitor analysis and consumer insights</li>
-          <li>Led adoption of <strong>AI-driven tools</strong> for market research, elevating quality of client-facing strategic recommendations</li>
-          <li>Orchestrated hands-on campaign implementation and <strong>strategic website overhauls</strong> (UI/UX) using agile principles</li>
-          <li>Executed <strong>executive-level events</strong> and fostered strategic networking opportunities leading to new client leads</li>
-        </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Google Ads</span><span class="exp-tag">Meta Ads</span><span class="exp-tag">UX/UI</span><span class="exp-tag">Agile</span><span class="exp-tag">Market Research</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-company">Miller Leith</div>
-        <div class="exp-period">May 2022 &ndash; Nov 2023</div>
-        <div class="exp-location">Melbourne, VIC</div>
-      </div>
-      <div class="exp-content">
-        <div class="exp-role">Digital Marketing Coordinator</div>
-        <ul class="exp-bullets">
-          <li>Co-led a <strong>full company rebrand</strong>: driving strategic research, brand definition, and all digital and visual elements, resulting in <strong>11% lift in brand recognition</strong> and <strong>37% improvement in website engagement</strong></li>
-          <li>Developed and executed a <strong>data-driven social media strategy</strong>, overseeing long-form video content and paid ads to grow brand presence and engagement</li>
-          <li>Spearheaded <strong>executive-level events</strong>, managing high-stakes client relationships and creating networking opportunities that converted into new leads and strategic partnerships</li>
-          <li>Initiated and managed the company's <strong>CSR program</strong>, aligning organisational values with community impact and strengthening brand reputation</li>
-        </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Rebranding</span><span class="exp-tag">Social Media</span><span class="exp-tag">Event Strategy</span><span class="exp-tag">CSR</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-company">Pizza Monster</div>
-        <div class="exp-period">Jun 2021 &ndash; Nov 2021</div>
-        <div class="exp-location">Melbourne, VIC</div>
-      </div>
-      <div class="exp-content">
-        <div class="exp-role">Digital Marketing Specialist</div>
-        <ul class="exp-bullets">
-          <li>Optimised <strong>Google Search &amp; Shopping Ads</strong> for soft opening day, yielding over <strong>40 online orders and 35 walk-ins</strong></li>
-          <li>Cultivated cohesive brand presence across all digital channels through creative storytelling and visual identity</li>
-        </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Google Ads</span><span class="exp-tag">Brand Identity</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-company">RMIT University</div>
-        <div class="exp-period">Dec 2019 &ndash; Apr 2021</div>
-        <div class="exp-location">Melbourne, VIC</div>
-      </div>
-      <div class="exp-content">
-        <div class="exp-role">Creative Manager</div>
-        <ul class="exp-bullets">
-          <li>Led a team of 6 to plan and execute <strong>university-wide events attracting 15,000+ students</strong>: managing end-to-end logistics, communications, and on-the-day delivery at scale</li>
-          <li>Developed and executed <strong>comprehensive digital strategy</strong> and high-impact promotional campaigns across key channels</li>
-          <li>Built a clear feedback loop between digital activity and outcomes, using <strong>data to directly inform campaign decisions</strong> and demonstrate performance impact</li>
-        </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Event Marketing</span><span class="exp-tag">Digital Strategy</span><span class="exp-tag">Campaign Management</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-company">Ekvity Ventures</div>
-        <div class="exp-period">Apr 2017 &ndash; Dec 2018</div>
-      </div>
-      <div class="exp-content">
-        <div class="exp-role">Digital Marketing Executive</div>
-        <ul class="exp-bullets">
-          <li>Led a team of 5 in a <strong>full brand rebranding</strong>, broadening the target audience from 35+ to 18+ and driving <strong>16% growth</strong> in existing clientele</li>
-          <li>Owned end-to-end <strong>website redesign</strong>: from design and content creation through to external agency collaboration and launch</li>
-          <li>Launched a <strong>nationwide quarterly newsletter</strong>, managing design, copy, and distribution to build brand presence at scale</li>
-          <li>Grew organic reach through <strong>SEO, content strategy, and Google Ads</strong></li>
-        </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Rebranding</span><span class="exp-tag">SEO</span><span class="exp-tag">Web Design</span><span class="exp-tag">Google Ads</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="built" aria-label="What I've Built">
-  <div class="section-label">What I've Built</div>
-  <h2 class="section-title">Tools, <em>not just decks.</em></h2>
-  <p class="built-intro reveal">The fastest way to raise a team's performance is to take the admin off their plate. So alongside strategy, I build internal tools that <strong>automate the manual work and keep people focused on what only humans can do</strong> — the thinking. A few of them:</p>
-  <div class="built-grid">
-
-    <article class="built-card reveal">
-      <div class="built-card-top">
-        <span class="built-index">01</span>
-        <div class="built-metric"><span class="built-metric-num">55%</span><span class="built-metric-label">average reduction in audit time</span></div>
-      </div>
-      <h3 class="built-card-title">AI-Powered Google Ads Auditor</h3>
-      <p class="built-card-desc">An automated auditor that runs 74 weighted checks across an account and outputs a client-ready report. It flags every issue automatically, so the strategist's time goes to interpretation and strategy rather than manual review — depth goes up, admin goes down.</p>
-      <div class="built-tags"><span>Python</span><span>FastAPI</span><span>React</span><span>Google Ads API</span></div>
-    </article>
-
-    <article class="built-card reveal reveal-delay-1">
-      <div class="built-card-top">
-        <span class="built-index">02</span>
-        <div class="built-metric"><span class="built-metric-num">$15K+</span><span class="built-metric-label">wasted ad spend saved to date</span></div>
-      </div>
-      <h3 class="built-card-title">Negative Keyword AI Agent</h3>
-      <p class="built-card-desc">An agent that continuously scans search query data, identifies spend leaking to irrelevant terms, and recommends negative keywords — then quantifies the spend it has saved. It catches waste no one has the hours to find manually.</p>
-      <div class="built-tags"><span>Python</span><span>AI Agents</span><span>Google Ads API</span><span>Automation</span></div>
-    </article>
-
-    <article class="built-card reveal reveal-delay-2">
-      <div class="built-card-top">
-        <span class="built-index">03</span>
-        <div class="built-metric"><span class="built-metric-num">42%</span><span class="built-metric-label">reduction in account overspends</span></div>
-      </div>
-      <h3 class="built-card-title">Budget Pacing Automation</h3>
-      <p class="built-card-desc">Automated pacing that monitors live spend against monthly targets across accounts and flags drift before it becomes an overspend — turning a reactive, end-of-month scramble into a proactive, always-on safeguard.</p>
-      <div class="built-tags"><span>Python</span><span>Google Ads API</span><span>Automation</span></div>
-    </article>
-
-    <article class="built-card reveal reveal-delay-3">
-      <div class="built-card-top">
-        <span class="built-index">04</span>
-        <div class="built-metric"><span class="built-metric-num">3&rarr;1</span><span class="built-metric-label">ad platforms + CRM unified into one performance score</span></div>
-      </div>
-      <h3 class="built-card-title">Paid Media Performance Dashboard</h3>
-      <p class="built-card-desc">A leadership dashboard that pulls Google Ads, Meta and HubSpot into one spend-weighted performance score per account, counting hard conversions only and surfacing a live "Code Red" view of anything underperforming — turning scattered platform data into a single decision-ready view.</p>
-      <div class="built-tags"><span>Google Apps Script</span><span>Google Ads API</span><span>Meta Graph API</span><span>HubSpot API</span></div>
-    </article>
-
-  </div>
-</section>
-
-<section id="skills" aria-label="Skills and Tools">
-  <div class="section-label">Skills</div>
-  <h2 class="section-title">Tools &amp; <em>Capabilities</em></h2>
-  <div class="skills-grid reveal">
-
-    <div class="skill-card" style="grid-column:1/-1;">
-      <div class="skill-card-title">Strategic Competencies</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Digital Strategy</span><span class="skill-tag">Market Research</span><span class="skill-tag">Forecasting &amp; Auditing</span><span class="skill-tag">Consumer Behaviour</span><span class="skill-tag">Brand Management</span><span class="skill-tag">Stakeholder Communications</span><span class="skill-tag">Training &amp; Development</span><span class="skill-tag">Commercial Mindset</span><span class="skill-tag">Email Marketing</span><span class="skill-tag">CRM Management</span><span class="skill-tag">Go-To-Market Strategy</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-title">Analytics &amp; Ads</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Google Analytics</span><span class="skill-tag">Google Ads</span><span class="skill-tag">Meta Ads</span><span class="skill-tag">TikTok Ads</span><span class="skill-tag">LinkedIn Ads</span><span class="skill-tag">Programmatic Ads</span><span class="skill-tag">BigQuery</span><span class="skill-tag">SEMRush</span><span class="skill-tag">AHRefs</span><span class="skill-tag">Agency Analytics</span><span class="skill-tag">Google Search Console</span><span class="skill-tag">Power BI</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-title">CRM &amp; MarTech</div>
-      <div class="skill-tags">
-        <span class="skill-tag">HubSpot</span><span class="skill-tag">Marketo</span><span class="skill-tag">ProfitPeak</span><span class="skill-tag">Zoho</span><span class="skill-tag">Hotjar</span><span class="skill-tag">Microsoft Clarity</span><span class="skill-tag">Wordpress</span><span class="skill-tag">Octoparse</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-title">AI &amp; Automation</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Prompt Engineering</span><span class="skill-tag">MCP Development</span><span class="skill-tag">AI Agents</span><span class="skill-tag">Zapier</span><span class="skill-tag">N8N</span><span class="skill-tag">Asana Automation</span><span class="skill-tag">GA4 Scripts</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-title">Design &amp; Creative</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Adobe Suite</span><span class="skill-tag">Figma</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-title">Technical</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">MySQL</span><span class="skill-tag">HTML/CSS</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-card-title">Project Management</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Monday</span><span class="skill-tag">Asana</span><span class="skill-tag">Jira</span><span class="skill-tag">Trello</span><span class="skill-tag">Notion</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="certifications" aria-label="Certifications">
-  <div class="section-label">Certifications</div>
-  <h2 class="section-title">Credentials &amp; <em>Qualifications</em></h2>
-  <div class="cert-grid reveal" style="grid-template-columns:repeat(2,1fr);">
-
-    <div class="cert-item"><div class="cert-dot"></div><div>
-      <div class="cert-name">Digital Marketing Strategy</div>
-      <div class="cert-meta">ADMA &middot; August 2023</div>
-      <div class="cert-skills">
-        <span class="cert-skill">Digital Marketing Strategy</span><span class="cert-skill">Customer Journey Mapping</span><span class="cert-skill">Empathy Mapping</span><span class="cert-skill">Remarketing</span><span class="cert-skill">Market Research</span><span class="cert-skill">Keyword Research</span><span class="cert-skill">Paid Advertising</span><span class="cert-skill">Strategic Content Development</span><span class="cert-skill">On-Page Optimisation</span>
-      </div>
-    </div></div>
-
-    <div class="cert-item"><div class="cert-dot"></div><div>
-      <div class="cert-name">Behavioural Economics</div>
-      <div class="cert-meta">ADMA &middot; December 2024</div>
-      <div class="cert-skills">
-        <span class="cert-skill">Consumer Behaviour</span><span class="cert-skill">Decision-Making Psychology</span><span class="cert-skill">Strategic Planning</span><span class="cert-skill">Marketing Strategy</span>
-      </div>
-    </div></div>
-
-    <div class="cert-item"><div class="cert-dot"></div><div>
-      <div class="cert-name">Social Media Strategy</div>
-      <div class="cert-meta">Australian Institute of Management &middot; October 2022</div>
-      <div class="cert-skills">
-        <span class="cert-skill">Social Media Strategy</span><span class="cert-skill">Content Marketing</span><span class="cert-skill">Audience Engagement</span><span class="cert-skill">Brand Presence</span>
-      </div>
-    </div></div>
-
-    <div class="cert-item"><div class="cert-dot"></div><div>
-      <div class="cert-name">Google Analytics Certification</div>
-      <div class="cert-meta">Google &middot; May 2025 &ndash; May 2026</div>
-      <div class="cert-skills">
-        <span class="cert-skill">Google Analytics</span><span class="cert-skill">Data Analytics</span><span class="cert-skill">Marketing Attribution</span><span class="cert-skill">Performance Measurement</span><span class="cert-skill">Trend Forecasting</span><span class="cert-skill">Demand Forecasting</span><span class="cert-skill">Performance Marketing</span><span class="cert-skill">Online Marketing</span>
-      </div>
-    </div></div>
-
-    <div class="cert-item"><div class="cert-dot"></div><div>
-      <div class="cert-name">Google Ads Shopping Certification</div>
-      <div class="cert-meta">Google &middot; May 2025 &ndash; May 2026</div>
-      <div class="cert-skills">
-        <span class="cert-skill">Shopping Ads</span><span class="cert-skill">Google Ads</span><span class="cert-skill">Paid Search Campaigns</span><span class="cert-skill">Paid Media Strategy</span><span class="cert-skill">Search Engine Marketing</span><span class="cert-skill">Paid Media Advertising</span>
-      </div>
-    </div></div>
-
-    <div class="cert-item"><div class="cert-dot"></div><div>
-      <div class="cert-name">Google Ads Measurement Certification</div>
-      <div class="cert-meta">Google &middot; May 2025 &ndash; May 2026</div>
-      <div class="cert-skills">
-        <span class="cert-skill">Performance Measurement</span><span class="cert-skill">Performance Attribution</span><span class="cert-skill">Marketing Attribution</span><span class="cert-skill">Strategic Planning</span><span class="cert-skill">Performance Marketing</span>
-      </div>
-    </div></div>
-
-  </div>
-</section>
-
-<section id="education" aria-label="Education">
-  <div>
-    <div class="section-label">Education</div>
-    <h2 class="section-title">Academic <em>Background</em></h2>
-  </div>
-  <div class="edu-items reveal">
-    <div class="edu-item">
-      <div class="edu-school">RMIT University, Melbourne</div>
-      <div class="edu-deg">Master of Information Technology</div>
-      <div class="edu-period">Feb 2019 &ndash; Nov 2020</div>
-      <div class="edu-spec">Specialisations: Software Engineering, Project Management, Usability Engineering</div>
-    </div>
-    <div class="edu-item">
-      <div class="edu-school">University of Mumbai</div>
-      <div class="edu-deg">Bachelor of Financial Accounting</div>
-      <div class="edu-period">2015 &ndash; 2018</div>
-      <div class="edu-spec">Specialisations: Economics, Management Accounting &amp; Trade Finance</div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" aria-label="Contact">
-  <h2 class="contact-title">Let's build something<br/><em>exceptional together.</em></h2>
-  <p class="contact-sub">Open to strategic partnerships, consulting opportunities, and leadership conversations.</p>
-  <div class="contact-links">
-    <a href="https://www.linkedin.com/in/hardik--mehta/" target="_blank" rel="noopener" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Lets Connect - LinkedIn'});">Let's Connect</a>
-  </div>
-</section>
-
-</main>
-<footer role="contentinfo">
-  <div class="footer-name">Hardik Mehta</div>
-  <div class="footer-copy">&middot; Melbourne, VIC &middot; 2026</div>
-</footer>
-
-
-<!-- Theme toggle -->
-<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark mode">&#9788;</button>
-
-<!-- Cursor glow -->
-<div class="cursor-glow" id="cursorGlow"></div>
-
-<!-- Back to top -->
-<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
 <script>
-// Respect user motion + input preferences
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const isTouch = window.matchMedia('(pointer: coarse)').matches || !window.matchMedia('(hover: hover)').matches;
+(function(){
+  "use strict";
+  var doc = document.documentElement, body = document.body;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) body.classList.add('js');
 
-// Cursor glow — desktop pointers only, and only when motion is allowed
-const glow = document.getElementById('cursorGlow');
-if (glow && !isTouch && !reduceMotion) {
-  document.addEventListener('mousemove', e => {
-    glow.style.left = e.clientX + 'px';
-    glow.style.top  = e.clientY + 'px';
-  }, { passive: true });
-} else if (glow) {
-  glow.style.display = 'none';
-}
-
-// Mobile navigation toggle
-const navToggle  = document.getElementById('navToggle');
-const navLinksEl = document.querySelector('.nav-links');
-if (navToggle && navLinksEl) {
-  navToggle.addEventListener('click', () => {
-    const open = navLinksEl.classList.toggle('open');
-    navToggle.classList.toggle('open', open);
-    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  navLinksEl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    navLinksEl.classList.remove('open');
-    navToggle.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  }));
-}
-
-// Scroll reveal — only arm when motion is allowed (otherwise content stays visible)
-if (!reduceMotion) {
-  document.body.classList.add('js-ready');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(en => {
-      if (en.isIntersecting) {
-        en.target.classList.add('visible');
-        io.unobserve(en.target);
-      }
+  /* ---------- split headings into animatable words ---------- */
+  document.querySelectorAll('[data-split]').forEach(function(el){
+    var words = el.textContent.trim().split(/\s+/);
+    el.textContent = '';
+    words.forEach(function(w, i){
+      var outer = document.createElement('span');
+      outer.className = 'w';
+      outer.style.setProperty('--wi', i);
+      var inner = document.createElement('span');
+      inner.textContent = w;
+      outer.appendChild(inner);
+      el.appendChild(outer);
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-}
-
-const btt = document.getElementById('backToTop');
-// Progress bar
-const progressBar = document.getElementById('progressBar');
-function updateProgress() {
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-  progressBar.style.width = pct + '%';
-}
-
-// Active nav highlight
-const sections = document.querySelectorAll('section[id], section[id="hero"]');
-const navLinks = document.querySelectorAll('.nav-links a');
-function updateActiveNav() {
-  const scrollY = window.scrollY + 120;
-  sections.forEach(sec => {
-    if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
-      navLinks.forEach(a => {
-        a.classList.remove('active');
-        if (a.getAttribute('href') === '#' + sec.id) a.classList.add('active');
-      });
-    }
   });
-}
 
-window.addEventListener('scroll', () => {
-  updateProgress();
-  updateActiveNav();
-  if (window.scrollY > 400) btt.classList.add('show');
-  else btt.classList.remove('show');
-}, { passive: true });
+  requestAnimationFrame(function(){ body.classList.add('ready'); });
 
-updateProgress();
-updateActiveNav();
+  /* ---------- theme, with a soft crossfade where supported ---------- */
+  var themeBtn = document.getElementById('themeBtn');
+  function paint(t){
+    doc.setAttribute('data-theme', t);
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', t === 'dark' ? '#08120f' : '#f4f7f5');
+    if (themeBtn) themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  paint(doc.getAttribute('data-theme') || 'light');
+  if (themeBtn) themeBtn.addEventListener('click', function(){
+    var next = doc.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('hm-theme', next); } catch(e){}
+    if (!reduce && doc.startViewTransition) { doc.startViewTransition(function(){ paint(next); }); }
+    else { paint(next); }
+  });
 
-// Theme toggle
-const themeToggle = document.getElementById('themeToggle');
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'light') {
-  document.body.classList.add('light-mode');
-  themeToggle.innerHTML = '&#9790;';
-}
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-  const isLight = document.body.classList.contains('light-mode');
-  themeToggle.innerHTML = isLight ? '&#9790;' : '&#9788;';
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
-});
+  /* ---------- mobile drawer ---------- */
+  var burger = document.getElementById('burger'), drawer = document.getElementById('drawer');
+  if (burger && drawer) {
+    burger.addEventListener('click', function(){
+      var open = drawer.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    drawer.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        drawer.classList.remove('open'); burger.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      });
+    });
+  }
 
+  /* ---------- nav glider ---------- */
+  var menu = document.getElementById('menu'), glider = document.getElementById('glider');
+  var navLinks = menu ? Array.prototype.slice.call(menu.querySelectorAll('a')) : [];
+  var activeLi = null;
+  function slide(li){ if (!glider || !li) return; glider.style.width = li.offsetWidth + 'px'; glider.style.transform = 'translateX(' + li.offsetLeft + 'px)'; glider.style.opacity = '1'; }
+  function rest(){ if (!glider) return; if (activeLi) slide(activeLi); else glider.style.opacity = '0'; }
+  navLinks.forEach(function(a){ a.addEventListener('mouseenter', function(){ slide(a.parentElement); }); });
+  if (menu) menu.addEventListener('mouseleave', rest);
+
+  /* ----------------------------------------------------------
+     Ambient layer. Two eased values are written onto the root and
+     the background reads them: how fast the page is moving, and
+     where the pointer is. Both settle back to rest on their own,
+     so nothing in the background ever moves sharply.
+     ---------------------------------------------------------- */
+  var amb = { v:0, tv:0, x:0, y:0, tx:0, ty:0, live:false, last:(window.scrollY||0) };
+  function ambTick(){
+    amb.v += (amb.tv - amb.v) * 0.15;
+    amb.x += (amb.tx - amb.x) * 0.07;
+    amb.y += (amb.ty - amb.y) * 0.07;
+    doc.style.setProperty('--vel', amb.v.toFixed(4));
+    doc.style.setProperty('--px', amb.x.toFixed(4));
+    doc.style.setProperty('--py', amb.y.toFixed(4));
+    amb.tv *= 0.86;
+    var busy = Math.abs(amb.v) > .0015 || Math.abs(amb.tv) > .0015 ||
+               Math.abs(amb.tx - amb.x) > .0015 || Math.abs(amb.ty - amb.y) > .0015;
+    if (busy) { requestAnimationFrame(ambTick); } else { amb.live = false; }
+  }
+  function ambWake(){ if (!amb.live && !reduce){ amb.live = true; requestAnimationFrame(ambTick); } }
+
+  if (!reduce && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    window.addEventListener('mousemove', function(e){
+      amb.tx = (e.clientX / window.innerWidth - .5) * 2;
+      amb.ty = (e.clientY / window.innerHeight - .5) * 2;
+      ambWake();
+    }, { passive:true });
+  }
+
+  /* ---------- scroll driven: mark fill, shapes, spine, nav, to top ---------- */
+  var topbar = document.getElementById('topbar'), toTop = document.getElementById('toTop');
+  var mark = document.getElementById('mark'), spine = document.getElementById('spine'), tl = document.getElementById('tl');
+  var shapes = Array.prototype.slice.call(document.querySelectorAll('[data-shape]'));
+  function measureShapes(){
+    var sy = window.scrollY || window.pageYOffset;
+    shapes.forEach(function(el){
+      var host = el.closest('section') || el;
+      var r = host.getBoundingClientRect();
+      el._top = r.top + sy;
+      el._h = r.height || 1;
+      el._y = parseFloat(el.getAttribute('data-speed')) || 0;
+      el._x = parseFloat(el.getAttribute('data-x')) || 0;
+      el._r = parseFloat(el.getAttribute('data-rot')) || 0;
+      el._s = parseFloat(el.getAttribute('data-scale')) || 0;
+    });
+  }
+  var slabs = Array.prototype.slice.call(document.querySelectorAll('.slab'));
+  var sxMax = 70, srMax = 52;
+  function measureSlabs(){
+    var sy = window.scrollY || window.pageYOffset;
+    var w = window.innerWidth;
+    var pad = Math.min(56, Math.max(20, w * 0.05));
+    var content = Math.min(1160, w - pad * 2);
+    sxMax = Math.min(78, Math.max(7, (w - content) / 2 * 0.52));  /* never reaches the text */
+    srMax = Math.min(54, Math.max(22, w * 0.085));
+    slabs.forEach(function(el){ el._top = el.getBoundingClientRect().top + sy; });
+  }
+  function measureAll(){ measureShapes(); measureSlabs(); }
+  measureAll();
+  window.addEventListener('load', measureAll);
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+  var queued = false;
+
+  function frame(){
+    var y = window.scrollY || window.pageYOffset, vh = window.innerHeight;
+    var max = doc.scrollHeight - vh;
+    var p = max > 0 ? Math.min(1, Math.max(0, y / max)) : 0;
+
+    amb.tv = Math.max(-1, Math.min(1, (y - amb.last) / 80)); amb.last = y; ambWake();
+    if (topbar) topbar.classList.toggle('stuck', y > 24);
+    if (toTop) toTop.classList.toggle('show', y > 620);
+
+    if (!reduce) {
+      shapes.forEach(function(el){
+        var top = el._top - y;
+        if (top > vh || top + el._h < 0) return;          /* off screen, skip */
+        var t = (vh - top) / (vh + el._h);
+        t = Math.min(1, Math.max(0, t)) - .5;
+        el.style.transform =
+          'translate3d(' + (t * el._x).toFixed(1) + 'px,' + (t * el._y).toFixed(1) + 'px,0)' +
+          ' rotate(' + (t * el._r).toFixed(2) + 'deg)' +
+          ' scale(' + (1 + t * el._s).toFixed(4) + ')';
+      });
+      slabs.forEach(function(el){
+        var top = el._top - y;                       /* the panel's leading edge */
+        var t = (vh - top) / (vh * 0.62);            /* 0 on arrival, 1 once locked */
+        t = Math.min(1, Math.max(0, t));
+        var k = 1 - t * t * (3 - 2 * t);
+        el.style.setProperty('--sx', (sxMax * k).toFixed(1) + 'px');
+        el.style.setProperty('--sr', (srMax * k).toFixed(1) + 'px');
+      });
+      if (spine && tl) {
+        var b = tl.getBoundingClientRect();
+        var sp2 = (vh * 0.62 - b.top) / b.height;
+        spine.style.setProperty('--sp', Math.min(1, Math.max(0, sp2)).toFixed(4));
+      }
+    }
+
+    var m = y + 170, id = null;
+    sections.forEach(function(s){ if (m >= s.offsetTop) id = s.id; });
+    var found = null;
+    navLinks.forEach(function(a){
+      var on = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('on', on);
+      if (on) { a.setAttribute('aria-current','true'); found = a.parentElement; } else { a.removeAttribute('aria-current'); }
+    });
+    if (found !== activeLi) { activeLi = found; rest(); }
+    queued = false;
+  }
+  window.addEventListener('scroll', function(){ if (!queued){ queued = true; requestAnimationFrame(frame); } }, { passive:true });
+  window.addEventListener('resize', function(){ measureAll(); rest(); frame(); });
+  frame();
+  if (toTop) toTop.addEventListener('click', function(){ window.scrollTo({ top:0, behavior: reduce ? 'auto':'smooth' }); });
+
+  /* ---------- reveal ---------- */
+  var rv = Array.prototype.slice.call(document.querySelectorAll('[data-rv]'));
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold:0.08, rootMargin:'0px 0px -80px 0px' });
+    rv.forEach(function(el){ io.observe(el); });
+  } else { rv.forEach(function(el){ el.classList.add('in'); }); }
+
+  /* ---------- counters ---------- */
+  function ease(t){ return 1 - Math.pow(1 - t, 4); }
+  function roll(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var pre = el.getAttribute('data-pre') || '', suf = el.getAttribute('data-suf') || '';
+    if (isNaN(target)) return;
+    if (reduce) { el.textContent = pre + target + suf; return; }
+    el.classList.add('rolling');
+    var start = null, dur = 1500;
+    function step(ts){
+      if (start === null) start = ts;
+      var t = Math.min(1, (ts - start) / dur);
+      el.textContent = pre + Math.round(target * ease(t)) + suf;
+      if (t > .35) el.classList.remove('rolling');
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var nums = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
+  if ('IntersectionObserver' in window) {
+    var nio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ roll(e.target); nio.unobserve(e.target); } });
+    }, { threshold:0.5 });
+    nums.forEach(function(el){ nio.observe(el); });
+  } else { nums.forEach(roll); }
+
+  /* ---------- timeline ---------- */
+  document.querySelectorAll('.tl-head').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement, wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.tl-item.open').forEach(function(o){
+        o.classList.remove('open'); o.querySelector('.tl-head').setAttribute('aria-expanded','false');
+      });
+      if (!wasOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+
+  /* ---------- command palette ---------- */
+  var cmd = document.getElementById('cmd'), cmdInput = document.getElementById('cmdInput'),
+      cmdList = document.getElementById('cmdList'), cmdOpen = document.getElementById('cmdOpen');
+  function go(h){ var el = document.querySelector(h); if (el) el.scrollIntoView({ behavior: reduce ? 'auto':'smooth', block:'start' }); }
+  var items = [
+    { l:'Approach', k:'Section', run:function(){ go('#approach'); } },
+    { l:'What I build', k:'Section', run:function(){ go('#build'); } },
+    { l:'Experience', k:'Section', run:function(){ go('#experience'); } },
+    { l:'Industries', k:'Section', run:function(){ go('#industries'); } },
+    { l:'Capability', k:'Section', run:function(){ go('#capability'); } },
+    { l:'Credentials', k:'Section', run:function(){ go('#credentials'); } },
+    { l:'Get in touch', k:'Section', run:function(){ go('#contact'); } },
+    { l:'Open LinkedIn', k:'Link', run:function(){ window.open('https://www.linkedin.com/in/hardik--mehta/','_blank','noopener'); } },
+    { l:'Switch theme', k:'Action', run:function(){ if (themeBtn) themeBtn.click(); } },
+    { l:'Back to top', k:'Action', run:function(){ window.scrollTo({ top:0, behavior: reduce ? 'auto':'smooth' }); } }
+  ];
+  var shown = items.slice(), sel = 0;
+  function draw(){
+    cmdList.innerHTML = '';
+    shown.forEach(function(it, i){
+      var li = document.createElement('li');
+      li.setAttribute('role','option');
+      li.setAttribute('aria-selected', i === sel ? 'true' : 'false');
+      var a = document.createElement('span'); a.textContent = it.l;
+      var b = document.createElement('em'); b.textContent = it.k;
+      li.appendChild(a); li.appendChild(b);
+      li.addEventListener('mouseenter', function(){ sel = i; mk(); });
+      li.addEventListener('click', function(){ shut(); it.run(); });
+      cmdList.appendChild(li);
+    });
+  }
+  function mk(){
+    Array.prototype.forEach.call(cmdList.children, function(li, i){ li.setAttribute('aria-selected', i === sel ? 'true' : 'false'); });
+    var a = cmdList.children[sel];
+    if (a && a.scrollIntoView) a.scrollIntoView({ block:'nearest' });
+  }
+  function show(){ cmd.classList.add('open'); cmdInput.value=''; shown = items.slice(); sel = 0; draw(); setTimeout(function(){ cmdInput.focus(); }, 30); }
+  function shut(){ cmd.classList.remove('open'); }
+  if (cmdOpen) cmdOpen.addEventListener('click', show);
+  if (cmd) cmd.addEventListener('click', function(e){ if (e.target === cmd) shut(); });
+  if (cmdInput) cmdInput.addEventListener('input', function(){
+    var q = cmdInput.value.toLowerCase().trim();
+    shown = items.filter(function(it){ return (it.l + ' ' + it.k).toLowerCase().indexOf(q) > -1; });
+    sel = 0; draw();
+  });
+  document.addEventListener('keydown', function(e){
+    if (!e.key) return;
+    var open = cmd && cmd.classList.contains('open');
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k'){ e.preventDefault(); open ? shut() : show(); return; }
+    if (e.key === '/' && !open && ['INPUT','TEXTAREA'].indexOf((document.activeElement||{}).tagName) === -1){ e.preventDefault(); show(); return; }
+    if (!open) return;
+    if (e.key === 'Escape') shut();
+    else if (e.key === 'ArrowDown'){ e.preventDefault(); sel = Math.min(shown.length-1, sel+1); mk(); }
+    else if (e.key === 'ArrowUp'){ e.preventDefault(); sel = Math.max(0, sel-1); mk(); }
+    else if (e.key === 'Enter'){ e.preventDefault(); var it = shown[sel]; shut(); if (it) it.run(); }
+  });
+  if (cmdList) draw();
+})();
 </script>
 </body>
 </html>
