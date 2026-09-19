@@ -235,7 +235,7 @@ html[data-theme="dark"] .s-surface,html[data-theme="dark"] .s-paper{--slab-edge:
   transition:background-color .55s var(--e),border-color .55s var(--e),box-shadow .55s var(--e),max-width .65s var(--e);
 }
 .topbar.stuck .shell{
-  max-width:900px;background:var(--surface);background:color-mix(in srgb,var(--surface) 84%,transparent);
+  max-width:980px;background:var(--surface);background:color-mix(in srgb,var(--surface) 84%,transparent);
   border-color:var(--line);box-shadow:var(--sh-2);
   backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);
 }
@@ -251,7 +251,7 @@ html[data-theme="dark"] .s-surface,html[data-theme="dark"] .s-paper{--slab-edge:
 .nav-right{display:flex;align-items:center;gap:.35rem;}
 .menu{position:relative;display:flex;align-items:center;list-style:none;}
 .menu a{
-  position:relative;z-index:1;display:block;padding:.44rem .8rem;border-radius:var(--r-pill);
+  position:relative;z-index:1;display:block;padding:.44rem .68rem;border-radius:var(--r-pill);
   font-size:.865rem;font-weight:550;color:var(--ink-3);text-decoration:none;transition:color .35s var(--e);
 }
 .menu a:hover,.menu a.on{color:var(--ink);}
@@ -447,6 +447,22 @@ html[data-theme="dark"] .hero .blobby.b1{opacity:.22;}
 /* ==========================================================
    CAPABILITY / CREDENTIALS
    ========================================================== */
+/* venture */
+.venture{
+  background:var(--paper);border:1.5px solid var(--line);border-radius:var(--r-lg);
+  padding:clamp(1.7rem,3.2vw,2.6rem);
+  display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(1.6rem,4vw,3.2rem);align-items:center;
+  transition:border-color .45s var(--e),background-color .5s var(--e);
+}
+.venture:hover{border-color:var(--line-2);}
+.venture h3{font-size:clamp(1.3rem,2.3vw,1.7rem);font-weight:400;letter-spacing:-.032em;margin:.7rem 0 .85rem;}
+.venture p{font-size:var(--fs-body);line-height:1.76;color:var(--ink-2);max-width:56ch;}
+.venture .btn{margin-top:1.4rem;}
+.facts{display:grid;gap:.9rem;}
+.facts div{border-left:2px solid var(--brand);padding-left:.95rem;}
+.facts b{display:block;font-family:"Bricolage Grotesque","Manrope",sans-serif;font-size:1.5rem;font-weight:280;letter-spacing:-.04em;color:var(--ink);line-height:1.1;}
+.facts span{display:block;font-size:var(--fs-micro);color:var(--ink-3);line-height:1.5;margin-top:.15rem;}
+
 /* industries */
 .sectors{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-gap);}
 .sector{
@@ -543,13 +559,15 @@ footer b{font-weight:650;color:var(--ink);}
    RESPONSIVE
    ========================================================== */
 @media(max-width:1080px){
+  .venture{grid-template-columns:1fr;gap:1.8rem;}
+  .facts{grid-template-columns:repeat(3,1fr);}
   .sectors{grid-template-columns:repeat(2,1fr);}
   .cards{grid-template-columns:repeat(2,1fr);}
   .kbtn{display:none;}
   .feature{grid-template-columns:1fr;gap:1.8rem;}
   .mini{grid-template-columns:repeat(3,1fr);}
 }
-@media(max-width:940px){
+@media(max-width:1080px){
   .menu{display:none;}
   .burger{display:grid;}
   .drawer{display:block;}
@@ -569,6 +587,7 @@ footer b{font-weight:650;color:var(--ink);}
   .tl-head:hover{padding-left:1.3rem;}
 }
 @media(max-width:680px){
+  .facts{grid-template-columns:1fr;}
   .sectors{grid-template-columns:1fr;}
   .cards{grid-template-columns:1fr;}
   .caps{grid-template-columns:1fr;}
@@ -618,6 +637,7 @@ footer b{font-weight:650;color:var(--ink);}
         <li><a href="#approach">Approach</a></li>
         <li><a href="#build">Build</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#venture">Venture</a></li>
         <li><a href="#industries">Industries</a></li>
         <li><a href="#capability">Capability</a></li>
         <li><a href="#credentials">Credentials</a></li>
@@ -635,6 +655,7 @@ footer b{font-weight:650;color:var(--ink);}
       <li><a href="#approach">Approach</a></li>
       <li><a href="#build">Build</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#venture">Venture</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#capability">Capability</a></li>
       <li><a href="#credentials">Credentials</a></li>
@@ -827,7 +848,7 @@ footer b{font-weight:650;color:var(--ink);}
         </button>
         <div class="tl-panel"><div><div class="tl-body">
           <ul>
-            <li>A split remit by design. Half of it is performance director work on the agency's largest accounts and its commercial strategy. The other half is the agency-wide <strong>data, AI and automation function</strong>, built from scratch</li>
+            <li>A split remit by design. Half of it is performance director work on the agency's largest accounts and its commercial strategy. The other half is the agency-wide <strong>data, AI and automation function</strong>, built from nothing</li>
             <li>Own the agency's <strong>AI and automation roadmap</strong>: around fifty initiatives spanning paid media, SEO, operations and finance, each scoped and sequenced around how the teams actually work rather than what is technically interesting</li>
             <li>Lead the build of an <strong>AI-first paid media platform</strong>, rolled out one channel at a time so adoption is real rather than announced</li>
             <li>Built the <strong>agency-wide client health scorecard</strong>, resolving advertising, SEO, budget status and client sentiment into one score that sorts by client, by team and across the agency</li>
@@ -843,21 +864,40 @@ footer b{font-weight:650;color:var(--ink);}
         <button class="tl-head" aria-expanded="false">
           <span>
             <span class="tl-role">Senior Performance Manager</span>
-            <span class="tl-meta"><span class="org">Impressive Digital</span><i>/</i><span>Aug 2024 to Jul 2026</span><i>/</i><span>Melbourne</span></span>
+            <span class="tl-meta"><span class="org">Impressive Digital</span><i>/</i><span>Dec 2025 to Jul 2026</span><i>/</i><span>Melbourne</span></span>
+          </span>
+          <span class="caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="tl-panel"><div><div class="tl-body">
+          <ul>
+            <li>The step up from strategy into ownership: <strong>my own patch and my own team</strong>, with the agency's more senior accounts moved into the portfolio</li>
+            <li>Owned go-to-market strategy across a <strong>portfolio of 19 clients</strong> at an average <strong>12&#215; return on ad spend</strong></li>
+            <li>Built the agency's first <strong>AI-native tooling</strong>: an automated account reviewer across Google, Meta and Microsoft Ads, budget pacing, and a negative keyword agent</li>
+            <li>Set the <strong>measurement standard</strong> across the patch, replacing platform-reported conversions with a hard conversion definition agreed client by client, so what we reported matched what their finance team could see</li>
+            <li>Grew accounts into <strong>programmatic and retail media</strong> that had only ever bought search and social, adding budget lines rather than redistributing them</li>
+            <li>Named <strong>agency ambassador for AI and programmatic</strong>, representing the agency in partner and platform conversations</li>
+          </ul>
+          <div class="chips"><span class="chip">Patch ownership</span><span class="chip">Team leadership</span><span class="chip">Measurement</span><span class="chip">Paid media R&amp;D</span><span class="chip">Programmatic and retail media</span></div>
+        </div></div></div>
+      </div>
+
+      <div class="tl-item">
+        <button class="tl-head" aria-expanded="false">
+          <span>
+            <span class="tl-role">Senior Strategy Manager</span>
+            <span class="tl-meta"><span class="org">Impressive Digital</span><i>/</i><span>Sep 2024 to Dec 2025</span><i>/</i><span>Melbourne</span></span>
           </span>
           <span class="caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
         </button>
         <div class="tl-panel"><div><div class="tl-body">
           <ul>
             <li>Strategic partner to senior clients and agency leadership, leading quarterly business reviews and shaping the investment decisions behind them</li>
-            <li>Owned go-to-market strategy across a <strong>portfolio of 19 clients</strong> at an average <strong>12&#215; return on ad spend</strong></li>
             <li>Drove <strong>38% year on year revenue growth</strong> for a luxury furniture brand against a 25% target, by diagnosing the full funnel and restructuring paid investment around brand and commercial goals</li>
             <li>Delivered <strong>five consecutive record months</strong> for a B2B industrial client, and scaled a B2B tech client into the <strong>US market</strong> using first and third party audience data</li>
-            <li>Built the agency's first <strong>AI-native tooling</strong>: an automated account reviewer across Google, Meta and Microsoft Ads, budget pacing, and a negative keyword agent</li>
-            <li>Led the response to a <strong>Google Ads manager account security incident</strong> across a 531 account structure, diagnosing the attack vector and coordinating remediation</li>
-            <li>Named <strong>agency ambassador for AI and programmatic</strong>, and hit a <strong>93% pitch success rate</strong> with hypothesis-led pre-sales audits framed in business terms rather than platform metrics</li>
+            <li>Hit a <strong>93% pitch success rate</strong> with hypothesis-led pre-sales audits framed in business terms rather than platform metrics</li>
+            <li>Set the strategic standard the performance team now works to, from discovery through to quarterly review</li>
           </ul>
-          <div class="chips"><span class="chip">Client strategy</span><span class="chip">Paid media R&amp;D</span><span class="chip">Programmatic</span><span class="chip">Pre-sales audits</span><span class="chip">Mentoring</span></div>
+          <div class="chips"><span class="chip">Client strategy</span><span class="chip">Quarterly business reviews</span><span class="chip">Pre-sales audits</span><span class="chip">Market research</span><span class="chip">Mentoring</span></div>
         </div></div></div>
       </div>
 
@@ -865,7 +905,7 @@ footer b{font-weight:650;color:var(--ink);}
         <button class="tl-head" aria-expanded="false">
           <span>
             <span class="tl-role">Client Strategy Manager</span>
-            <span class="tl-meta"><span class="org">Impressive Digital</span><i>/</i><span>Nov 2023 to Aug 2024</span><i>/</i><span>Melbourne</span></span>
+            <span class="tl-meta"><span class="org">Impressive Digital</span><i>/</i><span>Nov 2023 to Sep 2024</span><i>/</i><span>Melbourne</span></span>
           </span>
           <span class="caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
         </button>
@@ -917,6 +957,32 @@ footer b{font-weight:650;color:var(--ink);}
         </div></div></div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ================= VENTURE ================= -->
+<section id="venture" class="slab s-surface">
+  <div class="deco" aria-hidden="true">
+    <span class="drifter" data-shape data-speed="150" data-x="-44" style="width:min(38vw,430px);height:min(38vw,430px);right:-14vw;top:-8vw;"><i class="blobby green" style="--dx:-4%;--dy:5%;--ds:1.12;--drift:88s;"></i></span>
+  </div>
+  <div class="wrap">
+    <div class="head head-2" data-rv>
+      <h2 class="h2" data-split>One of my own</h2>
+      <p class="lede">The account where I hold every lever at once, and the only honest test of anything I would put in front of a client.</p>
+    </div>
+    <div class="venture" data-rv>
+      <div>
+        <span class="flag">Founder, since 2026</span>
+        <h3>Fluff Republic</h3>
+        <p>An Australian pet supplies business I started and run on my own. Store, catalogue, product feed, paid media, SEO, email and the margin behind all of it. Running a P&amp;L rather than a retainer changes how you read a number. It is where a tactic gets proven, or quietly killed, before it ever reaches a client's budget.</p>
+        <a href="https://fluffrepublic.com.au" target="_blank" rel="noopener" class="btn btn-ghost" onclick="track('CTA','Fluff Republic')">Visit fluffrepublic.com.au</a>
+      </div>
+      <div class="facts">
+        <div><b>Solo</b><span>Strategy, build, media and fulfilment</span></div>
+        <div><b>Shopify</b><span>Store, product feed and merchant setup</span></div>
+        <div><b>P&amp;L</b><span>Judged on margin, not on spend</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1338,6 +1404,7 @@ footer b{font-weight:650;color:var(--ink);}
     { l:'Approach', k:'Section', run:function(){ go('#approach'); } },
     { l:'What I build', k:'Section', run:function(){ go('#build'); } },
     { l:'Experience', k:'Section', run:function(){ go('#experience'); } },
+    { l:'Fluff Republic', k:'Section', run:function(){ go('#venture'); } },
     { l:'Industries', k:'Section', run:function(){ go('#industries'); } },
     { l:'Capability', k:'Section', run:function(){ go('#capability'); } },
     { l:'Credentials', k:'Section', run:function(){ go('#credentials'); } },
